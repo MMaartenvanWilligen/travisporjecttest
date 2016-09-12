@@ -1,0 +1,44 @@
+{
+  "name": "travisprojecttest",
+  "version": "1.0.0",
+  "description": "travis integration with github and node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaartenvanWilligenCH/travisporjecttest.git"
+  },
+  "author": "Maarten van Willigen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaartenvanWilligenCH/travisporjecttest/issues"
+  }, 
+  "bugs": {
+    "url": "https://github.com/MaartenvanWilligenCH/travisporjecttest/issues"
+  },
+  "homepage": "https://github.com/MaartenvanWilligenCH/travisporjecttest#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "chromedriver": "^2.23.1",
+    "geckodriver": "^1.1.2",
+    "selenium-webdriver": "^3.0.0-beta-2",
+    "phantomjs": ">=2.1"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.23.1",    
+    "webdriverio": "^4.2.11"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=4.5.0"
+  },
+  "keywords": [
+    "TravisCI",
+    "Node"
+  ]
+}
+
+
