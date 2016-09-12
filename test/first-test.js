@@ -8,3 +8,49 @@ describe('Array', function() {
     });
   });
 });
+
+
+require('chromedriver');
+
+var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until
+
+
+var driver = new webdriver.Builder()
+  .forBrowser('chrome')
+  .build();
+
+  driver.get('http://www.google.com/ncr');
+
+
+driver.get('https://www.google.co.uk').then(function() {
+  driver.findElement({name: 'q'}).then(function(input) {
+    input.sendKeys('maartenvanwilligen.nl');
+    input.sendKeys(webdriver.Key.ENTER);
+  });
+});
+
+driver.sleep(1000);
+
+var link = driver.findElement(By.xpath("//div['@id=srg']/div[1]/div[1]/h3[1]/a[1]"))
+ // var link = driver.findElement(By.xpath("//a[@href='http://maartenvanwilligen.nl/']"))
+
+link.getText().then(function(text) {
+
+describe('firstgoogleresult', function() {
+  describe('#indexOf()', function() {
+    it('should return true when first result', function() {
+      assert.equal(-1, text.indexOf(pageTitle));
+    });
+  });
+});
+
+  console.log(text);
+  var pageTitle = 'Maarten van Willigen';
+  console.log('portfolio maarten van willigen in top result?');
+  console.log(text.indexOf(pageTitle) !== -1);
+});
+
+driver.quit();
+
