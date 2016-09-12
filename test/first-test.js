@@ -37,6 +37,7 @@ var link = driver.findElement(By.xpath("//div['@id=srg']/div[1]/div[1]/h3[1]/a[1
  // var link = driver.findElement(By.xpath("//a[@href='http://maartenvanwilligen.nl/']"))
 
 link.getText().then(function(text) {
+var pageTitle = 'Maarten van Willigen';
 
 describe('firstgoogleresult', function() {
   describe('#indexOf()', function() {
@@ -46,8 +47,7 @@ describe('firstgoogleresult', function() {
   });
 });
 
-  console.log(text);
-  var pageTitle = 'Maarten van Willigen';
+  console.log(text); 
   console.log('portfolio maarten van willigen in top result?');
   console.log(text.indexOf(pageTitle) !== -1);
 });
