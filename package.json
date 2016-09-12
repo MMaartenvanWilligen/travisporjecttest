@@ -15,9 +15,6 @@
   "bugs": {
     "url": "https://github.com/MaartenvanWilligenCH/travisporjecttest/issues"
   }, 
-  "bugs": {
-    "url": "https://github.com/MaartenvanWilligenCH/travisporjecttest/issues"
-  },
   "homepage": "https://github.com/MaartenvanWilligenCH/travisporjecttest#readme",
   "dependencies": {
     "chai": "^3.5.0",
