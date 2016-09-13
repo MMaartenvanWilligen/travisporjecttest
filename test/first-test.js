@@ -33,18 +33,24 @@ driver.get('https://www.google.co.uk').then(function() {
 
 driver.sleep(1000);
 
+
+
+describe('firstgoogleresult', function() {
+
 var link = driver.findElement(By.xpath("//div['@id=srg']/div[1]/div[1]/h3[1]/a[1]"))
  // var link = driver.findElement(By.xpath("//a[@href='http://maartenvanwilligen.nl/']"))
 
 link.getText().then(function(text) {
 var pageTitle = 'Maarten van Willigen';
 
-describe('firstgoogleresult', function() {
+
   describe('#indexOf()', function() {
     it('should return true when first result', function() {
       assert.equal(-1, text.indexOf(pageTitle));
     });
+
   });
+  
 });
 
   console.log(text); 
