@@ -1,67 +1,123 @@
+var SauceLabs = require('saucelabs');
 
-var assert = require('assert'),
-    test = require('selenium-webdriver/testing'),
-    webdriver = require('selenium-webdriver'),
-    SauceLabs = require("saucelabs"),
-    username = process.env.SAUCE_USERNAME,
-    accessKey = process.env.SAUCE_ACCESS_KEY,
-    saucelabs = new SauceLabs({
-      username: username,
-      password: accessKey
-      proxy: "http://localhost:63342/travisprojecttest/Website/index.html"
+var myAccount = new SauceLabs({
+  username: "your-sauce-username",
+  password: "your-sauce-api-key"
+  proxy: "localhost:63342"
+});
+
+myAccount.getAccountDetails(function (err, res) {
+  console.log(res);
+  myAccount.getServiceStatus(function (err, res) {
+    // Status of the Sauce Labs services
+    console.log(res);
+    myAccount.getAllBrowsers(function (err, res) {
+      // List of all browser/os combinations currently supported on Sauce Labs
+      console.log(res);
+      myAccount.getJobs(function (err, jobs) {
+        // Get a list of all your jobs
+        for (var k in jobs) {
+          if ( jobs.hasOwnProperty( k )) {
+            myAccount.showJob(jobs[k].id, function (err, res) {
+              var str = res.id + ": Status: " + res.status;
+              if (res.error) {
+                str += "\033[31m Error: " + res.error + " \033[0m";
+              }
+              console.log(str);
+            });
+          }
+        }
+      });
     });
-
-test.describe('Google Search', function() {
-  this.timeout(60000);
-
-  var driver;
-
-  test.beforeEach(function() {
-    var browser = "chrome",
-        // version = process.env.VERSION,
-        // platform = process.env.PLATFORM,
-        server = "http://" + username + ":" + accessKey +
-            "@ondemand.saucelabs.com:80/wd/hub";
-
-    driver = new webdriver.Builder().
-    withCapabilities({
-      'browserName': browser,
-      // 'platform': platform,
-      // 'version': version,
-      'username': username,
-      'accessKey': accessKey
-    }).
-    usingServer(server).
-    build();
-
-    driver.getSession().then(function (sessionid){
-      driver.sessionID = sessionid.id_;
-    });
-
-  });
-
-  test.afterEach(function(done) {
-    var title = this.currentTest.title,
-        passed = (this.currentTest.state === 'passed') ? true : false;
-
-    driver.quit();
-
-    saucelabs.updateJob(driver.sessionID, {
-      name: title,
-      passed: passed
-    }, done);
-  })
-
-  test.it('searching for webdriver using google', function() {
-    // driver.get('http://google.com');
-    driver.get('http://localhost:63342/travisprojecttest/Website/index.html');
-    var searchBox = driver.findElement(webdriver.By.name('button'));
-    searchBox.getAttribute('value').then(function(value) {
-      assert.equal(value, 'raised');
-    });
-
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var assert = require('assert'),
+//     test = require('selenium-webdriver/testing'),
+//     webdriver = require('selenium-webdriver'),
+//     SauceLabs = require("saucelabs"),
+//     username = process.env.SAUCE_USERNAME,
+//     accessKey = process.env.SAUCE_ACCESS_KEY,
+//     saucelabs = new SauceLabs({
+//       username: username,
+//       password: accessKey
+//     });
+//
+// test.describe('Google Search', function() {
+//   this.timeout(60000);
+//
+//   var driver;
+//
+//   test.beforeEach(function() {
+//     var browser = "chrome",
+//         // version = process.env.VERSION,
+//         // platform = process.env.PLATFORM,
+//         server = "http://" + username + ":" + accessKey +
+//             "@ondemand.saucelabs.com:80/wd/hub";
+//
+//     driver = new webdriver.Builder().
+//     withCapabilities({
+//       'browserName': browser,
+//       // 'platform': platform,
+//       // 'version': version,
+//       'username': username,
+//       'accessKey': accessKey
+//     }).
+//     usingServer(server).
+//     build();
+//
+//     driver.getSession().then(function (sessionid){
+//       driver.sessionID = sessionid.id_;
+//     });
+//
+//   });
+//
+//   test.afterEach(function(done) {
+//     var title = this.currentTest.title,
+//         passed = (this.currentTest.state === 'passed') ? true : false;
+//
+//     driver.quit();
+//
+//     saucelabs.updateJob(driver.sessionID, {
+//       name: title,
+//       passed: passed
+//     }, done);
+//   })
+//
+//   test.it('searching for webdriver using google', function() {
+//     driver.get('http://google.com');
+//
+//     var searchBox = driver.findElement(webdriver.By.name('q'));
+//     searchBox.sendKeys('webdriver');
+//     searchBox.getAttribute('value').then(function(value) {
+//       assert.equal(value, 'webdriver');
+//     });
+//
+//   });
+// });
 
 
 
