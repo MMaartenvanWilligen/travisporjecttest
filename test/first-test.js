@@ -1,29 +1,35 @@
 var Webdriver = require("selenium-webdriver");
 var s = require("util").format;
+var assert = require('assert');
 
 describe("test", function () {
-  it("this", function () {
-    var driver = new Webdriver.Builder()
-        .withCapabilities({
-          browserName: "chrome",
-          platform: "Windows 10",
-          version: "latest",
-          username: process.env.SAUCE_USERNAME,
-          accessKey: process.env.SAUCE_ACCESS_KEY,
-          tunnelIdentifier: "Maartenconnect" // matches name of my tunnel
-        })
-        .usingServer(s("http://%s:%s@ondemand.saucelabs.com:80/wd/hub",
-            process.env.SAUCE_USERNAME, process.env.SAUCE_ACCESS_KEY))
-        .build()
+    it("this", function () {
+        var driver = new Webdriver.Builder()
+            .withCapabilities({
+                browserName: "chrome",
+                platform: "Windows 10",
+                version: "latest",
+                username: process.env.SAUCE_USERNAME,
+                accessKey: process.env.SAUCE_ACCESS_KEY,
+                // tunnelIdentifier: "Maartenconnect" // matches name of my tunnel
+            })
+            .usingServer(s("http://%s:%s@ondemand.saucelabs.com:80/wd/hub",
+                process.env.SAUCE_USERNAME, process.env.SAUCE_ACCESS_KEY))
+            .build();
 
-    return driver.get("http://localhost:63342/travisprojecttest/Website/index.html")
-        .then(function () {
-          // bunch of Selenium commands
-        })
-  })
+        return driver.get("http://localhost:63342/travisprojecttest/Website/index.html")
+            .then(function () {
+                // bunch of Selenium commands
+                var searchBox = driver.findElement(webdriver.By.name('button'));
+                searchBox.sendKeys('webdriver');
+                searchBox.getAttribute('value').then(function (value) {
+                    assert.equal(value, 'raised');
+//     });
+
+                })
+            })
+    })
 });
-
-
 
 // var assert = require('assert'),
 //     test = require('selenium-webdriver/testing'),
@@ -90,11 +96,6 @@ describe("test", function () {
 // });
 
 
-
-
-
-
-
 // beforeEach(function() {
 //   if (process.env.SAUCE_USERNAME != undefined) {
 //     this.browser = new webdriver.Builder()
@@ -115,21 +116,6 @@ describe("test", function () {
 //
 //   return this.browser.get("http://localhost:63342/travisprojecttest/Website/index.html");
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // var webdriver = require('selenium-webdriver'), // muse use selenium-webdriver version <=2.47.0
