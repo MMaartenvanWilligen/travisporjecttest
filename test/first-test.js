@@ -16,17 +16,17 @@ test.describe('Google Search', function() {
   var driver;
 
   test.beforeEach(function() {
-    var browser = process.env.BROWSER,
-        version = process.env.VERSION,
-        platform = process.env.PLATFORM,
+    var browser = "chrome",
+        // version = process.env.VERSION,
+        // platform = process.env.PLATFORM,
         server = "http://" + username + ":" + accessKey +
             "@ondemand.saucelabs.com:80/wd/hub";
 
     driver = new webdriver.Builder().
     withCapabilities({
       'browserName': browser,
-      'platform': platform,
-      'version': version,
+      // 'platform': platform,
+      // 'version': version,
       'username': username,
       'accessKey': accessKey
     }).
