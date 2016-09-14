@@ -20,19 +20,19 @@ describe("testing javascript in the browser", function() {
                 }).build();
         }
 
-        return this.browser.get("http://localhost:63342/travisprojecttest/Website/index.html");
+        return this.browser.get("http://sel.maarten.choffice.nl/");
     });
 
     afterEach(function() {
         return this.browser.quit();
     });
 
-    it("should handle clicking on a headline", function(done) {
+    it("text h1 should be equal to awesome", function(done) {
         var headline = this.browser.findElement(webdriver.By.css('h1'));
 
 
         headline.getText().then(function(txt) {
-            assert.equal(txt, "awesome");
+            assert.equal(txt, "sel");
             done();
         });
     });
