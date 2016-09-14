@@ -20,7 +20,7 @@ describe("testing javascript in the browser", function() {
                 }).build();
         }
 
-        return this.browser.get("http://sel.maarten.choffice.nl/");
+        return this.browser.get("http://localhost:4445/travisprojecttest/Website/index.html");
     });
 
     afterEach(function() {
@@ -32,7 +32,7 @@ describe("testing javascript in the browser", function() {
 
 
         headline.getText().then(function(txt) {
-            assert.equal(txt, "sel");
+            assert.equal(txt, "awesome");
             done();
         });
     });
