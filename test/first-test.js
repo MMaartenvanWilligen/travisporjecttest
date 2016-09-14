@@ -1,57 +1,27 @@
-var SauceLabs = require('saucelabs');
+var Webdriver = require("seleniuv-webdriver")
+var s = require("util").format
 
-var myAccount = new SauceLabs({
-  username: "your-sauce-username",
-  password: "your-sauce-api-key"
-  proxy: "localhost:63342"
-});
+describe("test", function () {
+  it("this", function () {
+    var driver = new Webdriver.Builder()
+        .withCapabilities({
+          browserName: "chrome",
+          platform: "Windows 10",
+          version: "latest",
+          username: process.env.SAUCE_USERNAME,
+          accessKey: process.env.SAUCE_ACCESS_KEY,
+          tunnelIdentifier: "Maartenconnect" // matches name of my tunnel
+        })
+        .usingServer(s("http://%s:%s@ondemand.saucelabs.com:80/wd/hub",
+            process.env.SAUCE_USERNAME, process.env.SAUCE_ACCESS_KEY))
+        .build()
 
-myAccount.getAccountDetails(function (err, res) {
-  console.log(res);
-  myAccount.getServiceStatus(function (err, res) {
-    // Status of the Sauce Labs services
-    console.log(res);
-    myAccount.getAllBrowsers(function (err, res) {
-      // List of all browser/os combinations currently supported on Sauce Labs
-      console.log(res);
-      myAccount.getJobs(function (err, jobs) {
-        // Get a list of all your jobs
-        for (var k in jobs) {
-          if ( jobs.hasOwnProperty( k )) {
-            myAccount.showJob(jobs[k].id, function (err, res) {
-              var str = res.id + ": Status: " + res.status;
-              if (res.error) {
-                str += "\033[31m Error: " + res.error + " \033[0m";
-              }
-              console.log(str);
-            });
-          }
-        }
-      });
-    });
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return driver.get("http://localhost:63342/travisprojecttest/Website/index.html")
+        .then(function () {
+          // bunch of Selenium commands
+        })
+  })
+})
 
 
 
