@@ -22,7 +22,8 @@
     "chromedriver": "^2.23.1",
     "geckodriver": "^1.1.2",
     "selenium-webdriver": "^3.0.0-beta-2",
-    "phantomjs": ">=2.1"
+    "phantomjs": ">=2.1",
+    "webdriverio": "^4.2.11"
   },
   "devDependencies": {
     "chromedriver": "^2.23.1",    
