@@ -1,5 +1,5 @@
-var Webdriver = require("seleniuv-webdriver")
-var s = require("util").format
+var Webdriver = require("selenium-webdriver");
+var s = require("util").format;
 
 describe("test", function () {
   it("this", function () {
@@ -21,7 +21,7 @@ describe("test", function () {
           // bunch of Selenium commands
         })
   })
-})
+});
 
 
 
