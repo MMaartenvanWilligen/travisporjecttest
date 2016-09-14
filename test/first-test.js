@@ -8,6 +8,7 @@ var assert = require('assert'),
     saucelabs = new SauceLabs({
       username: username,
       password: accessKey
+      proxy: "http://localhost:63342/travisprojecttest/Website/index.html"
     });
 
 test.describe('Google Search', function() {
@@ -52,12 +53,11 @@ test.describe('Google Search', function() {
   })
 
   test.it('searching for webdriver using google', function() {
-    driver.get('http://google.com');
-
-    var searchBox = driver.findElement(webdriver.By.name('q'));
-    searchBox.sendKeys('webdriver');
+    // driver.get('http://google.com');
+    driver.get('http://localhost:63342/travisprojecttest/Website/index.html');
+    var searchBox = driver.findElement(webdriver.By.name('button'));
     searchBox.getAttribute('value').then(function(value) {
-      assert.equal(value, 'webdriver');
+      assert.equal(value, 'raised');
     });
 
   });
