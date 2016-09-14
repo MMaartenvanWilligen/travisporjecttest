@@ -23,7 +23,8 @@
     "geckodriver": "^1.1.2",
     "selenium-webdriver": "^3.0.0-beta-2",
     "phantomjs": ">=2.1",
-    "webdriverio": "^4.2.11"
+    "webdriverio": "^4.2.11",
+    "saucelabs": "3.10.3"
   },
   "devDependencies": {
     "chromedriver": "^2.23.1",    
