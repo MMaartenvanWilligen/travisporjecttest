@@ -25,33 +25,33 @@
 13 silly mapToRegistry uri https://registry.npmjs.org/sauce-connect
 14 verbose request uri https://registry.npmjs.org/sauce-connect
 15 verbose request no auth needed
-16 info attempt registry request try #1 at 16:52:48
-17 verbose request id 0a5b4cd4d1615493
+16 info attempt registry request try #1 at 15:23:45
+17 verbose request id b768be7c0e27b03c
 18 verbose etag "1GJNDIFMIN63O2VOMHEIR7M4M"
 19 http request GET https://registry.npmjs.org/sauce-connect
 20 http 304 https://registry.npmjs.org/sauce-connect
-21 verbose headers { date: 'Tue, 13 Sep 2016 14:52:48 GMT',
+21 verbose headers { date: 'Thu, 15 Sep 2016 13:23:45 GMT',
 21 verbose headers   via: '1.1 varnish',
 21 verbose headers   'cache-control': 'max-age=300',
 21 verbose headers   etag: '"1GJNDIFMIN63O2VOMHEIR7M4M"',
-21 verbose headers   age: '18',
+21 verbose headers   age: '15',
 21 verbose headers   connection: 'keep-alive',
-21 verbose headers   'x-served-by': 'cache-ams4127-AMS',
+21 verbose headers   'x-served-by': 'cache-ams4143-AMS',
 21 verbose headers   'x-cache': 'HIT',
 21 verbose headers   'x-cache-hits': '1',
-21 verbose headers   'x-timer': 'S1473778368.333572,VS0,VE0',
+21 verbose headers   'x-timer': 'S1473945825.225130,VS0,VE0',
 21 verbose headers   vary: 'Accept-Encoding' }
 22 silly get cb [ 304,
-22 silly get   { date: 'Tue, 13 Sep 2016 14:52:48 GMT',
+22 silly get   { date: 'Thu, 15 Sep 2016 13:23:45 GMT',
 22 silly get     via: '1.1 varnish',
 22 silly get     'cache-control': 'max-age=300',
 22 silly get     etag: '"1GJNDIFMIN63O2VOMHEIR7M4M"',
-22 silly get     age: '18',
+22 silly get     age: '15',
 22 silly get     connection: 'keep-alive',
-22 silly get     'x-served-by': 'cache-ams4127-AMS',
+22 silly get     'x-served-by': 'cache-ams4143-AMS',
 22 silly get     'x-cache': 'HIT',
 22 silly get     'x-cache-hits': '1',
-22 silly get     'x-timer': 'S1473778368.333572,VS0,VE0',
+22 silly get     'x-timer': 'S1473945825.225130,VS0,VE0',
 22 silly get     vary: 'Accept-Encoding' } ]
 23 verbose etag https://registry.npmjs.org/sauce-connect from cache
 24 verbose get saving sauce-connect to /home/maarten/.npm/registry.npmjs.org/sauce-connect/.cache.json
@@ -168,7 +168,7 @@
 120 silly install sauce-connect@0.1.1 /usr/local/lib/node_modules/.staging/sauce-connect-c21e82d3
 121 info lifecycle sauce-connect@0.1.1~install: sauce-connect@0.1.1
 122 verbose lifecycle sauce-connect@0.1.1~install: unsafe-perm in lifecycle false
-123 verbose lifecycle sauce-connect@0.1.1~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/sauce-connect/node_modules/.bin:/usr/local/lib/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
+123 verbose lifecycle sauce-connect@0.1.1~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/sauce-connect/node_modules/.bin:/usr/local/lib/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Applications/chromedriver:/usr/local/bin/chromedriver:/Applications/geckodriver:/usr/local/bin/geckodriver
 124 verbose lifecycle sauce-connect@0.1.1~install: CWD: /usr/local/lib/node_modules/sauce-connect
 125 silly lifecycle sauce-connect@0.1.1~install: Args: [ '-c', 'make install' ]
 126 silly lifecycle sauce-connect@0.1.1~install: Returned: code: 2  signal: null
