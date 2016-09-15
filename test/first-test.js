@@ -27,14 +27,29 @@ describe("testing javascript in the browser", function() {
         return this.browser.quit();
     });
 
-    it("should handle clicking on a headline", function(done) {
-        var headline = this.browser.findElement(webdriver.By.css('h1'));
+    describe("testing if text is set", function() {
 
-        headline.click();
+        it("h1 shuold be awesome", function (done) {
+            var headline = this.browser.findElement(webdriver.By.css('h1'));
 
-        headline.getText().then(function(txt) {
-            assert.equal(txt, "awesome");
+            // headline.click();
+
+            headline.getText().then(function (txt) {
+                assert.equal(txt, "awesome");
+                done();
+            });
+        });
+
+
+        it("CTA button should be raised", function (done) {
+            var button =  this.browser.findElement(webdriver.by.css('button'));
+
+            button.getClass().then(function(classs) {
+                assert.equal(classs, "raised");
+            };
             done();
+
         });
     });
+
 });
