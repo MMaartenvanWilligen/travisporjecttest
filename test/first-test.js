@@ -43,9 +43,9 @@ describe("testing javascript in the browser", function () {
 
         it("CTA button should be raised", function (done) {
             var button = this.browser.findElement(webdriver.by.css('button'));
-
-            button.getClass().then(function (classs) {
-                assert.equal(classs, "raised");
+            button.getText().then(function (txt) {
+                assert.equal(txt, "raised");
+                done();
             });
             done();
 
