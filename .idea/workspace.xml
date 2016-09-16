@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234ef644-0937-4a33-9eb3-86b400fcaf34" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/first-test.js" afterPath="$PROJECT_DIR$/test/first-test.js" />
     </list>
     <ignored path="travisprojecttest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="first-test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="first-test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="780">
+              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+            <state relative-caret-position="465">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -149,8 +149,8 @@
         <option value="$PROJECT_DIR$/test/button-test.js" />
         <option value="$PROJECT_DIR$/test/mocha.opts" />
         <option value="$PROJECT_DIR$/test/buttont.js" />
-        <option value="$PROJECT_DIR$/test/first-test.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/test/first-test.js" />
       </list>
     </option>
   </component>
@@ -306,12 +306,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="35994000" />
+      <workItem from="1473768919085" duration="36898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35994000" />
+    <option name="totallyTimeSpent" value="36898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1192" y="183" width="1366" height="1000" extended-state="0" />
@@ -424,14 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/buttont.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -440,18 +432,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/first-test.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="465">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/test/buttont.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/first-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding />
         </state>
       </provider>
