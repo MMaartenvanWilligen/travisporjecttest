@@ -5,7 +5,6 @@ var chai = require('chai')
     , should = chai.should();
 
 
-
 describe("testing javascript in the browser", function () {
 
     beforeEach(function () {
@@ -38,7 +37,6 @@ describe("testing javascript in the browser", function () {
         it("h1 should be awesome", function (done) {
             var headline = this.browser.findElement(webdriver.By.css('h1'));
 
-            // headline.click();
 
             headline.getText().then(function (txt) {
                 assert.equal(txt, "awesome");
@@ -47,7 +45,7 @@ describe("testing javascript in the browser", function () {
         });
     });
 
-   describe('Home page', function () {
+    describe('Home page', function () {
 
         it('should load the page properly', function () {
             assert.ok(true);
@@ -88,7 +86,7 @@ describe("testing javascript in the browser", function () {
 
     });
 
-    require("button-test.js");
+    require("./button-test");
 
 
 });
