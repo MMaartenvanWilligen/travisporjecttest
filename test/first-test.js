@@ -1,5 +1,9 @@
 var assert = require("assert");
 var webdriver = require("selenium-webdriver");
+var chai = require('chai')
+    , expect = chai.expect
+    , should = chai.should();
+
 
 describe("testing javascript in the browser", function () {
     beforeEach(function () {
@@ -29,7 +33,7 @@ describe("testing javascript in the browser", function () {
 
     describe("text set", function () {
 
-        it("h1 shuold be awesome", function (done) {
+        it("h1 should be awesome", function (done) {
             var headline = this.browser.findElement(webdriver.By.css('h1'));
 
             // headline.click();
@@ -39,10 +43,14 @@ describe("testing javascript in the browser", function () {
                 done();
             });
         });
+    });
 
-
+    describe("buttons", function () {
         it("CTA button should be raised", function (done) {
-            var button = this.browser.findElement(webdriver.by.css('button'));
+
+            var button = this.browser.findElement(webdriver.By.id("mdl-button")).then(button = > console.log(button.length)
+            )
+
             button.getText().then(function (txt) {
                 assert.equal(txt, "raised");
                 done();
@@ -53,11 +61,46 @@ describe("testing javascript in the browser", function () {
 
     });
 
+
     describe('Home page', function () {
-        it('should load the page properly');
-        it('should navigate to login');
-        it('should navigate to sign up');
+
+        it('should load the page properly', function () {
+            assert.ok(true);
+        });
+
+
+        it('should navigate to login', function () {
+
+
+        });
+
+
+        it('should navigate to contact');
         it('should load analytics');
+    });
+
+    describe('Images', function () {
+        it('should be visible in the screen');
+        it('should be more then 0px height and width');
+        it('should have rel');
+
+    });
+
+    describe('Form', function () {
+
+
+        describe("before submit", function () {
+
+
+        });
+
+        describe("test after submit ", function () {
+            it("expect status 200 after submit");
+            it("should return error for false email");
+
+        });
+
+
     });
 
 });
