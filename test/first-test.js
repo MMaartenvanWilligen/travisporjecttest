@@ -4,109 +4,93 @@ var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
 
+describe("testing javascript in the browser", function () {
 
-init();
+    before(function () {
+        if (process.env.SAUCE_USERNAME != undefined) {
+            this.browser = new webdriver.Builder()
+                .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
+                .withCapabilities({
+                    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+                    build: process.env.TRAVIS_BUILD_NUMBER,
+                    username: process.env.SAUCE_USERNAME,
+                    accessKey: process.env.SAUCE_ACCESS_KEY,
+                    browserName: "chrome"
+                }).build();
+        } else {
+            this.browser = new webdriver.Builder()
+                .withCapabilities({
+                    browserName: "chrome"
+                }).build();
+        }
 
-function init() {
+        return this.browser.get("http://localhost:8000/website/index.html");
+    });
 
-    setTunnel();
-}
+    after(function () {
+        return this.browser.quit();
+    });
 
-function setTunnel() {
+    describe("text set", function () {
 
-    if (process.env.SAUCE_USERNAME != undefined) {
-        this.browser = new webdriver.Builder()
-            .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
-            .withCapabilities({
-                'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-                build: process.env.TRAVIS_BUILD_NUMBER,
-                username: process.env.SAUCE_USERNAME,
-                accessKey: process.env.SAUCE_ACCESS_KEY,
-                browserName: "chrome"
-            }).build();
-    } else {
-        this.browser = new webdriver.Builder()
-            .withCapabilities({
-                browserName: "chrome"
-            }).build();
-    }
-
-    this.browser.get("http://localhost:8000/website/index.html");
-
-
-    describe("testing javascript in the browser", function () {
-
-
-
-        describe("text set", function () {
-
-            it("h1 should be awesome", function (done) {
-                var headline = this.browser.findElement(webdriver.By.css('h1'));
+        it("h1 should be awesome", function (done) {
+            var headline = this.browser.findElement(webdriver.By.css('h1'));
 
 
-                headline.getText().then(function (txt) {
-                    assert.equal(txt, "awesome");
-                    done();
-                });
+            headline.getText().then(function (txt) {
+                assert.equal(txt, "awesome");
+                done();
             });
         });
+    });
 
-        describe('Home page', function () {
+    describe('Home page', function () {
 
-            it('should load the page properly', function () {
-                assert.ok(true);
-            });
-
-
-            it('should navigate to login', function () {
-
-
-            });
-
-
-            it('should navigate to contact');
-            it('should load analytics');
+        it('should load the page properly', function () {
+            assert.ok(true);
         });
 
-        describe('Images', function () {
-            it('should be visible in the screen');
-            it('should be more then 0px height and width');
-            it('should have rel');
 
-        });
-
-        describe('Form', function () {
-
-
-            describe("before submit", function () {
-
-
-            });
-
-            describe("test after submit ", function () {
-                it("expect status 200 after submit");
-                it("should return error for false email");
-
-            });
+        it('should navigate to login', function () {
 
 
         });
 
-        describe("buttons", function () {
 
-            require("./buttont");
+        it('should navigate to contact');
+        it('should load analytics');
+    });
 
+    describe('Images', function () {
+        it('should be visible in the screen');
+        it('should be more then 0px height and width');
+        it('should have rel');
+
+    });
+
+    describe('Form', function () {
+
+
+        describe("before submit", function () {
+
+
+        });
+
+        describe("test after submit ", function () {
+            it("expect status 200 after submit");
+            it("should return error for false email");
 
         });
 
 
     });
 
-    quitBrowser();
+    describe("buttons", function () {
 
-}
+      ("./buttont");
 
-function quitBrowser() {
 
-    this.browser.quit();
-}
+    });
+
+
+});
