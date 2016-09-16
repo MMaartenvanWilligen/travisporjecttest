@@ -6,6 +6,7 @@ var chai = require('chai')
 
 
 describe("testing javascript in the browser", function () {
+
     beforeEach(function () {
         if (process.env.SAUCE_USERNAME != undefined) {
             this.browser = new webdriver.Builder()
@@ -46,6 +47,7 @@ describe("testing javascript in the browser", function () {
     });
 
     describe("buttons", function () {
+
         it("CTA button should be raised", function (done) {
 
             var button = this.browser.findElement(webdriver.By.id("raisedbutton"));
@@ -65,7 +67,7 @@ describe("testing javascript in the browser", function () {
             button.click();
 
             button.getText().then(function (txt) {
-                assert.equal(txt, "buttontransform");
+                assert.equal(txt, "raised");
                 done();
             });
             done();
