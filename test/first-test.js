@@ -33,11 +33,6 @@ function setTunnel() {
 
     this.browser.get("http://localhost:8000/website/index.html");
 
-    test();
-}
-
-function test() {
-
 
     describe("testing javascript in the browser", function () {
 
