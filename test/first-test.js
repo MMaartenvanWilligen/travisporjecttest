@@ -53,7 +53,7 @@ describe("testing javascript in the browser", function () {
             var button = this.browser.findElement(webdriver.By.id("raisedbutton"));
 
             button.getText().then(function (txt) {
-                assert.equal(txt, "raised");
+                assert.equal(txt, "RAISED");
                 done();
             });
             done();
@@ -67,7 +67,7 @@ describe("testing javascript in the browser", function () {
             button.click();
 
             button.getText().then(function (txt) {
-                assert.equal(txt, "raised");
+                assert.equal(txt, "BUTTONTRANSFORM");
                 done();
             });
             done();
