@@ -5,6 +5,7 @@ var chai = require('chai')
     , should = chai.should();
 
 
+
 describe("testing javascript in the browser", function () {
 
     beforeEach(function () {
@@ -46,37 +47,7 @@ describe("testing javascript in the browser", function () {
         });
     });
 
-    describe("buttons", function () {
-
-        it("CTA button should be raised", function (done) {
-
-            var button = this.browser.findElement(webdriver.By.id("raisedbutton"));
-
-            button.getText().then(function (txt) {
-                assert.equal(txt, "RAISED");
-                done();
-            });
-
-
-        });
-
-        it("expect onclick text change to buttontransform", function (done) {
-
-            var button = this.browser.findElement(webdriver.By.id("raisedbutton"));
-
-            button.click();
-
-            button.getText().then(function (txt) {
-                assert.equal(txt, "BUTTONTRANSFORM");
-                done();
-            });
-
-        });
-
-    });
-
-
-    describe('Home page', function () {
+   describe('Home page', function () {
 
         it('should load the page properly', function () {
             assert.ok(true);
@@ -116,5 +87,8 @@ describe("testing javascript in the browser", function () {
 
 
     });
+
+    require("button-test.js");
+
 
 });
