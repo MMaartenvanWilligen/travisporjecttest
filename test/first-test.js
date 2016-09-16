@@ -56,7 +56,7 @@ describe("testing javascript in the browser", function () {
                 assert.equal(txt, "RAISED");
                 done();
             });
-            done();
+
 
         });
 
@@ -70,7 +70,7 @@ describe("testing javascript in the browser", function () {
                 assert.equal(txt, "BUTTONTRANSFORM");
                 done();
             });
-            done();
+
         });
 
     });
