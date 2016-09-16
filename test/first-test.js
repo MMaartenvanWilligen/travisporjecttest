@@ -1,8 +1,8 @@
 var assert = require("assert");
 var webdriver = require("selenium-webdriver");
-var chai = require('chai')
-    , expect = chai.expect
-    , should = chai.should();
+var chai = require('chai');
+    // , expect = chai.expect
+    // , should = chai.should();
 
 describe("testing javascript in the browser", function () {
 
