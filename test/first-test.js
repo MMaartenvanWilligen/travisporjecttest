@@ -2,8 +2,7 @@ var assert = require("assert");
 var webdriver = require("selenium-webdriver");
 var chai = require('chai')
     , expect = chai.expect
-    , should = chai.should;
-
+    , should = chai.should();
 
 describe("testing javascript in the browser", function () {
 
@@ -86,7 +85,11 @@ describe("testing javascript in the browser", function () {
 
     });
 
-    require("./button-test");
+    describe("buttons", function () {
+
+        require("./button-test");
+
+    });
 
 
 });

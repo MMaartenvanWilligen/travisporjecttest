@@ -1,4 +1,4 @@
-describe("buttons", function () {
+
 
     it("CTA button should be raised", function (done) {
 
@@ -25,4 +25,3 @@ describe("buttons", function () {
 
     });
 
-});
