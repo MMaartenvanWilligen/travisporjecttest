@@ -87,7 +87,7 @@ describe("testing javascript in the browser", function () {
 
     describe("buttons", function () {
 
-      ("./buttont");
+      require("./buttont");
 
 
     });
