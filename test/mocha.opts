@@ -1,2 +1,2 @@
---bdd
-
+--reporter dot
+--ui bdd
