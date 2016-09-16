@@ -48,8 +48,7 @@ describe("testing javascript in the browser", function () {
     describe("buttons", function () {
         it("CTA button should be raised", function (done) {
 
-            var button = this.browser.findElement(webdriver.By.id("mdl-button")).then(button => console.log(button.length)
-            )
+            var button = this.browser.findElement(webdriver.By.id("mdl-button"));
 
             button.getText().then(function (txt) {
                 assert.equal(txt, "raised");
@@ -57,6 +56,19 @@ describe("testing javascript in the browser", function () {
             });
             done();
 
+        });
+
+        it("expect onclick text change to buttontransform", function (done) {
+
+            var button = this.browser.findElement(webdriver.By.id("mdl-button"));
+
+            button.click();
+
+            button.getText().then(function (txt) {
+                assert.equal(txt, "buttontransform");
+                done();
+            });
+            done();
         });
 
     });

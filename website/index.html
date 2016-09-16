@@ -3,16 +3,20 @@
     <title>demo website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--        material design lite       -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!--        main stylesheet       -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--        material design lite script       -->
+    <!--        main js      -->
+    <script  src="js/main.js"></script>
 
 </head>
 
@@ -74,9 +78,10 @@
         </div>
 
         <!--buttons-->
-        <div id="buttons" >
+        <div id="buttons">
             <!-- Colored raised button -->
-            <button name="button" value="raised" id="raisedbutton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            <button name="button" value="raised" id="raisedbutton" onclick="textTransform(this)"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                 raised
             </button>
             <!-- Accent-colored raised button -->
@@ -90,12 +95,14 @@
         </div>
 
         <!--checkboxes-->
-        <!--checked-->
         <div id="checkboxes">
+
+            <!--checked-->
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                 <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
                 <span class="mdl-checkbox__label">Checkbox</span>
             </label>
+
             <!--unchecked-->
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
                 <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
