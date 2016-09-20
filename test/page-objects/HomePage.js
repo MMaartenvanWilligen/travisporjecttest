@@ -2,17 +2,17 @@
  * Created by maarten on 19-09-16.
  */
 
-var page = require("./Page");
+var Page = require("Page");
 
 //constructor
 function HomePage(webdriver) {
 
-    page.call(this, webdriver, "http://localhost:8000/website/index.html");
+    Page.call(this, webdriver, "http://localhost:8000/website/index.html");
 
 }
 
 //subclass Homepage extends page
-HomePage.prototype = Object.create(page.prototype);
+HomePage.prototype = Object.create(Page.prototype);
 HomePage.prototype.constructor = HomePage;
 
 
