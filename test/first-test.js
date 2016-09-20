@@ -4,8 +4,8 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 
-HomePage = require("./page-objects/HomePage");
-
+var HomePage = require("./page-objects/HomePage");
+var HomepageObject ;
 
 describe("testing javascript in the browser", function () {
 
@@ -15,6 +15,7 @@ describe("testing javascript in the browser", function () {
         console.log("before");
         driver = require(" ./GetDriver").GetDriver();
         console.log(driver);
+        HomepageObject = new HomePage(driver);
     });
 
     after(function () {
@@ -35,7 +36,7 @@ describe("testing javascript in the browser", function () {
 
     describe('Home page', function () {
 
-        var HomepageObject = new Homepage(driver);
+
 
         console.log('HompageObject.constructor is ' + HomepageObject.constructor);
 

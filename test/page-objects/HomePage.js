@@ -4,16 +4,16 @@
 
 var Page = require("./Page");
 
+// subclass Homepage extends page
+HomePage.prototype = Object.create(Page.prototype);
+HomePage.prototype.constructor = HomePage;
+
 //constructor
 function HomePage(webdriver) {
 
     Page.call(this, webdriver, "http://localhost:8000/website/index.html");
 
 }
-
-// subclass Homepage extends page
-HomePage.prototype = Object.create(Page);
-HomePage.prototype.constructor = HomePage;
 
 //method click on cta button
 HomePage.prototype.ctaButtonClick = function () {
