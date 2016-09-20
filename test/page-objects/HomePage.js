@@ -2,7 +2,7 @@
  * Created by maarten on 19-09-16.
  */
 
-var Page = require("Page");
+var Page = require("./Page");
 
 //constructor
 function HomePage(webdriver) {
@@ -11,7 +11,7 @@ function HomePage(webdriver) {
 
 }
 
-//subclass Homepage extends page
+// subclass Homepage extends page
 HomePage.prototype = Object.create(Page.prototype);
 HomePage.prototype.constructor = HomePage;
 
