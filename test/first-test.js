@@ -2,7 +2,7 @@ var assert = require("assert");
 var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
-var $ = require('jQuery');
+// var $ = require('jQuery');
 
 HomePage = require("./page-objects/Homepage");
 
