@@ -12,7 +12,6 @@ function Page(webdriver, url) {
 
 Page.prototype.getUrl = function() {
     this.webdriver.get(this.url);
-
 };
 
 
