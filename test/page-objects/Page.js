@@ -20,7 +20,7 @@ Page.prototype.getUrl = function() {
     this.webdriver.get(this.url);
 };
 
-module.export= Page;
+module.export = Page;
 
 
 
