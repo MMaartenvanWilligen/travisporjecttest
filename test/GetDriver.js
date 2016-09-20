@@ -19,23 +19,7 @@ Driver.prototype.buildDriver = function () {
 
     console.log("getDriver");
 
-    if (process.env.SAUCE_USERNAME != undefined) {
-        console.log("suace user name defined");
-        driver = new webdriver.Builder()
-            .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
-            .withCapabilities({
-                'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-                build: process.env.TRAVIS_BUILD_NUMBER,
-                username: process.env.SAUCE_USERNAME,
-                accessKey: process.env.SAUCE_ACCESS_KEY,
-                browserName: "chrome"
-            }).build();
-    } else {
-        driver = new webdriver.Builder()
-            .withCapabilities({
-                browserName: "chrome"
-            }).build();
-    }
+
 
     console.log(driver);
     return driver;
