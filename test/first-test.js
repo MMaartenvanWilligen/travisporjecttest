@@ -12,7 +12,9 @@ describe("testing javascript in the browser", function () {
     var driver;
 
     before(function () {
+        console.log("before");
         driver = require(" ./GetDriver").GetDriver();
+        console.log(driver);
     });
 
     after(function () {

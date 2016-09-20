@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234ef644-0937-4a33-9eb3-86b400fcaf34" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GetDriver.js" afterPath="$PROJECT_DIR$/test/GetDriver.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/first-test.js" afterPath="$PROJECT_DIR$/test/first-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/page-objects/HomePage.js" afterPath="$PROJECT_DIR$/test/page-objects/HomePage.js" />
     </list>
     <ignored path="travisprojecttest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="first-test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="269">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +46,8 @@
       <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/page-objects/HomePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -72,8 +70,8 @@
       <file leaf-file-name="GetDriver.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="705">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -154,8 +152,8 @@
         <option value="$PROJECT_DIR$/test/getDriver.js" />
         <option value="$PROJECT_DIR$/test/page-objects/Page.js" />
         <option value="$PROJECT_DIR$/test/page-objects/HomePage.js" />
-        <option value="$PROJECT_DIR$/test/first-test.js" />
         <option value="$PROJECT_DIR$/test/GetDriver.js" />
+        <option value="$PROJECT_DIR$/test/first-test.js" />
       </list>
     </option>
   </component>
@@ -315,12 +313,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="57641000" />
+      <workItem from="1473768919085" duration="58571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57641000" />
+    <option name="totallyTimeSpent" value="58571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1098" y="51" width="1462" height="1286" extended-state="0" />
@@ -457,16 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/page-objects/HomePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/page-objects/Page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -477,10 +465,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/page-objects/HomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="705">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -489,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/first-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        <state relative-caret-position="269">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
