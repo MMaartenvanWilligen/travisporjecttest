@@ -11,8 +11,10 @@ describe("testing javascript in the browser", function () {
 
     var driver;
 
+    this.timeout(15000);
+
     before(function () {
-        driver = require("getDriver").getDriver();
+        driver = require(" ./GetDriver").GetDriver();
     });
 
     after(function () {

@@ -4,7 +4,7 @@
 var webdriver = require("selenium-webdriver");
 var driver;
 
-function getDriver() {
+function GetDriver() {
 
     if (!driver) {
 
@@ -39,7 +39,7 @@ Driver.prototype.buildDriver = function () {
 
 };
 
-module.export.getDriver = getDriver;
+module.export.GetDriver = GetDriver;
 
 
 
