@@ -11,8 +11,6 @@ describe("testing javascript in the browser", function () {
 
     var driver;
 
-    this.timeout(15000);
-
     before(function () {
         driver = require(" ./GetDriver").GetDriver();
     });
@@ -78,9 +76,7 @@ describe("testing javascript in the browser", function () {
             describe("test after submit ", function () {
                 it("expect status 200 after submit");
                 it("should return error for false email");
-
             });
-
         });
 
         describe("buttons", function () {

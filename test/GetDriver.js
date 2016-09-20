@@ -7,7 +7,6 @@ var driver;
 function GetDriver() {
 
     if (!driver) {
-
         return this.buildDriver();
     } else {
         return driver
@@ -18,7 +17,10 @@ function GetDriver() {
 
 Driver.prototype.buildDriver = function () {
 
+    console.log("getDriver");
+
     if (process.env.SAUCE_USERNAME != undefined) {
+        console.log("suace user name defined");
         driver = new webdriver.Builder()
             .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
             .withCapabilities({
@@ -35,6 +37,7 @@ Driver.prototype.buildDriver = function () {
             }).build();
     }
 
+    console.log(driver);
     return driver;
 
 };

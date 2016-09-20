@@ -15,7 +15,6 @@ function HomePage(webdriver) {
 HomePage.prototype = Object.create(Page.prototype);
 HomePage.prototype.constructor = HomePage;
 
-
 //method click on cta button
 HomePage.prototype.ctaButtonClick = function () {
 
