@@ -4,7 +4,9 @@
 
 // Object Page
 
-//contructor
+var HomePage = require("./HomePage");
+
+//constructor
 function Page(webdriver, url) {
 
     this.webdriver = webdriver;

@@ -12,7 +12,7 @@ function HomePage(webdriver) {
 }
 
 // subclass Homepage extends page
-HomePage.prototype = Object.create(Page.prototype);
+HomePage.prototype = Object.create(Page.prototype.constructor);
 HomePage.prototype.constructor = HomePage;
 
 
