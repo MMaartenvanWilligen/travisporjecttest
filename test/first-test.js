@@ -26,7 +26,6 @@ describe("testing javascript in the browser", function () {
         it("h1 should be awesome", function (done) {
             var headline = this.browser.findElement(webdriver.By.css('h1'));
 
-
             headline.getText().then(function (txt) {
                 assert.equal(txt, "awesome");
                 done();

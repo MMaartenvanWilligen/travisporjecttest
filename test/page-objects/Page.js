@@ -4,7 +4,7 @@
 
 // Object Page
 
-var HomePage = require("./HomePage");
+//var HomePage = require("./HomePage");
 
 //constructor
 function Page(webdriver, url) {
@@ -18,7 +18,6 @@ function Page(webdriver, url) {
 Page.prototype.getUrl = function() {
     this.webdriver.get(this.url);
 };
-
 
 module.export= Page;
 

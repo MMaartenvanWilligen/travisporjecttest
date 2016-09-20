@@ -12,7 +12,7 @@ function HomePage(webdriver) {
 }
 
 // subclass Homepage extends page
-HomePage.prototype = Object.create(Page.prototype);
+HomePage.prototype = Object.create(Page.prototype;
 HomePage.prototype.constructor = HomePage;
 
 
@@ -21,6 +21,7 @@ HomePage.prototype.ctaButtonClick = function () {
 
     var button = this.webdriver.findElement(webdriver.By.id("raisedbutton"));
     button.click();
+    return this
 };
 
 //method return cta button
