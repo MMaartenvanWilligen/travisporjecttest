@@ -4,7 +4,7 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 
-HomePage = require("./page-objects/Homepage");
+HomePage = require("./page-objects/HomePage");
 
 
 describe("testing javascript in the browser", function () {

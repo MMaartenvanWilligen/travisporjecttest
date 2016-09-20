@@ -2,7 +2,7 @@
  * Created by maarten on 19-09-16.
  */
 
-var page = require("./page");
+var page = require("./Page");
 
 //constructor
 function HomePage(webdriver) {
