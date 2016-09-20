@@ -39,7 +39,7 @@ Driver.prototype.buildDriver = function () {
 
 };
 
-module.export.GetDriver = GetDriver;
+module.export = GetDriver;
 
 
 

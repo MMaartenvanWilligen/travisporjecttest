@@ -20,7 +20,7 @@ Page.prototype.getUrl = function() {
 };
 
 
-module.export.Page = Page;
+module.export= Page;
 
 
 
