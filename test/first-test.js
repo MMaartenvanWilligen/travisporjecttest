@@ -33,7 +33,7 @@ describe("testing javascript in the browser", function () {
             // HomepageObject = new HomePage(driver);
         }
 
-        return webdriver.get("http://localhost:8000/website/index.html");
+        return driver.get("http://localhost:8000/website/index.html");
 
     });
 
