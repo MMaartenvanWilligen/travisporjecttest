@@ -6,11 +6,17 @@ var chai = require('chai')
 // var $ = require('jQuery');
 
 
-var HomepageObject ;
+var HomepageObject;
 
 describe("testing javascript in the browser", function () {
 
     var driver;
+
+    /*before test start a new webdriver. This webdriver uses the saucelabs browser.
+     *
+     * start selenium webdriver that uses chrome browser on saucelabs
+     *
+     * */
 
     before(function () {
         if (process.env.SAUCE_USERNAME != undefined) {
@@ -24,18 +30,27 @@ describe("testing javascript in the browser", function () {
                     accessKey: process.env.SAUCE_ACCESS_KEY,
                     browserName: "chrome"
                 }).build();
-            // HomepageObject = new HomePage(driver);
+
         } else {
             driver = new webdriver.Builder()
                 .withCapabilities({
                     browserName: "chrome"
                 }).build();
-            // HomepageObject = new HomePage(driver);
+
         }
 
+        /*direct to the demo website
+         *
+         * Saucelabs has access to local website via tunnel
+         *
+         * */
         return driver.get("http://localhost:8000/website/index.html");
 
     });
+
+    /*after the tests quit the driver
+    *
+    * */
 
     after(function () {
         return this.driver.quit();
@@ -56,7 +71,7 @@ describe("testing javascript in the browser", function () {
     describe('Home page', function () {
 
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
-        HomepageObject = new require("./page-objects/HomePage").constructor;
+        HomepageObject = new require("./page-objects/HomePage").constructor(driver);
 
         it('should load the page properly', function () {
 

@@ -5,9 +5,11 @@
 // var Page = require("./page");
 
 //constructor
-function HomePage() {
+function HomePage(driver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
+    this.driver = driver;
+    console.log(driver);
 
 }
 
@@ -19,7 +21,7 @@ function HomePage() {
 
 HomePage.prototype.ctaButtonClick = function () {
 
-    var button = this.webdriver.findElement(webdriver.By.id("raisedbutton"));
+    var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
     button.click();
 
 };
@@ -27,7 +29,7 @@ HomePage.prototype.ctaButtonClick = function () {
 //method return cta button
 HomePage.prototype.ctaButton = function () {
 
-    return this.webdriver.findElement(webdriver.By.id("raisedbutton"));
+    return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 
 module.export = HomePage;
