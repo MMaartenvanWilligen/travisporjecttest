@@ -18,6 +18,7 @@ function Page(webdriver, url) {
 //method
 Page.prototype.getUrl = function() {
     this.webdriver.get(this.url);
+    return this
 };
 
 module.export = Page;
