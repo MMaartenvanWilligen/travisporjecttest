@@ -4,7 +4,11 @@
 
 // var Page = require("./page");
 
-//constructor
+/*
+* constructor HomePage object
+*
+* driver
+* */
 function HomePage(driver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
@@ -17,7 +21,9 @@ function HomePage(driver) {
 // HomePage.prototype = Object.create(Page.prototype);
 // HomePage.prototype.constructor = HomePage;
 
-//method click on cta button
+/*method click on cta button
+*
+* */
 
 HomePage.prototype.ctaButtonClick = function () {
 
@@ -26,12 +32,18 @@ HomePage.prototype.ctaButtonClick = function () {
 
 };
 
-//method return cta button
+/*method return cta button
+*
+*
+* */
 HomePage.prototype.ctaButton = function () {
 
     return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 
+/*
+* export HomePage
+* */
 module.export = HomePage;
 
 
