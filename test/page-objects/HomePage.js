@@ -4,8 +4,6 @@
 
 var Page = require("./page");
 
-
-
 //constructor
 function HomePage(webdriver) {
 

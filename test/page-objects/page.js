@@ -14,6 +14,7 @@ function Page(webdriver, url) {
 
 }
 
+Page.prototype.constructor = Page;
 
 //method
 Page.prototype.getUrl = function() {
