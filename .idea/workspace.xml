@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234ef644-0937-4a33-9eb3-86b400fcaf34" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GetDriver.js" afterPath="$PROJECT_DIR$/test/GetDriver.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/first-test.js" afterPath="$PROJECT_DIR$/test/first-test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/page-objects/HomePage.js" afterPath="$PROJECT_DIR$/test/page-objects/HomePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/page-objects/page.js" afterPath="$PROJECT_DIR$/test/page-objects/page.js" />
     </list>
     <ignored path="travisprojecttest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="first-test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -48,9 +48,11 @@
       <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/page-objects/HomePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="9" column="76" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="76" />
+              <folding>
+                <element signature="n#!!doc;n#HomePage#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +60,8 @@
       <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/page-objects/page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -68,11 +70,9 @@
       <file leaf-file-name="GetDriver.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="3" selection-end-line="4" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,10 +147,10 @@
         <option value="$PROJECT_DIR$/test/driver.js" />
         <option value="$PROJECT_DIR$/test/getDriver.js" />
         <option value="$PROJECT_DIR$/test/mocha.opts" />
-        <option value="$PROJECT_DIR$/test/GetDriver.js" />
         <option value="$PROJECT_DIR$/test/page-objects/Page.js" />
-        <option value="$PROJECT_DIR$/test/page-objects/HomePage.js" />
         <option value="$PROJECT_DIR$/test/page-objects/page.js" />
+        <option value="$PROJECT_DIR$/test/GetDriver.js" />
+        <option value="$PROJECT_DIR$/test/page-objects/HomePage.js" />
         <option value="$PROJECT_DIR$/test/first-test.js" />
       </list>
     </option>
@@ -227,6 +227,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travisprojecttest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travisprojecttest" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page-objects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -293,12 +311,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="65524000" />
+      <workItem from="1473768919085" duration="66575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65524000" />
+    <option name="totallyTimeSpent" value="66575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1098" y="51" width="1462" height="1286" extended-state="0" />
@@ -427,16 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -445,26 +453,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/page-objects/page.js">
+    <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="3" selection-end-line="4" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/page-objects/HomePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="9" column="76" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="76" />
+          <folding>
+            <element signature="n#!!doc;n#HomePage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/page-objects/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/first-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="555">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding />
         </state>
       </provider>

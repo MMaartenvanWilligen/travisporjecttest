@@ -1,11 +1,12 @@
+var webdriver = require("selenium-webdriver");
 var assert = require("assert");
 var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
 // var $ = require('jQuery');
 
-// var HomePage = require("./page-objects/HomePage");
-// var HomepageObject ;
+var HomePage = require("./page-objects/HomePage");
+var HomepageObject ;
 
 describe("testing javascript in the browser", function () {
 
@@ -32,6 +33,8 @@ describe("testing javascript in the browser", function () {
             // HomepageObject = new HomePage(driver);
         }
 
+        return webdriver.get("http://localhost:8000/website/index.html");
+
     });
 
     after(function () {
@@ -53,6 +56,7 @@ describe("testing javascript in the browser", function () {
     describe('Home page', function () {
 
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
+        HomepageObject = new HomePage;
 
         it('should load the page properly', function () {
 
@@ -81,21 +85,21 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("CTA button should be raised", function (done) {
-                // HomepageObject.getUrl();
-                // HomepageObject.ctaButton().getText().then(function (txt) {
-                //     assert.equal(txt, "RAISED");
-                //     done();
-                // });
+
+                HomepageObject.ctaButtonClick.getText().then(function (txt) {
+                    assert.equal(txt, "RAISED");
+                    done();
+                });
 
             });
 
             it("expect onclick text change to buttontransform", function (done) {
 
-                // HomepageObject.ctaButtonClick();
-                // HomepageObject.ctaButton().getText().then(function (txt) {
-                //     assert.equal(txt, "BUTTONTRANSFORM");
-                //     done();
-                // });
+                HomepageObject.ctaButtonClick();
+                HomepageObject.ctaButton().getText().then(function (txt) {
+                    assert.equal(txt, "BUTTONTRANSFORM");
+                    done();
+                });
 
             });
 
