@@ -5,7 +5,7 @@
 // var Page = require("./page");
 
 //constructor
-function HomePage(webdriver) {
+function HomePage() {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
 
