@@ -30,7 +30,6 @@ HomePage.prototype.ctaButtonClick = function () {
     var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
     button.click();
     return this
-
 };
 
 /*method return cta button
@@ -38,7 +37,7 @@ HomePage.prototype.ctaButtonClick = function () {
 *
 * */
 HomePage.prototype.ctaButton = function () {
-    
+
     this.driver.get("http://localhost:8000/website/index.html");
     return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };

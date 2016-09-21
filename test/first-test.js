@@ -70,7 +70,7 @@ describe("testing javascript in the browser", function () {
     describe('Home page', function () {
 
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
-        HomepageObject = new require("./page-objects/HomePage").constructor(this.driver);
+        var HomepageObject = new require("./page-objects/HomePage").prototype.HomepageObject(this.driver);
 
         it('should load the page properly', function () {
 
