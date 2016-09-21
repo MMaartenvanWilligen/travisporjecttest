@@ -4,8 +4,8 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 
-var HomePage = require("./page-objects/HomePage");
-var HomepageObject ;
+// var HomePage = require("./page-objects/HomePage");
+// var HomepageObject ;
 
 describe("testing javascript in the browser", function () {
 
@@ -23,13 +23,13 @@ describe("testing javascript in the browser", function () {
                     accessKey: process.env.SAUCE_ACCESS_KEY,
                     browserName: "chrome"
                 }).build();
-            HomepageObject = new HomePage(driver);
+            // HomepageObject = new HomePage(driver);
         } else {
             driver = new webdriver.Builder()
                 .withCapabilities({
                     browserName: "chrome"
                 }).build();
-            HomepageObject = new HomePage(driver);
+            // HomepageObject = new HomePage(driver);
         }
 
     });
@@ -58,24 +58,6 @@ describe("testing javascript in the browser", function () {
 
         });
 
-        //
-        // it('should navigate to login', function () {
-        //
-        //
-        // });
-        //
-        //
-        // it('should navigate to contact', function (done) {
-        //     driver.getTitle().then(function (title) {  // WebDriver command
-        //         expect(title).toBe('Contact');
-        //     });
-        //
-        //     driver.getTitle().then(function (title) {  // WebDriver command
-        //         expect(title).toBe('Google');
-        //         it('should load analytics');
-        //     });
-        // });
-
         describe('Images', function () {
             it('should be visible in the screen');
             it('should be more then 0px height and width');
@@ -99,21 +81,21 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("CTA button should be raised", function (done) {
-                HomepageObject.getUrl();
-                HomepageObject.ctaButton().getText().then(function (txt) {
-                    assert.equal(txt, "RAISED");
-                    done();
-                });
+                // HomepageObject.getUrl();
+                // HomepageObject.ctaButton().getText().then(function (txt) {
+                //     assert.equal(txt, "RAISED");
+                //     done();
+                // });
 
             });
 
             it("expect onclick text change to buttontransform", function (done) {
 
-                HomepageObject.ctaButtonClick();
-                HomepageObject.ctaButton().getText().then(function (txt) {
-                    assert.equal(txt, "BUTTONTRANSFORM");
-                    done();
-                });
+                // HomepageObject.ctaButtonClick();
+                // HomepageObject.ctaButton().getText().then(function (txt) {
+                //     assert.equal(txt, "BUTTONTRANSFORM");
+                //     done();
+                // });
 
             });
 
