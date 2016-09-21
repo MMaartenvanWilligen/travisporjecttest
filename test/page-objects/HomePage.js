@@ -26,9 +26,10 @@ function HomePage(driver) {
 * */
 
 HomePage.prototype.ctaButtonClick = function () {
-
+    this.driver.get("http://localhost:8000/website/index.html");
     var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
     button.click();
+    return this
 
 };
 
@@ -37,7 +38,8 @@ HomePage.prototype.ctaButtonClick = function () {
 *
 * */
 HomePage.prototype.ctaButton = function () {
-
+    
+    this.driver.get("http://localhost:8000/website/index.html");
     return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 
