@@ -5,7 +5,7 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 
-var HomePage = require("./page-objects/HomePage");
+
 var HomepageObject ;
 
 describe("testing javascript in the browser", function () {
@@ -56,7 +56,7 @@ describe("testing javascript in the browser", function () {
     describe('Home page', function () {
 
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
-        HomepageObject = new HomePage();
+        HomepageObject = new require("./page-objects/HomePage").constructor;
 
         it('should load the page properly', function () {
 
