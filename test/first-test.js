@@ -34,7 +34,6 @@ describe("testing javascript in the browser", function () {
                 .withCapabilities({
                     browserName: "chrome"
                 }).build();
-
         }
 
         /*direct to the demo website
@@ -52,7 +51,7 @@ describe("testing javascript in the browser", function () {
      * */
 
     after(function () {
-        // return this.driver.quit();
+        return driver.quit();
     });
 
     describe("text set", function () {
@@ -69,9 +68,7 @@ describe("testing javascript in the browser", function () {
 
     describe('Home page', function () {
 
-        //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
-        //HomepageObject = new require("./page-objects/HomePage").constructor(this.driver, this.webdriver);
-
+        homepage = new Home(driver, webdriver);
 
 
         it('should load the page properly', function () {
@@ -101,10 +98,10 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("CTA button should be raised", function (done) {
-                homepage = new Home(driver, webdriver);
+
                 button = homepage.ctaButton();
                 console.log("button" + " " + button);
-                    button.getText().then(function (txt) {
+                button.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
                     done();
                 });
