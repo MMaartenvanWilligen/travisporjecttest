@@ -14,6 +14,10 @@ describe("testing javascript in the browser", function () {
     var driver;
     var homepage;
 
+    var GetDriverObject = new GetDriver;
+    driver = GetDriverObject.buildDriver();
+    console.log("driver is" + " " + driver);
+
     /*before test start a new webdriver. This webdriver uses the saucelabs browser.
      *
      * start selenium webdriver that uses chrome browser on saucelabs
@@ -22,10 +26,7 @@ describe("testing javascript in the browser", function () {
 
     before(function () {
 
-        var GetDriverObject = new GetDriver;
-        driver = GetDriverObject.buildDriver();
-        console.log("driver is" + " " + driver);
-        return driver;
+        
     });
 
     /*after the tests quit the driver
