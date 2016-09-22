@@ -12,7 +12,6 @@ describe("testing javascript in the browser", function () {
     var driver;
     var homepage;
 
-
     /*
      * before first describe
      * set driver that interact with saucelabs
@@ -33,6 +32,7 @@ describe("testing javascript in the browser", function () {
     /*
      * test HomePage
      * */
+
     describe('Home page', function () {
 
         /*
