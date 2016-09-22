@@ -1,8 +1,6 @@
 /**
  * Created by maarten on 19-09-16.
  */
-"use strict";
-
 // Object Page
 
 /*constructor

@@ -1,4 +1,3 @@
-"use strict";
 
 var webdriver = require("selenium-webdriver");
 var assert = require("assert");
@@ -24,8 +23,8 @@ describe("testing javascript in the browser", function () {
 
     before(function () {
 
-        driver = new GetDriver;
-        driver.buildDriver();
+        var GetDriverObject = new GetDriver;
+        driver = GetDriverObject.buildDriver();
         console.log("driver is" + " " + driver);
         return driver;
     });

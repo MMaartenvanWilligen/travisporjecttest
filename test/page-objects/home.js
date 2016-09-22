@@ -1,8 +1,6 @@
 /**
  * Created by maarten on 19-09-16.
  */
-"use strict";
-
 var webdriver = require("selenium-webdriver");
 var Page = require("./page");
 
