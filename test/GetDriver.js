@@ -7,11 +7,11 @@ var driver;
 
 function GetDriver() {
 
-    if (!driver) {
-        return this.buildDriver();
-    } else {
-        return driver
-    }
+    // if (!driver) {
+    //     return this.buildDriver();
+    // } else {
+    //     return driver
+    // }
 
 }
 

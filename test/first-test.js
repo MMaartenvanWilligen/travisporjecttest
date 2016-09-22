@@ -5,7 +5,7 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 var Home = require("./page-objects/home");
-var GetDriver =  require("./GetDriver");
+var GetDriver = require("./GetDriver");
 
 describe("testing javascript in the browser", function () {
     var driver;
@@ -19,7 +19,8 @@ describe("testing javascript in the browser", function () {
 
     before(function () {
 
-        driver = new GetDriver();
+        driver = new GetDriver;
+        driver.buildDriver();
         console.log("driver is" + " " + driver);
     });
 

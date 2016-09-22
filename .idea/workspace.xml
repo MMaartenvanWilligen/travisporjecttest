@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="234ef644-0937-4a33-9eb3-86b400fcaf34" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GetDriver.js" afterPath="$PROJECT_DIR$/test/GetDriver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/first-test.js" afterPath="$PROJECT_DIR$/test/first-test.js" />
     </list>
     <ignored path="travisprojecttest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -68,8 +69,8 @@
       <file leaf-file-name="GetDriver.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state relative-caret-position="600">
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -326,12 +327,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="84159000" />
+      <workItem from="1473768919085" duration="84980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84159000" />
+    <option name="totallyTimeSpent" value="84980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1178" y="51" width="1382" height="1286" extended-state="0" />
@@ -488,8 +489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state relative-caret-position="600">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -499,7 +500,7 @@
     <entry file="file://$PROJECT_DIR$/test/first-test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
