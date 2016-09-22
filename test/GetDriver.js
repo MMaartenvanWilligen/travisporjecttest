@@ -1,7 +1,7 @@
 /**
  * Created by maarten on 19-09-16.
  */
-// var webdriver = require("selenium-webdriver");
+var webdriver = require("selenium-webdriver");
 
 var driver;
 
@@ -18,7 +18,7 @@ function GetDriver() {
 GetDriver.prototype.buildDriver = function () {
 
     console.log("getDriver");
-    console.log(driver);
+
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
