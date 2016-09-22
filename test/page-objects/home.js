@@ -9,7 +9,7 @@
 *
 * driver
 * */
-function HomePage (driver, webdriver) {
+function Home(driver, webdriver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
     this.driver = driver;
@@ -26,7 +26,7 @@ function HomePage (driver, webdriver) {
 *
 * */
 
-HomePage.prototype.ctaButtonClick = function () {
+Home.prototype.ctaButtonClick = function () {
     this.driver.get("http://localhost:8000/website/index.html");
     var button = this.driver.findElement(this.webdriver.By.id("raisedbutton"));
     button.click();
@@ -37,7 +37,7 @@ HomePage.prototype.ctaButtonClick = function () {
 *
 *
 * */
-HomePage.prototype.ctaButton = function () {
+Home.prototype.ctaButton = function () {
 
     this.driver.get("http://localhost:8000/website/index.html");
     return this.driver.findElement(this.webdriver.By.id("raisedbutton"));
@@ -46,7 +46,7 @@ HomePage.prototype.ctaButton = function () {
 /*
 * export HomePage
 * */
-module.export = HomePage;
+module.exports = Home;
 
 
 

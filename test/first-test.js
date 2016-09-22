@@ -7,7 +7,7 @@ var chai = require('chai')
 
 
 var HomepageObject;
-
+var Home = require("./page-objects/home");
 
 describe("testing javascript in the browser", function () {
     var driver;
@@ -73,8 +73,8 @@ describe("testing javascript in the browser", function () {
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
         //HomepageObject = new require("./page-objects/HomePage").constructor(this.driver, this.webdriver);
 
-        require("./page-objects/HomePage");
-        HomepageObject = new HomePage(this.driver, webdriver);
+
+        homepageObject = new Home(this.driver, webdriver);
 
         it('should load the page properly', function () {
 
@@ -104,7 +104,7 @@ describe("testing javascript in the browser", function () {
 
             it("CTA button should be raised", function (done) {
 
-                HomepageObject.ctaButtonClick.getText().then(function (txt) {
+                homepageObject.ctaButtonClick.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
                     done();
                 });
@@ -113,8 +113,8 @@ describe("testing javascript in the browser", function () {
 
             it("expect onclick text change to buttontransform", function (done) {
 
-                HomepageObject.ctaButtonClick();
-                HomepageObject.ctaButton().getText().then(function (txt) {
+                homepageObject.ctaButtonClick();
+                homepageObject.ctaButton().getText().then(function (txt) {
                     assert.equal(txt, "BUTTONTRANSFORM");
                     done();
                 });
