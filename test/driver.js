@@ -7,14 +7,15 @@ var driver;
 function GetDriver() {
 
     if (!driver) {
-        return this.buildDriver();
+        driver = buildDriver();
+        return driver;
     } else {
         return driver
     }
 
 }
 
-GetDriver.prototype.buildDriver = function () {
+var buildDriver = function () {
 
     console.log("getDriver");
 
@@ -31,15 +32,15 @@ GetDriver.prototype.buildDriver = function () {
                 browserName: "chrome"
             }).build();
 
+        return driver;
+
     } else {
         driver = new webdriver.Builder()
             .withCapabilities({
                 browserName: "chrome"
             }).build();
+        return driver;
     }
-
-
-    return driver;
 
 };
 
