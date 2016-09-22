@@ -1,6 +1,7 @@
 /**
  * Created by maarten on 19-09-16.
  */
+"use strict";
 
 // Object Page
 
@@ -19,12 +20,9 @@ function Page(driver, url) {
  * return
  * */
 
-
 Page.prototype.getUrl = function() {
    return this.driver.get(this.url);
 };
-
-
 
 module.exports = Page;
 

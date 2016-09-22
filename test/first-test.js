@@ -1,3 +1,5 @@
+"use strict";
+
 var webdriver = require("selenium-webdriver");
 var assert = require("assert");
 var chai = require('chai')
@@ -86,7 +88,7 @@ describe("testing javascript in the browser", function () {
 
             it("CTA button should be raised", function (done) {
 
-                button = homepage.ctaButton();
+                var button = homepage.ctaButton();
                 console.log("button" + " " + button);
                 button.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
