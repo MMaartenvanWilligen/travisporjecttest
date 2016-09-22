@@ -9,12 +9,16 @@
 *
 * driver
 * */
+
+var webdriver = require("selenium-webdriver");
+
 function Home(driver, webdriver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
     this.driver = driver;
-    this.webdriver = webdriver;
+    //this.webdriver = webdriver;
     console.log(driver);
+
 
 }
 
@@ -28,7 +32,7 @@ function Home(driver, webdriver) {
 
 Home.prototype.ctaButtonClick = function () {
     this.driver.get("http://localhost:8000/website/index.html");
-    var button = this.driver.findElement(this.webdriver.By.id("raisedbutton"));
+    var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
     button.click();
     return this
 };
@@ -39,8 +43,8 @@ Home.prototype.ctaButtonClick = function () {
 * */
 Home.prototype.ctaButton = function () {
 
-    this.driver.get("http://localhost:8000/website/index.html");
-    return this.driver.findElement(this.webdriver.By.id("raisedbutton"));
+    // this.driver.get("http://localhost:8000/website/index.html");
+    return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 
 /*

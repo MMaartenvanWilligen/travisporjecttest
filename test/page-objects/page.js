@@ -7,22 +7,20 @@
 //var HomePage = require("./HomePage");
 
 //constructor
-// function Page(webdriver, url) {
-//
-//     this.webdriver = webdriver;
-//     this.url = url;
-//
-// }
-//
-// Page.prototype.constructor = Page;
-//
-// //method
-// Page.prototype.getUrl = function() {
-//     this.webdriver.get(this.url);
-//     return this
-// };
-//
-// module.export = Page;
+function Page(webdriver, url) {
+
+    this.webdriver = webdriver;
+    this.url = url;
+
+}
+
+//method
+Page.prototype.getUrl = function() {
+    this.webdriver.get(this.url);
+    return this
+};
+
+module.exports = Page;
 
 
 

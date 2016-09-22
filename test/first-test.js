@@ -21,7 +21,7 @@ describe("testing javascript in the browser", function () {
     before(function () {
         if (process.env.SAUCE_USERNAME != undefined) {
             console.log("suace user name defined");
-            this.driver = new webdriver.Builder()
+            driver = new webdriver.Builder()
                 .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
                 .withCapabilities({
                     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
@@ -32,7 +32,7 @@ describe("testing javascript in the browser", function () {
                 }).build();
 
         } else {
-            this.driver = new webdriver.Builder()
+            driver = new webdriver.Builder()
                 .withCapabilities({
                     browserName: "chrome"
                 }).build();
@@ -74,7 +74,7 @@ describe("testing javascript in the browser", function () {
         //HomepageObject = new require("./page-objects/HomePage").constructor(this.driver, this.webdriver);
 
 
-        homepageObject = new Home(this.driver, webdriver);
+        homepageObject = new Home(driver, webdriver);
 
         it('should load the page properly', function () {
 
@@ -104,7 +104,9 @@ describe("testing javascript in the browser", function () {
 
             it("CTA button should be raised", function (done) {
 
-                homepageObject.ctaButtonClick.getText().then(function (txt) {
+                button = homepageObject.ctaButton();
+                console.log(button);
+                    button.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
                     done();
                 });
