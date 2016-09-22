@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234ef644-0937-4a33-9eb3-86b400fcaf34" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/GetDriver.js" afterPath="$PROJECT_DIR$/test/driver.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/first-test.js" afterPath="$PROJECT_DIR$/test/first-test.js" />
     </list>
     <ignored path="travisprojecttest.iws" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="first-test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -65,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetDriver.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
+      <file leaf-file-name="driver.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/driver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="720">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -111,7 +112,6 @@
         <option value="$PROJECT_DIR$/test/buttont.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/page-objects/homePage.js" />
-        <option value="$PROJECT_DIR$/test/driver.js" />
         <option value="$PROJECT_DIR$/test/getDriver.js" />
         <option value="$PROJECT_DIR$/test/mocha.opts" />
         <option value="$PROJECT_DIR$/test/page-objects/Page.js" />
@@ -120,6 +120,7 @@
         <option value="$PROJECT_DIR$/test/page-objects/home.js" />
         <option value="$PROJECT_DIR$/test/page-objects/page.js" />
         <option value="$PROJECT_DIR$/test/GetDriver.js" />
+        <option value="$PROJECT_DIR$/test/driver.js" />
         <option value="$PROJECT_DIR$/test/first-test.js" />
       </list>
     </option>
@@ -294,12 +295,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="91357000" />
+      <workItem from="1473768919085" duration="91785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91357000" />
+    <option name="totallyTimeSpent" value="91785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="877" y="23" width="1382" height="1286" extended-state="0" />
@@ -454,10 +455,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/GetDriver.js">
+    <entry file="file://$PROJECT_DIR$/test/driver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="720">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -466,8 +467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/first-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>

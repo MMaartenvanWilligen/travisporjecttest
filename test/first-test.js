@@ -6,7 +6,7 @@ var chai = require('chai')
 // var $ = require('jQuery');
 var Home = require("./page-objects/home");
 // var Page = require("./page-objects/page");
-var GetDriver = require("./GetDriver");
+var GetDriver =
 
 
 describe("testing javascript in the browser", function () {
@@ -14,8 +14,8 @@ describe("testing javascript in the browser", function () {
     var driver;
     var homepage;
 
-    var GetDriverObject = new GetDriver;
-    driver = GetDriverObject.buildDriver();
+
+    driver = require("./driver").GetDriver;
     console.log("driver is" + " " + driver);
 
     /*before test start a new webdriver. This webdriver uses the saucelabs browser.
@@ -26,7 +26,7 @@ describe("testing javascript in the browser", function () {
 
     before(function () {
 
-        
+
     });
 
     /*after the tests quit the driver
@@ -34,7 +34,7 @@ describe("testing javascript in the browser", function () {
      * */
 
     after(function () {
-        return driver.quit();
+        //return driver.quit();
     });
 
     describe("text set", function () {
