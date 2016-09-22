@@ -21,7 +21,7 @@ describe("testing javascript in the browser", function () {
     before(function () {
         if (process.env.SAUCE_USERNAME != undefined) {
             console.log("suace user name defined");
-            driver = new webdriver.Builder()
+            this.driver = new webdriver.Builder()
                 .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
                 .withCapabilities({
                     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
@@ -32,7 +32,7 @@ describe("testing javascript in the browser", function () {
                 }).build();
 
         } else {
-            driver = new webdriver.Builder()
+            this.driver = new webdriver.Builder()
                 .withCapabilities({
                     browserName: "chrome"
                 }).build();
