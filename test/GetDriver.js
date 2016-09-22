@@ -15,7 +15,7 @@ function GetDriver() {
 
 }
 
-Driver.prototype.buildDriver = function () {
+GetDriver.prototype.buildDriver = function () {
 
     console.log("getDriver");
     console.log(driver);
