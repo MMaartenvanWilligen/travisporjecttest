@@ -4,13 +4,11 @@ var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
 // var $ = require('jQuery');
-
-
-var HomepageObject;
 var Home = require("./page-objects/home");
 
 describe("testing javascript in the browser", function () {
     var driver;
+    var homepage;
 
     /*before test start a new webdriver. This webdriver uses the saucelabs browser.
      *
@@ -44,6 +42,7 @@ describe("testing javascript in the browser", function () {
          * Saucelabs has access to local website via tunnel
          *
          * */
+
         return driver.get("http://localhost:8000/website/index.html");
 
     });
@@ -73,7 +72,7 @@ describe("testing javascript in the browser", function () {
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
         //HomepageObject = new require("./page-objects/HomePage").constructor(this.driver, this.webdriver);
 
-        homepageObject = new Home(driver, webdriver);
+
 
         it('should load the page properly', function () {
 
@@ -102,8 +101,8 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("CTA button should be raised", function (done) {
-
-                button = homepageObject.ctaButton();
+                homepage = new Home(driver, webdriver);
+                button = homepage.ctaButton();
                 console.log("button" + " " + button);
                     button.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
@@ -114,8 +113,8 @@ describe("testing javascript in the browser", function () {
 
             it("expect onclick text change to buttontransform", function (done) {
 
-                homepageObject.ctaButtonClick();
-                homepageObject.ctaButton().getText().then(function (txt) {
+                homepage.ctaButtonClick();
+                homepage.ctaButton().getText().then(function (txt) {
                     assert.equal(txt, "BUTTONTRANSFORM");
                     done();
                 });

@@ -10,15 +10,14 @@
 * driver
 * */
 
-var webdriver = require("selenium-webdriver");
+//var webdriver = require("selenium-webdriver");
 
 function Home(driver, webdriver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
     this.driver = driver;
-    //this.webdriver = webdriver;
+    this.webdriver = webdriver;
     console.log("driver" + " " + this.driver);
-
 
 }
 
