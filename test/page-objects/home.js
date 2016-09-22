@@ -10,27 +10,23 @@
  * driver
  * */
 
-var webdriver = require("selenium-webdriver");
-
 function Home(driver) {
 
-    // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
-    this.driver = driver;
-    //this.webdriver = webdriver;
+    Page.call(this, driver, "http://localhost:8000/website/index.html");
     console.log("driver" + " " + this.driver);
 
 }
 
 // subclass Homepage extends page
-// HomePage.prototype = Object.create(Page.prototype);
-// HomePage.prototype.constructor = HomePage;
+Home.prototype = Object.create(Page.prototype);
+Home.prototype.constructor = Home;
 
 /*method click on cta button
  *
  * */
 
 Home.prototype.ctaButtonClick = function () {
-    this.driver.get("http://localhost:8000/website/index.html");
+
     var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
     button.click();
     return this
@@ -42,7 +38,7 @@ Home.prototype.ctaButtonClick = function () {
 
 Home.prototype.ctaButton = function () {
 
-    // this.driver.get("http://localhost:8000/website/index.html");
+
     return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 

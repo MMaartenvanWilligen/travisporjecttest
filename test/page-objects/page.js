@@ -4,19 +4,17 @@
 
 // Object Page
 
-//var HomePage = require("./HomePage");
-
 //constructor
-function Page(webdriver, url) {
+function Page(driver, url) {
 
-    this.webdriver = webdriver;
+    this.driver = driver;
     this.url = url;
 
 }
 
 //method
-Page.prototype.getUrl = function() {
-    this.webdriver.get(this.url);
+Page.prototype.getUrl = function () {
+    driver.get(this.url);
     return this
 };
 
