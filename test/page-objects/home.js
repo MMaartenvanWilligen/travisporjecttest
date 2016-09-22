@@ -5,18 +5,18 @@
 // var Page = require("./page");
 
 /*
-* constructor HomePage object
-*
-* driver
-* */
+ * constructor HomePage object
+ *
+ * driver
+ * */
 
-//var webdriver = require("selenium-webdriver");
+var webdriver = require("selenium-webdriver");
 
-function Home(driver, webdriver) {
+function Home(driver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
     this.driver = driver;
-    this.webdriver = webdriver;
+    //this.webdriver = webdriver;
     console.log("driver" + " " + this.driver);
 
 }
@@ -26,8 +26,8 @@ function Home(driver, webdriver) {
 // HomePage.prototype.constructor = HomePage;
 
 /*method click on cta button
-*
-* */
+ *
+ * */
 
 Home.prototype.ctaButtonClick = function () {
     this.driver.get("http://localhost:8000/website/index.html");
@@ -37,9 +37,9 @@ Home.prototype.ctaButtonClick = function () {
 };
 
 /*method return cta button
-*
-*
-* */
+ *
+ * */
+
 Home.prototype.ctaButton = function () {
 
     // this.driver.get("http://localhost:8000/website/index.html");
@@ -47,8 +47,9 @@ Home.prototype.ctaButton = function () {
 };
 
 /*
-* export HomePage
-* */
+ * export HomePage
+ * */
+
 module.exports = Home;
 
 
