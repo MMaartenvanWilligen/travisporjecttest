@@ -15,7 +15,7 @@ describe("testing javascript in the browser", function () {
     var homepage;
 
 
-    driver = require("./driver").GetDriver;
+    driver = require("./driver").GetDriver();
     console.log("driver is" + " " + driver);
 
     /*before test start a new webdriver. This webdriver uses the saucelabs browser.

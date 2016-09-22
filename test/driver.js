@@ -15,10 +15,9 @@ function GetDriver() {
 
 }
 
-var buildDriver = function () {
+var buildDriver = function() {
 
     console.log("getDriver");
-
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
