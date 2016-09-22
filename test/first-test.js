@@ -12,16 +12,14 @@ describe("testing javascript in the browser", function () {
     var driver;
     var homepage;
 
+
     /*
      * before first describe
      * set driver that interact with saucelabs
      * */
 
-    before(function (done) {
-        driver = require("./driver").GetDriver();
-        console.log("driver is" + " " + driver);
-        done();
-    });
+    driver = require("./driver").GetDriver();
+    console.log("driver is" + " " + driver);
 
     /*
      * after describe
