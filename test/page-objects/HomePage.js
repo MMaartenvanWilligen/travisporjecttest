@@ -1,7 +1,7 @@
 /**
  * Created by maarten on 19-09-16.
  */
-var webdriver = require("selenium-webdriver");
+// var webdriver = require("selenium-webdriver");
 // var Page = require("./page");
 
 /*
@@ -9,10 +9,11 @@ var webdriver = require("selenium-webdriver");
 *
 * driver
 * */
-function HomePage(driver) {
+function HomePage (driver, webdriver) {
 
     // Page.call(this, webdriver, "http://localhost:8000/website/index.html");
     this.driver = driver;
+    this.webdriver = webdriver;
     console.log(driver);
 
 }
@@ -27,7 +28,7 @@ function HomePage(driver) {
 
 HomePage.prototype.ctaButtonClick = function () {
     this.driver.get("http://localhost:8000/website/index.html");
-    var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
+    var button = this.driver.findElement(this.webdriver.By.id("raisedbutton"));
     button.click();
     return this
 };
@@ -39,7 +40,7 @@ HomePage.prototype.ctaButtonClick = function () {
 HomePage.prototype.ctaButton = function () {
 
     this.driver.get("http://localhost:8000/website/index.html");
-    return this.driver.findElement(webdriver.By.id("raisedbutton"));
+    return this.driver.findElement(this.webdriver.By.id("raisedbutton"));
 };
 
 /*

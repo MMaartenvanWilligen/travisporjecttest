@@ -8,8 +8,9 @@ var chai = require('chai')
 
 var HomepageObject;
 
-describe("testing javascript in the browser", function () {
 
+describe("testing javascript in the browser", function () {
+    var driver;
 
     /*before test start a new webdriver. This webdriver uses the saucelabs browser.
      *
@@ -48,8 +49,8 @@ describe("testing javascript in the browser", function () {
     });
 
     /*after the tests quit the driver
-    *
-    * */
+     *
+     * */
 
     after(function () {
         return this.driver.quit();
@@ -70,7 +71,10 @@ describe("testing javascript in the browser", function () {
     describe('Home page', function () {
 
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
-        var HomepageObject = new require("./page-objects/HomePage").prototype.HomepageObject(this.driver);
+        //HomepageObject = new require("./page-objects/HomePage").constructor(this.driver, this.webdriver);
+
+        require("./page-objects/HomePage");
+        HomepageObject = new HomePage(this.driver, webdriver);
 
         it('should load the page properly', function () {
 
