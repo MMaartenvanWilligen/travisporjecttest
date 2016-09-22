@@ -59,7 +59,7 @@ describe("testing javascript in the browser", function () {
     describe("text set", function () {
 
         it("h1 should be awesome", function (done) {
-            var headline = this.driver.findElement(webdriver.By.css('h1'));
+            var headline = driver.findElement(webdriver.By.css('h1'));
 
             headline.getText().then(function (txt) {
                 assert.equal(txt, "awesome");
@@ -72,7 +72,6 @@ describe("testing javascript in the browser", function () {
 
         //console.log('HompageObject.constructor is ' + HomepageObject.constructor);
         //HomepageObject = new require("./page-objects/HomePage").constructor(this.driver, this.webdriver);
-
 
         homepageObject = new Home(driver, webdriver);
 
