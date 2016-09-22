@@ -55,7 +55,7 @@ describe("testing javascript in the browser", function () {
 // Outputs: true
         homepage = new Home(driver);
         homepage.getUrl();
-        console.log(Page.isPrototypeOf(Home));
+        
 
         it('should load the page properly', function () {
 
