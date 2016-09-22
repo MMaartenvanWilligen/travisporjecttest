@@ -2,7 +2,6 @@
  * Created by maarten on 19-09-16.
  */
 var webdriver = require("selenium-webdriver");
-
 var driver;
 
 function GetDriver() {
@@ -44,7 +43,7 @@ GetDriver.prototype.buildDriver = function () {
 
 };
 
-module.exports = GetDriver;
+module.exports.GetDriver = GetDriver;
 
 
 
