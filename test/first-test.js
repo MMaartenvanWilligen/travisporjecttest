@@ -1,4 +1,3 @@
-
 var webdriver = require("selenium-webdriver");
 var assert = require("assert");
 var chai = require('chai')
@@ -6,7 +5,7 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 var Home = require("./page-objects/home");
-var Page = require("./page-objects/page");
+// var Page = require("./page-objects/page");
 var GetDriver = require("./GetDriver");
 
 
@@ -53,8 +52,6 @@ describe("testing javascript in the browser", function () {
 
 
 // Outputs: true
-
-
         homepage = new Home(driver);
         homepage.getUrl();
         console.log(Page.isPrototypeOf(Home));
