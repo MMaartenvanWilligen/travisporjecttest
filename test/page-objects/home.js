@@ -12,7 +12,6 @@ var Page = require("./page");
 
 function Home(driver) {
 
-
     Page.call(this, driver, "http://localhost:8000/website/index.html");
     console.log("driver" + " " + driver);
 
@@ -22,7 +21,7 @@ function Home(driver) {
 Home.prototype = Object.create(Page.prototype);
 Home.prototype.constructor = Home;
 
-/*method click on cta button
+/* method click on cta button
  *
  * */
 
@@ -38,7 +37,6 @@ Home.prototype.ctaButtonClick = function () {
  * */
 
 Home.prototype.ctaButton = function () {
-
 
     return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
