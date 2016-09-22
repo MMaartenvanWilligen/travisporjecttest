@@ -17,9 +17,10 @@ describe("testing javascript in the browser", function () {
      * set driver that interact with saucelabs
      * */
 
-    before(function () {
+    before(function (done) {
         driver = require("./driver").GetDriver();
         console.log("driver is" + " " + driver);
+        done();
     });
 
     /*
