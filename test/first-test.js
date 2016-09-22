@@ -20,7 +20,7 @@ describe("testing javascript in the browser", function () {
     before(function () {
 
         driver = new GetDriver();
-
+        console.log("driver is" + " " + driver);
     });
 
     /*after the tests quit the driver

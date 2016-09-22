@@ -4,15 +4,21 @@
 
 // Object Page
 
-//constructor
+/*constructor
+ * sets driver and url
+ * */
+
 function Page(driver, url) {
 
-    this.driver = driver;
     this.url = url;
+    this.driver = driver;
 
 }
 
-//method
+/*method
+ * get url with driver
+ * return
+ * */
 Page.prototype.getUrl = function () {
     this.driver.get(this.url);
     return this
