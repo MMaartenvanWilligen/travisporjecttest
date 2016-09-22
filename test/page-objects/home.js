@@ -14,7 +14,7 @@ function Home(driver) {
 
 
     Page.call(this, driver, "http://localhost:8000/website/index.html");
-    console.log("driver" + " " + this.driver);
+    console.log("driver" + " " + driver);
 
 }
 
