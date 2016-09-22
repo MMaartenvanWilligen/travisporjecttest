@@ -24,9 +24,13 @@ describe("testing javascript in the browser", function () {
      * after describe
      * quit the driver
      * */
+    before(function () {
+
+
+    });
 
     after(function () {
-       // return driver.quit();
+       return driver.quit();
     });
 
     /*
