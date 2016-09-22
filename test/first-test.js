@@ -5,15 +5,14 @@ var chai = require('chai')
     , should = chai.should();
 // var $ = require('jQuery');
 var Home = require("./page-objects/home");
+var Page = require("./page-objects/page");
 var GetDriver = require("./GetDriver");
-var driver;
-var homepage;
-driver = new GetDriver;
-driver.buildDriver();
-console.log("driver is" + " " + driver);
+
 
 describe("testing javascript in the browser", function () {
 
+    var driver;
+    var homepage;
 
     /*before test start a new webdriver. This webdriver uses the saucelabs browser.
      *
@@ -23,7 +22,10 @@ describe("testing javascript in the browser", function () {
 
     before(function () {
 
-
+        driver = new GetDriver;
+        driver.buildDriver();
+        console.log("driver is" + " " + driver);
+        return driver;
     });
 
     /*after the tests quit the driver
@@ -47,6 +49,10 @@ describe("testing javascript in the browser", function () {
     });
 
     describe('Home page', function () {
+
+
+// Outputs: true
+        console.log(Page.isPrototypeOf(Home));
 
         homepage = new Home(driver);
         homepage.getUrl();

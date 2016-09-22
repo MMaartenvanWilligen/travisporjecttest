@@ -12,17 +12,19 @@ function Page(driver, url) {
 
     this.url = url;
     this.driver = driver;
-
 }
 
 /*method
  * get url with driver
  * return
  * */
-Page.prototype.getUrl = function () {
-    this.driver.get(this.url);
-    return this
+
+
+Page.prototype.getUrl = function() {
+   return this.driver.get(this.url);
 };
+
+
 
 module.exports = Page;
 
