@@ -7,6 +7,9 @@
  * sets driver and url
  * */
 
+var driver;
+var url;
+
 function Page(driver, url) {
 
     this.url = url;

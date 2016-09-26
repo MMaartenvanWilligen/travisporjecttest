@@ -24,6 +24,7 @@ describe("testing javascript in the browser", function () {
      * after describe
      * quit the driver
      * */
+
     before(function () {
 
 
@@ -35,6 +36,7 @@ describe("testing javascript in the browser", function () {
 
     /*
      * test HomePage
+     *
      * */
 
     describe('Home page', function () {

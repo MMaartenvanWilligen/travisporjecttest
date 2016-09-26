@@ -27,7 +27,7 @@ Home.prototype.constructor = Home;
 
 Home.prototype.header = function () {
 
-      return driver.findElement(webdriver.By.css('h1'));
+      return this.driver.findElement(webdriver.By.css('h1'));
 };
 
 
