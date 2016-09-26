@@ -103,6 +103,13 @@ describe("testing javascript in the browser", function () {
 
             });
 
+            it("Button should be visible for the user" , function () {
+
+                var button = homepage.ctaButton();
+                button.should.be.visible;
+
+            });
+
         });
 
     });
