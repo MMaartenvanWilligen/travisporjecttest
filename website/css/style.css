@@ -51,4 +51,13 @@ and open the template in the editor.
 #buttons button {
   width: 150px; }
 
+#raisedbutton{
+
+  position: absolute;
+
+  top: -10000px;
+  left: -10000px;
+}
+
+
 /*# sourceMappingURL=style.css.map */
