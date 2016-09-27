@@ -8,15 +8,47 @@ var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
 
+var Buttons = require("./page-objects/buttons");
+
+
 
 Describe("Buttons should visible by user", function () {
+
+
+    var driver;
+    var buttonsObject;
+
+    /*
+     * before first describe
+     * set driver that interact with saucelabs
+     * */
+
+    driver = require("./driver").GetDriver();
+    console.log("driver is" + " " + driver);
+
+
+    before(function () {
+
+
+    });
+
+    after(function () {
+        return driver.quit();
+    });
+
+    buttonsObject = new Buttons(driver);
+    buttonsObject.getUrl();
 
     Describe("should be within screen width and height", function () {
 
         var heightScreen = driver.manage().window().getSize().getHeight();
         var widthScreen = driver.manage().window().getSize().getWidth();
 
+        console.log(heightScreen + " " + widthScreen);
 
+        var buttons = buttonsObject.arrayAllButtons();
+
+        console.log(buttons);
 
     });
 
@@ -42,8 +74,7 @@ Describe("Buttons should visible by user", function () {
 
     it("Button should be css visible", function () {
 
-        var button = homepage.ctaButton();
-        button.should.be.visiblel;
+
 
     });
 
