@@ -13,7 +13,6 @@ var Buttons = require("./page-objects/buttons");
 
 describe("Buttons should visible by user", function () {
 
-
     var driver;
     var buttonsObject;
 
@@ -41,10 +40,11 @@ describe("Buttons should visible by user", function () {
     describe("should be within screen width and height", function () {
 
 
-        var heightScreen = window.innerHeight;
-        var widthScreen = window.innerWidth;
+        var button = buttonsObject.CtaButton();
+        rectObject = button.getBoundingClientRect();
 
-        console.log(heightScreen + " " + widthScreen);
+        console.log(rectObject);
+        //console.log(heightScreen + " " + widthScreen);
 
         var buttons = buttonsObject.arrayAllButtons();
 

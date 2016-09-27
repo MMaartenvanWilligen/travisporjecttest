@@ -20,6 +20,7 @@ Buttons.prototype.arrayAllButtons = function () {
 
 Buttons.prototype.CtaButton = function () {
 
+    return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 
 module.exports = Buttons;
