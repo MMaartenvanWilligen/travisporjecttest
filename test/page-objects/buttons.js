@@ -3,7 +3,7 @@
  */
 
 var Page = require("./page");
-function Buttons() {
+function Buttons(driver) {
 
    Page.call(this, driver, "http://localhost:8000/website/index.html")
 }
