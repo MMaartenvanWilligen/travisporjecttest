@@ -24,4 +24,4 @@ Buttons.prototype.CtaButton = function () {
 
 };
 
-module.exports = buttons;
+module.exports = Buttons;
