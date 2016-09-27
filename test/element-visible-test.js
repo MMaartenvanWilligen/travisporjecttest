@@ -13,6 +13,11 @@ Describe("Buttons should visible by user", function () {
 
     Describe("should be within screen width and height", function () {
 
+        var heightScreen = driver.manage().window().getSize().getHeight();
+        var widthScreen = driver.manage().window().getSize().getWidth();
+
+
+
     });
 
     Describe("Should be before other elements", function () {
