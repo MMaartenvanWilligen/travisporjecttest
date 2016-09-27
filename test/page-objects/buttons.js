@@ -2,10 +2,12 @@
  * Created by maarten on 27-09-16.
  */
 
+var webdriver = require("selenium-webdriver");
+
 var Page = require("./page");
 function Buttons(driver) {
 
-   Page.call(this, driver, "http://localhost:8000/website/index.html")
+    Page.call(this, driver, "http://localhost:8000/website/index.html")
 }
 
 // subclass Buttons extends page
