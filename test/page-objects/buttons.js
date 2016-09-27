@@ -20,8 +20,6 @@ Buttons.prototype.arrayAllButtons = function () {
 
 Buttons.prototype.CtaButton = function () {
 
-
-
 };
 
 module.exports = Buttons;

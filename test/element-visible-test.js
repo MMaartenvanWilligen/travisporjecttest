@@ -11,8 +11,7 @@ var chai = require('chai')
 var Buttons = require("./page-objects/buttons");
 
 
-
-Describe("Buttons should visible by user", function () {
+describe("Buttons should visible by user", function () {
 
 
     var driver;
@@ -39,7 +38,7 @@ Describe("Buttons should visible by user", function () {
     buttonsObject = new Buttons(driver);
     buttonsObject.getUrl();
 
-    Describe("should be within screen width and height", function () {
+    describe("should be within screen width and height", function () {
 
         var heightScreen = driver.manage().window().getSize().getHeight();
         var widthScreen = driver.manage().window().getSize().getWidth();
@@ -50,30 +49,34 @@ Describe("Buttons should visible by user", function () {
 
         console.log(buttons);
 
-    });
+        it('should be visible in the screen', function () {
 
-    Describe("Should be before other elements", function () {
 
-    });
-
-    Describe("Should not be behind other elements", function () {
+        });
 
     });
 
-    Describe("Should be clickable", function () {
+    describe("Should be before other elements", function () {
 
     });
 
-    Describe("Button background should not be same color as background", function () {
+    describe("Should not be behind other elements", function () {
 
     });
 
-    Describe("Text Should not be same color as background", function () {
+    describe("Should be clickable", function () {
+
+    });
+
+    describe("Button background should not be same color as background", function () {
+
+    });
+
+    describe("Text Should not be same color as background", function () {
 
     });
 
     it("Button should be css visible", function () {
-
 
 
     });
