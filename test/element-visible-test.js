@@ -2,7 +2,6 @@
  * Created by maarten on 26-09-16.
  */
 
-
 var webdriver = require("selenium-webdriver");
 var assert = require("assert");
 var chai = require('chai')
