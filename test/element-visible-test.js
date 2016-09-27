@@ -40,8 +40,9 @@ describe("Buttons should visible by user", function () {
 
     describe("should be within screen width and height", function () {
 
-        var heightScreen = webdriver.manage().window().getSize();
-        var widthScreen = webdriver.manage().window().getSize().getWidth();
+
+        var heightScreen = window.innerHeight;
+        var widthScreen = window.innerWidth;
 
         console.log(heightScreen + " " + widthScreen);
 
