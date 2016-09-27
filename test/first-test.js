@@ -31,7 +31,7 @@ describe("testing javascript in the browser", function () {
     });
 
     after(function () {
-       return driver.quit();
+        return driver.quit();
     });
 
     /*
@@ -50,7 +50,7 @@ describe("testing javascript in the browser", function () {
         homepage = new Home(driver);
         homepage.getUrl();
 
-        it("h1 should be awesome", function (done) {
+        it("h1 text should be awesome", function (done) {
             homepage.header().getText().then(function (txt) {
                 assert.equal(txt, "awesome");
                 done();
@@ -93,7 +93,7 @@ describe("testing javascript in the browser", function () {
 
             });
 
-            it("expect onclick text change to buttontransform", function (done) {
+            it("Expect onclick text change to buttontransform", function (done) {
 
                 homepage.ctaButtonClick();
                 homepage.ctaButton().getText().then(function (txt) {
@@ -103,12 +103,6 @@ describe("testing javascript in the browser", function () {
 
             });
 
-            it("Button should be visible for the user" , function () {
-
-                var button = homepage.ctaButton();
-                button.should.be.visible;
-
-            });
 
         });
 
