@@ -35,11 +35,7 @@ describe("Buttons should visible by user", function () {
     });
 
 
-    driver
-        .url("http://localhost:8000/website/index.html")
-        .getViewportSize().then(function(size) {
-        console.log(size); // outputs: {width: 1024, height: 768}
-    });
+
 
     // buttonsObject = new Buttons(driver);
     // buttonsObject.getUrl();
@@ -57,6 +53,11 @@ describe("Buttons should visible by user", function () {
 
         it('should be visible in the screen', function () {
 
+            driver
+                .url("http://localhost:8000/website/index.html")
+                .getViewportSize().then(function(size) {
+                console.log(size); // outputs: {width: 1024, height: 768}
+            });
 
         });
 
