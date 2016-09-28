@@ -38,7 +38,6 @@ var buildDriver = function () {
             .getTitle().then(console.log)
             .end();
 
-
         //return driver;
 
     } else {
@@ -54,6 +53,4 @@ var buildDriver = function () {
 
 };
 
-
 module.exports.GetDriver = GetDriver;
-
