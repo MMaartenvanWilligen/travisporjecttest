@@ -22,7 +22,7 @@ var buildDriver = function () {
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
-        var client = require('webdriverio').remote({
+        var driver = require('webdriverio').remote({
             user: process.env.SAUCE_USERNAME,
             key: process.env.SAUCE_ACCESS_KEY,
             host: 'localhost',
@@ -32,13 +32,12 @@ var buildDriver = function () {
             }
         });
 
-        client
-            .init()
+        driver
             .url('http://localhost:4445/website/index.html')
             .getTitle().then(console.log)
             .end();
 
-        //return driver;
+        return driver;
 
     } else {
         driver = require('webdriverio').remote({
