@@ -32,7 +32,8 @@ var buildDriver = function () {
                 'idle-timeout': 30000,
                 build: process.env.TRAVIS_BUILD_NUMBER
             }
-        }).init();
+        }).init()
+           .url("http://localhost:8000/website/index.html");
 
         return driver;
 
