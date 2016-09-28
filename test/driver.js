@@ -37,9 +37,10 @@ var buildDriver = function () {
             .init()
             .url('http://localhost')
             .getTitle().then(console.log);
+            .end();
 
 
-        return driver;
+        //return driver;
 
     } else {
         driver = require('webdriverio').remote({
