@@ -36,7 +36,7 @@ var buildDriver = function () {
         driver
             .init()
             .url('http://localhost')
-            .getTitle().then(console.log);
+            .getTitle().then(console.log)
             .end();
 
 
