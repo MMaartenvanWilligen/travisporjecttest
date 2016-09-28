@@ -13,16 +13,16 @@ var Buttons = require("./page-objects/buttons");
 
 describe("Buttons should visible by user", function () {
 
-    // var driver;
-    // var buttonsObject;
+    var driver;
+    var buttonsObject;
 
     /*
      * before first describe
      * set driver that interact with saucelabs
      * */
 
-    // driver = require("./driver").GetDriver();
-    // console.log("driver is" + " " + driver);
+    driver = require("./driver").GetDriver();
+    console.log("driver is" + " " + driver);
 
     before(function () {
 
@@ -32,8 +32,8 @@ describe("Buttons should visible by user", function () {
         //return driver.quit();
     });
 
-    // buttonsObject = new Buttons(driver);
-    // buttonsObject.getUrl();
+    buttonsObject = new Buttons(driver);
+    buttonsObject.getUrl();
 
     describe("should be within screen width and height", function () {
 
@@ -50,12 +50,9 @@ describe("Buttons should visible by user", function () {
         //
         // });
 
-        it('should allow access with correct creds', function*() {
-             browser.url("http://localhost:8000/website/index.html");
-             browser.getText('#raisedbutton').then(function(flashMsg) {
-                 console.log(flashMsg);
-                expect(flashMsg).toContain('You logged into a secure area!');
-            });
+        it('should show title', function*() {
+            buttonsObject.getTitle();
+
         });
 
     });

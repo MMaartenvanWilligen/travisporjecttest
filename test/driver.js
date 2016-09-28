@@ -2,7 +2,7 @@
  * Created by maarten on 19-09-16.
  */
 /*var webdriver = require("selenium-webdriver");*/
-var webdriverjs = require('webdriverio');
+
 var driver;
 
 function GetDriver() {
@@ -22,22 +22,20 @@ var buildDriver = function () {
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
-        driver = webdriverjs.remote({
-            host: 'http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub',
+        var driver = require('webdriverio').remote({
             user: process.env.SAUCE_USERNAME,
             key: process.env.SAUCE_ACCESS_KEY,
+            host: 'localhost',
+            port: 4445,
             desiredCapabilities: {
-                browserName: 'chrome',
-                'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-                'idle-timeout': 30000,
-                build: process.env.TRAVIS_BUILD_NUMBER
+                browserName: 'chrome'
             }
-        }).init();
+        });
 
         return driver;
 
     } else {
-        driver = webdriverjs.remote({
+        driver = require('webdriverio').remote({
             desiredCapabilities: {
                 browserName: "chrome"
             }

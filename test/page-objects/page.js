@@ -21,8 +21,12 @@ function Page(driver, url) {
  * return
  * */
 
-Page.prototype.getUrl = function() {
-   return this.driver.url(this.urllocal);
+Page.prototype.getUrl = function () {
+
+    return this.driver
+        .init()
+        .url(this.urllocal);
+
 };
 
 module.exports = Page;

@@ -25,4 +25,9 @@ Buttons.prototype.CtaButton = function () {
     return this.driver.element('#raisedbutton');
 };
 
+Buttons.prototype.getTitle = function () {
+
+    return this.driver.getTitle().then(console.log)
+};
+
 module.exports = Buttons;
