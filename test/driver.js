@@ -26,6 +26,7 @@ var buildDriver = function () {
             user: process.env.SAUCE_USERNAME,
             key: process.env.SAUCE_ACCESS_KEY,
             host: 'localhost',
+            'idle-timeout': 30000,
             port: 4445,
             desiredCapabilities: {
                 browserName: 'chrome'
@@ -35,7 +36,7 @@ var buildDriver = function () {
         driver
             .init()
             .url('http://localhost')
-            .getTitle().then(console.log)
+            .getTitle().then(console.log);
 
 
         return driver;
