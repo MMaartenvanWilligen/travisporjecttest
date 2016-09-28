@@ -44,12 +44,11 @@ describe("Buttons should visible by user", function () {
 
         var button = buttonsObject.CtaButton();
 
-
-
         it('should be visible in the screen', function () {
 
-            console.log("button" + " " + button.getText);
+            console.log("button" + " " + button);
             button.getText().then(function (txt) {
+                console.log(txt);
                 assert.equal(txt, "RAISED");
                 done();
             });

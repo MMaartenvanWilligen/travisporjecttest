@@ -24,9 +24,9 @@ var buildDriver = function () {
         console.log("suace user name defined");
         driver = webdriverjs.remote({
             host: 'http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub',
+            user: process.env.SAUCE_USERNAME,
+            key: process.env.SAUCE_ACCESS_KEY,
             desiredCapabilities: {
-                user: process.env.SAUCE_USERNAME,
-                key: process.env.SAUCE_ACCESS_KEY,
                 browserName: 'chrome',
                 'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
                 'idle-timeout': 30000,
