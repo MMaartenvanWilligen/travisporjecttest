@@ -52,7 +52,6 @@ describe("Buttons should visible by user", function () {
 
         it('should show title', function*() {
             buttonsObject.getTitle();
-
         });
 
     });

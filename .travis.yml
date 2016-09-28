@@ -6,6 +6,8 @@ node_js:
   - stable
 
 before_script:
+  - python -m SimpleHTTPServer &
+  - sleep 2
 
 
 cache:
@@ -13,6 +15,6 @@ cache:
     - node_modules
 
 addons:
-  sauce_connect: true
-
-
+  sauce_connect:
+    username: "Maaktnietzoveeluit"
+    access_key: "519926b3-9bcf-4500-9725-eb09b0a50d5d"
