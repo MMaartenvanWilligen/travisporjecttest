@@ -22,7 +22,7 @@ function Page(driver, url) {
  * */
 
 Page.prototype.getUrl = function() {
-   return this.driver.get(this.url);
+   return this.driver.url(this.url);
 };
 
 module.exports = Page;

@@ -37,26 +37,20 @@ describe("Buttons should visible by user", function () {
 
 
 
-    // buttonsObject = new Buttons(driver);
-    // buttonsObject.getUrl();
+    buttonsObject = new Buttons(driver);
+    buttonsObject.getUrl();
 
     describe("should be within screen width and height", function () {
 
-        // var button = buttonsObject.CtaButton();
-        //
-        // console.log(rectObject);
-        // //console.log(heightScreen + " " + widthScreen);
-        //
-        // var buttons = buttonsObject.arrayAllButtons();
-        //
-        // console.log(buttons);
+        var button = buttonsObject.CtaButton();
+
 
         it('should be visible in the screen', function () {
 
-            driver
-                .url("http://localhost:8000/website/index.html")
-                .getViewportSize().then(function(size) {
-                console.log(size); // outputs: {width: 1024, height: 768}
+            console.log("button" + " " + button);
+            button.getText().then(function (txt) {
+                assert.equal(txt, "RAISED");
+                done();
             });
 
         });
