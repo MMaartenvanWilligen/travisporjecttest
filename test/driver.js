@@ -34,7 +34,7 @@ var buildDriver = function () {
 
         client
             .init()
-            .url('http://localhost')
+            .url('http://localhost:4445/website/index.html')
             .getTitle().then(console.log)
             .end();
 
