@@ -31,24 +31,29 @@ describe("Buttons should visible by user", function () {
     });
 
     after(function () {
-        return driver.quit();
+        //return driver.quit();
     });
 
-    buttonsObject = new Buttons(driver);
-    buttonsObject.getUrl();
+
+    driver
+        .url("http://localhost:8000/website/index.html")
+        .getViewportSize().then(function(size) {
+        console.log(size); // outputs: {width: 1024, height: 768}
+    });
+
+    // buttonsObject = new Buttons(driver);
+    // buttonsObject.getUrl();
 
     describe("should be within screen width and height", function () {
 
-
-        var button = buttonsObject.CtaButton();
-        rectObject = button.getBoundingClientRect();
-
-        console.log(rectObject);
-        //console.log(heightScreen + " " + widthScreen);
-
-        var buttons = buttonsObject.arrayAllButtons();
-
-        console.log(buttons);
+        // var button = buttonsObject.CtaButton();
+        //
+        // console.log(rectObject);
+        // //console.log(heightScreen + " " + widthScreen);
+        //
+        // var buttons = buttonsObject.arrayAllButtons();
+        //
+        // console.log(buttons);
 
         it('should be visible in the screen', function () {
 
