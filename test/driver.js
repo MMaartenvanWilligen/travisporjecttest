@@ -22,7 +22,7 @@ var buildDriver = function () {
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
-        driver = new webdriverjs.remote({
+        driver = webdriverjs.remote({
             host: 'http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub',
             desiredCapabilities: {
                 user: process.env.SAUCE_USERNAME,
@@ -30,15 +30,14 @@ var buildDriver = function () {
                 browserName: 'chrome',
                 'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
                 'idle-timeout': 30000,
-                build: process.env.TRAVIS_BUILD_NUMBER,
-                captureHtml: true
+                build: process.env.TRAVIS_BUILD_NUMBER
             }
         }).init();
 
         return driver;
 
     } else {
-        driver = new webdriverjs.remote({
+        driver = webdriverjs.remote({
             desiredCapabilities: {
                 browserName: "chrome"
             }
