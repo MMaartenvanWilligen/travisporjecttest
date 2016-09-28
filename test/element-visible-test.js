@@ -24,9 +24,7 @@ describe("Buttons should visible by user", function () {
     // driver = require("./driver").GetDriver();
     // console.log("driver is" + " " + driver);
 
-
     before(function () {
-
 
     });
 
@@ -42,7 +40,7 @@ describe("Buttons should visible by user", function () {
         // var button = buttonsObject.CtaButton();
 
         // it('should be visible in the screen', function () {
-        //
+        //m
         //     console.log("button" + " " + button);
         //     button.getText().then(function (txt) {
         //         console.log(txt);
@@ -55,6 +53,7 @@ describe("Buttons should visible by user", function () {
         it('should allow access with correct creds', function*() {
              browser.url("http://localhost:8000/website/index.html");
              browser.getText('#raisedbutton').then(function(flashMsg) {
+                 console.log(flashMsg);
                 expect(flashMsg).toContain('You logged into a secure area!');
             });
         });
