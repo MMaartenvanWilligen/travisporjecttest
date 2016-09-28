@@ -2,7 +2,7 @@
  * Created by maarten on 27-09-16.
  */
 
-var webdriver = require("selenium-webdriver");
+
 
 var Page = require("./page");
 function Buttons(driver) {
