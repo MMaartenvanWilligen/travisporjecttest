@@ -22,18 +22,17 @@ var buildDriver = function () {
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
-        var driver = require('webdriverio').remote({
+        var client = require('webdriverio').remote({
             user: process.env.SAUCE_USERNAME,
             key: process.env.SAUCE_ACCESS_KEY,
             host: 'localhost',
-            'idle-timeout': 30000,
             port: 4445,
             desiredCapabilities: {
                 browserName: 'chrome'
             }
         });
 
-        driver
+        client
             .init()
             .url('http://localhost')
             .getTitle().then(console.log)
