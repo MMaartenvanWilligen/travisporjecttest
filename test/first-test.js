@@ -44,7 +44,7 @@ describe("testing javascript in the browser", function () {
 
         before(function () {
 
-            driver.getTitle().then(function (title) {
+            webdriver.getTitle().then(function (title) {
                 console.log('Page title is: ' + title);
             });
 
@@ -53,6 +53,11 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("h1 text should be awesome", function (done) {
+
+                driver.getTitle().then(function (title) {
+                    console.log('Page title is: ' + title);
+                });
+
                 homepage.header().getText().then(function (txt) {
                     assert.equal(txt, "awesome");
                     done();
