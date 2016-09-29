@@ -23,7 +23,12 @@ function Page(driver, url) {
 
 Page.prototype.getUrl = function () {
 
-    return this.driver.get(this.url);
+     var url = this.driver.get(this.url).then(function() {
+         return driver.getCurrentUrl();
+     });
+    console.log("url"+ " " + url);
+
+    return url;
 
 };
 
