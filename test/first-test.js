@@ -10,12 +10,17 @@ var Contact = require("./page-objects/contactPage");
 
 
 
-var driver;
-var homepage;
-var loginPage;
-var contactPage;
 
 describe("testing javascript in the browser", function () {
+
+
+/*
+* declaring variables
+*/
+    var driver;
+    var homepage;
+    var loginPage;
+    var contactPage;
 
     /*
      * test HomePage
@@ -133,6 +138,6 @@ describe("testing javascript in the browser", function () {
 function afterTests() {
 
     console.log("quit driver");
-    return driver.quit();
+    //return driver.quit();
 
 }
