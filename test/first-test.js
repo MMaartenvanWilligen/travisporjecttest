@@ -44,7 +44,7 @@ describe("testing javascript in the browser", function () {
 
         driver.wait(function() {
             return driver.findElement(webdriver.By.id("header")).isDisplayed();
-        }, timeout);
+        }, 3000);
 
         before(function () {
 
