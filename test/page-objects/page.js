@@ -24,7 +24,6 @@ function Page(driver, url) {
 Page.prototype.getUrl = function () {
 
     url = this.driver.get(this.url);
-    driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
     return url;
 
