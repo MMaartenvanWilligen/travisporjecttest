@@ -32,7 +32,6 @@ describe("Buttons should visible by user", function () {
     });
 
     driver
-        .init()
         .url('http://localhost:4445/website/index.html')
         .getTitle().then(console.log)
         .end();
