@@ -42,9 +42,15 @@ describe("testing javascript in the browser", function () {
         homepage = new Home(driver);
         homepage.getUrl();
 
-        driver.getTitle().then(function (title) {
-            console.log('Page title is: ' + title);
+        before(function () {
+
+            driver.getTitle().then(function (title) {
+                console.log('Page title is: ' + title);
+            });
+
         });
+
+
 
         describe("buttons", function () {
 
@@ -85,7 +91,7 @@ describe("testing javascript in the browser", function () {
             console.log("usernameInput" + " " + usernameInput);
             usernameInput.getText().then(function (txt) {
                 console.log(txt);
-                assert.equal(txt, "Maarten");
+                assert.equal(txt, "Admin");
                 done();
             });
         });
