@@ -20,29 +20,38 @@ describe("testing javascript in the browser", function () {
      * set driver that interact with saucelabs
      * */
 
-    driver = require("./driver").GetDriver();
-    console.log("driver is" + " " + driver);
+
 
     /*
      * after describe
      * quit the driver
      * */
 
-    before(function () {
 
-
-    });
 
     after(function () {
         return driver.quit();
+    });
+
+
+    beforeEach(function(){
+        console.log('see.. this function is run EACH time, before each describe()')
     });
 
     /*
      * test HomePage
      *
      * */
-
     describe('Home page', function () {
+
+        before(function () {
+            driver = require("./driver").GetDriver();
+            console.log("driver is" + " " + driver);
+
+            homepage = new Home(driver);
+            homepage.getUrl();
+        });
+
 
         /*
          * set Page Object Home
@@ -50,8 +59,7 @@ describe("testing javascript in the browser", function () {
          * ready fo testing
          * */
 
-        homepage = new Home(driver);
-        homepage.getUrl();
+
 
         it("h1 text should be awesome", function (done) {
             homepage.header().getText().then(function (txt) {
@@ -112,6 +120,9 @@ describe("testing javascript in the browser", function () {
     });
 
     describe("inlog", function () {
+
+        driver = require("./driver").GetDriver();
+        console.log("driver is" + " " + driver);
 
         loginPage = new Login(driver);
         loginPage.getUrl();
