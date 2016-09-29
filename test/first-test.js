@@ -38,13 +38,12 @@ describe("testing javascript in the browser", function () {
          * ready for testing
          * */
 
-        before(function () {
+
             driver = require("./driver").GetDriver();
             console.log("driver is" + " " + driver);
 
             homepage = new Home(driver);
             homepage.getUrl();
-        });
 
 
         it("h1 text should be awesome", function (done) {
@@ -106,10 +105,9 @@ describe("testing javascript in the browser", function () {
 
     describe("inlogPagina", function () {
 
-        before(function () {
+
             loginPage = new Login(driver);
             loginPage.getUrl();
-        });
 
         it("username should be Maarten", function (done) {
             inputUserName = loginPage.inputUsername();
