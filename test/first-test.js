@@ -60,7 +60,6 @@ describe("testing javascript in the browser", function () {
          * */
 
 
-
         it("h1 text should be awesome", function (done) {
             homepage.header().getText().then(function (txt) {
                 assert.equal(txt, "awesome");
@@ -119,28 +118,28 @@ describe("testing javascript in the browser", function () {
 
     });
 
-    describe("inlog", function () {
-
-        driver = require("./driver").GetDriver();
-        console.log("driver is" + " " + driver);
-
-        loginPage = new Login(driver);
-        loginPage.getUrl();
-
-        it("username should be Maarten", function (done) {
-           inputUserName =  loginPage.inputUsername();
-            inputUserName.sendKeys('Cheese');
-            inputUserName.getText().then(function (txt) {
-                assert.equal(txt, "Cheese");
-                done();
-            });
-
-        });
-
-        it("password should be", function () {
-            loginPage.inputPassword();
-        })
-
-    });
+    // describe("inlog", function () {
+    //
+    //     driver = require("./driver").GetDriver();
+    //     console.log("driver is" + " " + driver);
+    //
+    //     loginPage = new Login(driver);
+    //     loginPage.getUrl();
+    //
+    //     it("username should be Maarten", function (done) {
+    //        inputUserName =  loginPage.inputUsername();
+    //         inputUserName.sendKeys('Cheese');
+    //         inputUserName.getText().then(function (txt) {
+    //             assert.equal(txt, "Cheese");
+    //             done();
+    //         });
+    //
+    //     });
+    //
+    //     it("password should be", function () {
+    //         loginPage.inputPassword();
+    //     })
+    //
+    // });
 
 });
