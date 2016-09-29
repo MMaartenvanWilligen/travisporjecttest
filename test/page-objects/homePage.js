@@ -27,9 +27,8 @@ Home.prototype.constructor = Home;
 
 Home.prototype.header = function () {
 
-      return this.driver.findElement(By.css("h1"));
+    return this.driver.findElement(webdriver.By.id("h1"));
 };
-
 
 Home.prototype.ctaButtonClick = function () {
 

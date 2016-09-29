@@ -34,14 +34,11 @@ describe("testing javascript in the browser", function () {
     });
 
 
-    beforeEach(function(){
-        console.log('see.. this function is run EACH time, before each describe()')
-    });
-
     /*
      * test HomePage
      *
      * */
+
     describe('Home page', function () {
 
         before(function () {
