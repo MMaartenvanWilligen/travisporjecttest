@@ -50,8 +50,6 @@ describe("testing javascript in the browser", function () {
 
         });
 
-
-
         describe("buttons", function () {
 
             it("h1 text should be awesome", function (done) {
@@ -82,7 +80,6 @@ describe("testing javascript in the browser", function () {
 
     describe("Login page", function () {
 
-
         loginPage = new Login(driver);
         loginPage.getUrl();
 
@@ -104,7 +101,6 @@ describe("testing javascript in the browser", function () {
     afterTests();
 
 });
-
 
 /*
  * after tests
