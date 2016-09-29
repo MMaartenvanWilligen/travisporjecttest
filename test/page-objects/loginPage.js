@@ -21,6 +21,7 @@ function Login(driver) {
 Login.prototype = Object.create(Page.prototype);
 Login.prototype.constructor = Login;
 
+
 Login.prototype.inputUsername = function () {
 
     var usernameInput = this.driver.findElement(webdriver.By.id("username"));
@@ -29,9 +30,25 @@ Login.prototype.inputUsername = function () {
 
 };
 
+Login.prototype.inputUsernameGetValue = function () {
+
+
+};
+
+Login.prototype.inputUsernameSetValue =  function () {
+
+};
+
 Login.prototype.inputPassword = function () {
 
 };
 
+Login.prototype.inputPasswordGetValue = function () {
+
+};
+
+Login.prototype.inputPasswordSetValue = function () {
+
+};
 
 module.exports = Login;

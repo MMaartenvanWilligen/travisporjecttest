@@ -40,6 +40,7 @@ var buildDriver = function () {
             .withCapabilities({
                 browserName: "chrome"
             }).build();
+
         return driver;
     }
 
