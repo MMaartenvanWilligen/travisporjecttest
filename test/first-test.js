@@ -42,12 +42,18 @@ describe("testing javascript in the browser", function () {
         homepage = new Home(driver);
         homepage.getUrl();
 
-        driver.wait(function() {
-            return driver.findElement(webdriver.By.id("header")).isDisplayed();
+        /*
+         * wait till specific element is loaded.
+         * timeout 3000
+         * */
+
+        driver.wait(function () {
+            var displayed = driver.findElement(webdriver.By.id("header")).isDisplayed();
+            console.log(displayed);
+            return displayed
         }, 3000);
 
         before(function () {
-
 
 
         });
@@ -85,8 +91,11 @@ describe("testing javascript in the browser", function () {
 
         loginPage = new Login(driver);
         loginPage.getUrl();
-
-        driver.wait(function() {
+        /*
+         * wait till specific element is loaded
+         * timeout 3000
+         * */
+        driver.wait(function () {
             return driver.findElement(webdriver.By.id("username")).isDisplayed();
         }, 3000);
 
