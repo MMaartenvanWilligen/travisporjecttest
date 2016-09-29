@@ -20,9 +20,25 @@ describe("Buttons should visible by user", function () {
      * before first describe
      * set driver that interact with saucelabs
      * */
+    driver = require('webdriverio').remote({
+        user: process.env.SAUCE_USERNAME,
+        key: process.env.SAUCE_ACCESS_KEY,
+        host: 'localhost',
+        'idle-timeout': 30000,
+        port: 4445,
+        desiredCapabilities: {
+            browserName: 'chrome'
+        }
+    });
 
-    driver = require("./driver").GetDriver();
-    console.log("driver is" + " " + driver);
+    driver
+        .init()
+        .url('http://localhost:4445/website/index.html')
+        .getTitle().then(console.log)
+        .end();
+
+    // driver = require("./driver").GetDriver();
+    // console.log("driver is" + " " + driver);
 
     before(function () {
 

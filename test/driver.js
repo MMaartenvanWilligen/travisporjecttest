@@ -25,7 +25,8 @@ var buildDriver = function () {
         var driver = require('webdriverio').remote({
             user: process.env.SAUCE_USERNAME,
             key: process.env.SAUCE_ACCESS_KEY,
-            host: 'http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub',
+            host: 'localhost',
+            'idle-timeout': 30000,
             port: 4445,
             desiredCapabilities: {
                 browserName: 'chrome'
