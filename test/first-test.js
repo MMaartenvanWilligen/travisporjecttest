@@ -12,13 +12,11 @@ var Contact = require("./page-objects/contactPage");
 describe("testing javascript in the browser", function () {
 
 
-    /*
-     * declaring variables
-     */
     var driver;
     var homepage;
     var loginPage;
     var contactPage;
+
 
     /*
      * test HomePage
@@ -26,6 +24,13 @@ describe("testing javascript in the browser", function () {
      * */
 
     describe('Home page', function () {
+        /*
+         * declaring variables
+         */
+        var driver;
+        var homepage;
+        var loginPage;
+        var contactPage;
 
         /*
          * before
@@ -36,14 +41,15 @@ describe("testing javascript in the browser", function () {
          * ready for testing
          * */
 
-        driver = require("./driver").GetDriver();
-        console.log("driver is" + " " + driver);
 
-        homepage = new Home(driver);
-        homepage.getUrl();
 
         before(function () {
 
+            driver = require("./driver").GetDriver();
+            console.log("driver is" + " " + driver);
+
+            homepage = new Home(driver);
+            homepage.getUrl();
 
 
         });
