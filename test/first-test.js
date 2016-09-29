@@ -44,21 +44,13 @@ describe("testing javascript in the browser", function () {
 
         before(function () {
 
-            webdriver.getTitle().then(function (title) {
-                console.log('Page title is: ' + title);
-            });
+
 
         });
 
         describe("buttons", function () {
 
             it("h1 text should be awesome", function (done) {
-                webdriver.wait(function() {
-                    return driver.findElements(webdriver.By.id('header')).then(function(elements) {
-                        return elements[0];
-                    });
-                }, 1000, 'Failed to find element after 1 second');
-
 
                 homepage.header().getText().then(function (txt) {
                     assert.equal(txt, "awesome");

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="234ef644-0937-4a33-9eb3-86b400fcaf34" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/first-test.js" afterPath="$PROJECT_DIR$/test/first-test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/page-objects/homePage.js" afterPath="$PROJECT_DIR$/test/page-objects/homePage.js" />
     </list>
     <ignored path="travisprojecttest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,12 +24,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="first-test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="first-test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="420">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding>
+                <marker date="1475159866000" expanded="true" signature="994:1008" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/page-objects/homePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="62" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="62" />
+            <state relative-caret-position="930">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -172,7 +175,6 @@
         <option value="$PROJECT_DIR$/website/contactPage.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/page-objects/contactPage.js" />
-        <option value="$PROJECT_DIR$/test/page-objects/homePage.js" />
         <option value="$PROJECT_DIR$/test/element-visible-test.js" />
         <option value="$PROJECT_DIR$/test/mocha.opts" />
         <option value="$PROJECT_DIR$/test/driver.js" />
@@ -180,6 +182,7 @@
         <option value="$PROJECT_DIR$/test/page-objects/loginPage.js" />
         <option value="$PROJECT_DIR$/test/page-objects/page.js" />
         <option value="$PROJECT_DIR$/test/first-test.js" />
+        <option value="$PROJECT_DIR$/test/page-objects/homePage.js" />
       </list>
     </option>
   </component>
@@ -392,12 +395,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="155473000" />
+      <workItem from="1473768919085" duration="155760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155473000" />
+    <option name="totallyTimeSpent" value="155760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1317" y="86" width="1149" height="1286" extended-state="0" />
@@ -621,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/page-objects/homePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="62" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/page-objects/contactPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -664,9 +657,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/first-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1475159866000" expanded="true" signature="994:1008" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/page-objects/homePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
