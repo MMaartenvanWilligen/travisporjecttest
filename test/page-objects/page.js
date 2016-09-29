@@ -3,12 +3,14 @@
  */
 // Object Page
 
-/*constructor
- * sets driver and url
- * */
+
 
 var driver;
 var url;
+
+/*constructor
+ * sets driver and url
+ * */
 
 function Page(driver, url) {
 
@@ -23,13 +25,7 @@ function Page(driver, url) {
 
 Page.prototype.getUrl = function () {
 
-     var url = this.driver.get(this.url).then(function() {
-         return driver.getCurrentUrl();
-     });
-    console.log("url"+ " " + url);
-
-    return url;
-
+    return this.driver.get(this.url);
 };
 
 module.exports = Page;

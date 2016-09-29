@@ -42,6 +42,10 @@ describe("testing javascript in the browser", function () {
         homepage = new Home(driver);
         homepage.getUrl();
 
+        driver.getTitle().then(function (title) {
+            console.log('Page title is: ' + title);
+        });
+
         describe("buttons", function () {
 
             it("h1 text should be awesome", function (done) {

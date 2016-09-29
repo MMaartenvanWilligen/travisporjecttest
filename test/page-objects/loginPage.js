@@ -51,4 +51,17 @@ Login.prototype.inputPasswordSetValue = function () {
 
 };
 
+Login.prototype.submitButton = function () {
+
+    driver.findElement(webdriver.By.id('submit'));
+};
+
+Login.prototype.subMitButtonClick = function () {
+
+    driver.findElement(webdriver.id('submit')).click();
+    return this
+};
+
 module.exports = Login;
+
+
