@@ -9,12 +9,13 @@ var Login = require("./page-objects/loginPage");
 var Contact = require("./page-objects/contactPage");
 
 
+
+var driver;
+var homepage;
+var loginPage;
+var contactPage;
+
 describe("testing javascript in the browser", function () {
-
-    var driver;
-    var homepage;
-    var loginPage;
-
 
     /*
      * test HomePage
