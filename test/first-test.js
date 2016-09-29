@@ -110,10 +110,11 @@ describe("testing javascript in the browser", function () {
             loginPage.getUrl();
 
         it("username should be Maarten", function (done) {
-            inputUserName = loginPage.inputUsername();
-
-            inputUserName.getText().then(function (txt) {
-                assert.equal(txt, "Cheese");
+            usernameInput = loginPage.inputUsername();
+            console.log("usernameInput" + " " + usernameInput);
+            usernameInput.getText().then(function (txt) {
+                console.log(txt);
+                assert.equal(txt, "Maarten");
                 done();
             });
         });
