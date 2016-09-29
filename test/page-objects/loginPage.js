@@ -24,7 +24,7 @@ Login.prototype.constructor = Login;
 
 Login.prototype.inputUsername = function () {
 
-
+    return this.driver.findElement(webdriver.By.id("username"));
 };
 
 Login.prototype.inputPassword = function () {

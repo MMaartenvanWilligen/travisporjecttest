@@ -27,9 +27,9 @@ describe("Buttons should visible by user", function () {
 
     });
 
-    after(function () {
-       //return driver.quit();
-    });
+
+
+
 
     buttonsObject = new Buttons(driver);
     buttonsObject.getUrl();
@@ -81,5 +81,7 @@ describe("Buttons should visible by user", function () {
     });
 
 });
+
+
 
 
