@@ -23,3 +23,9 @@ function textTransform(e){
     e.innerHTML="buttontransform";
 
 }
+
+function loginButton() {
+
+
+
+}

@@ -4,7 +4,9 @@ var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
 
-var Home = require("./page-objects/home");
+var Home = require("./page-objects/homePage");
+var Login = require("./page-objects/loginPage");
+var Contact = require("./page-objects/contactPage");
 
 
 describe("testing javascript in the browser", function () {
@@ -107,5 +109,21 @@ describe("testing javascript in the browser", function () {
         });
 
     });
+
+    describe("inlog", function () {
+
+        loginPage = new Login(driver);
+        loginPage.getUrl();
+
+        it("username should be Maarten", function (done) {
+            loginPage.inputUsername();
+
+        });
+
+        it("password should be .. ",function () {
+            loginPage.inputPassword();
+        })
+
+    })
 
 });

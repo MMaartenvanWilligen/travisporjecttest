@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contactPage</title>
+
+    <!--        material design lite       -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!--        main stylesheet       -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--        main js      -->
+    <script  src="js/main.js"></script>
+
+</head>
+<body>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+
+    <main class="mdl-layout__content mdl-shadow--2dp">
+
+
+        <form action="index.html" id="formLogin">
+
+            <p>Contact</p>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="firstname"/>
+                <label class="mdl-textfield__label" for="firstname">Voornaam</label>
+                <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="lastname"/>
+                <label class="mdl-textfield__label" for="lastname">Achternaam</label>
+                <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*[0-9]*" id="Street">
+                <label class="mdl-textfield__label" for="Street">Straat + huisnummer</label>
+                <span class="mdl-textfield__error">Onjuist</span>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*[0-9]*" id="zipcode">
+                <label class="mdl-textfield__label" for="zipcode">Postcode</label>
+                <span class="mdl-textfield__error">Onjuist postcode</span>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" id="mail">
+                <label class="mdl-textfield__label" for="mail">E-mail</label>
+                <span class="mdl-textfield__error">Onjuist E-mail</span>
+            </div>
+
+            <button type="" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Verstuur</button>
+
+        </form>
+
+
+    </main>
+
+</div>
+
+
+
+</body>
+</html>

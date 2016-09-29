@@ -1,7 +1,7 @@
 /**
  * Created by maarten on 19-09-16.
  */
-var webdriver = require("we");
+var webdriver = require("selenium-webdriver");
 var Page = require("./page");
 
 /*

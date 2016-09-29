@@ -2,7 +2,6 @@
  * Created by maarten on 26-09-16.
  */
 
-var webdriver = require("selenium-webdriver");
 var assert = require("assert");
 var chai = require('chai')
     , expect = chai.expect
@@ -20,31 +19,16 @@ describe("Buttons should visible by user", function () {
      * before first describe
      * set driver that interact with saucelabs
      * */
-    driver = require('webdriverio').remote({
-        user: process.env.SAUCE_USERNAME,
-        key: process.env.SAUCE_ACCESS_KEY,
-        host: 'localhost',
-        'idle-timeout': 30000,
-        port: 4445,
-        desiredCapabilities: {
-            browserName: 'chrome'
-        }
-    });
 
-    driver
-        .url('http://localhost:4445/website/index.html')
-        .getTitle().then(console.log)
-        .end();
-
-    // driver = require("./driver").GetDriver();
-    // console.log("driver is" + " " + driver);
+    driver = require("./driver").GetDriver();
+    console.log("driver is" + " " + driver);
 
     before(function () {
 
     });
 
     after(function () {
-        //return driver.quit();
+       return driver.quit();
     });
 
     buttonsObject = new Buttons(driver);

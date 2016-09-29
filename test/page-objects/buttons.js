@@ -15,19 +15,18 @@ Buttons.prototype = Object.create(Page.prototype);
 Buttons.prototype.constructor = Buttons;
 
 Buttons.prototype.arrayAllButtons = function () {
-    var buttons = this.driver.findElement(webdriver.By.className("button"));
-    console.log(buttons);
-    return buttons;
+
+    return
 };
 
 Buttons.prototype.CtaButton = function () {
 
-    return this.driver.element('#raisedbutton');
+    return
 };
 
 Buttons.prototype.getTitle = function () {
 
-    return this.driver.getTitle().then(console.log)
+    return
 };
 
 module.exports = Buttons;

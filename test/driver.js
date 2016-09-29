@@ -4,6 +4,7 @@
 /*var webdriver = require("selenium-webdriver");*/
 
 var driver;
+var webdriver = require("selenium-webdriver");
 
 function GetDriver() {
 
@@ -22,35 +23,27 @@ var buildDriver = function () {
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");
-        var driver = require('webdriverio').remote({
-            user: process.env.SAUCE_USERNAME,
-            key: process.env.SAUCE_ACCESS_KEY,
-            host: 'localhost',
-            'idle-timeout': 30000,
-            port: 4445,
-            desiredCapabilities: {
-                browserName: 'chrome'
-            }
-        });
-
-        driver
-            .url('http://localhost:4445/website/index.html')
-            .getTitle().then(console.log)
-            .end();
+        driver = new webdriver.Builder()
+            .usingServer('http://' + process.env.SAUCE_USERNAME + ':' + process.env.SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub')
+            .withCapabilities({
+                'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+                build: process.env.TRAVIS_BUILD_NUMBER,
+                username: process.env.SAUCE_USERNAME,
+                accessKey: process.env.SAUCE_ACCESS_KEY,
+                browserName: "chrome"
+            }).build();
 
         return driver;
 
     } else {
-        driver = require('webdriverio').remote({
-            desiredCapabilities: {
+        driver = new webdriver.Builder()
+            .withCapabilities({
                 browserName: "chrome"
-            }
-
-        }).init();
-
+            }).build();
         return driver;
     }
 
 };
 
 module.exports.GetDriver = GetDriver;
+

@@ -8,11 +8,11 @@
  * */
 
 var driver;
-var urllocal;
+var url;
 
 function Page(driver, url) {
 
-    this.urllocal = url;
+    this.url = url;
     this.driver = driver;
 }
 
@@ -23,9 +23,7 @@ function Page(driver, url) {
 
 Page.prototype.getUrl = function () {
 
-    return this.driver
-        .init()
-        .url(this.urllocal);
+    return this.driver.get(this.url);
 
 };
 
