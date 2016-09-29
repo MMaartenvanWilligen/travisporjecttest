@@ -24,9 +24,9 @@ Login.prototype.constructor = Login;
 
 Login.prototype.inputUsername = function () {
 
-    var usernameInput = this.driver.findElement(webdriver.By.id("username"));
-    inputUserName.sendKeys('Maarten');
-    return usernameInput;
+    return this.driver.findElement(webdriver.By.id("username"));
+   //inputUserName.sendKeys('Maarten');
+
 
 };
 

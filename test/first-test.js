@@ -86,6 +86,10 @@ describe("testing javascript in the browser", function () {
         loginPage = new Login(driver);
         loginPage.getUrl();
 
+        driver.wait(function() {
+            return driver.findElement(webdriver.By.id("username")).isDisplayed();
+        }, 3000);
+
         it("username should be Maarten", function (done) {
             usernameInput = loginPage.inputUsername();
             console.log("usernameInput" + " " + usernameInput);
