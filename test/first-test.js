@@ -113,7 +113,7 @@ describe("testing javascript in the browser", function () {
 
         it("username should be Maarten", function (done) {
             inputUserName = loginPage.inputUsername();
-            inputUserName.sendKeys('Cheese');
+
             inputUserName.getText().then(function (txt) {
                 assert.equal(txt, "Cheese");
                 done();

@@ -21,10 +21,12 @@ function Login(driver) {
 Login.prototype = Object.create(Page.prototype);
 Login.prototype.constructor = Login;
 
-
 Login.prototype.inputUsername = function () {
 
-    return this.driver.findElement(webdriver.By.id("username"));
+    var usernameInput = this.driver.findElement(webdriver.By.id("username"));
+    inputUserName.sendKeys('Cheese');
+    return usernameInput;
+
 };
 
 Login.prototype.inputPassword = function () {
