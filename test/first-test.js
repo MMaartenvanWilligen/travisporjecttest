@@ -13,6 +13,7 @@ describe("testing javascript in the browser", function () {
 
     var driver;
     var homepage;
+    var loginPage;
 
     /*
      * before first describe
@@ -116,14 +117,19 @@ describe("testing javascript in the browser", function () {
         loginPage.getUrl();
 
         it("username should be Maarten", function (done) {
-            loginPage.inputUsername();
+           inputUserName =  loginPage.inputUsername();
+            inputUserName.sendKeys('Cheese');
+            inputUserName.getText().then(function (txt) {
+                assert.equal(txt, "Cheese");
+                done();
+            });
 
         });
 
-        it("password should be .. ",function () {
+        it("password should be", function () {
             loginPage.inputPassword();
         })
 
-    })
+    });
 
 });
