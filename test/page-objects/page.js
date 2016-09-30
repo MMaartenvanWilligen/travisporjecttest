@@ -25,9 +25,11 @@ function Page(driver, url) {
 
 Page.prototype.getUrl = function () {
 
-    this.driver.get(this.url);
-    console.log("get url");
+    return this.driver.get(this.url).then(function (result) {
 
+        console.log("get url");
+        return result[0];
+    });
 };
 
 module.exports = Page;
