@@ -24,19 +24,28 @@ Login.prototype.constructor = Login;
 
 Login.prototype.inputUsername = function () {
 
-    return this.driver.findElement(webdriver.By.id("username"));
-   //inputUserName.sendKeys('Maarten');
+    this.driver.wait(until.elementLocated(By.id('username')), 5000).then(function(elm) {
+        return elm;
+    });
 
+    //return this.driver.findElement(webdriver.By.id("username"));
+   //inputUserName.sendKeys('Maarten');
 
 };
 
 Login.prototype.inputUsernameGetValue = function () {
 
+    this.driver.wait(until.elementLocated(By.id('username')), 5000).then(function(elm) {
+        return elm;
+    });
 
 };
 
 Login.prototype.inputUsernameSetValue =  function () {
 
+    driver.wait(until.elementLocated(By.name('username')), 5 * 1000).then(function(elm) {
+        elm.sendKeys("Admin");
+    });
 };
 
 Login.prototype.inputPassword = function () {
