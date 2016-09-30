@@ -23,7 +23,10 @@ function Page(driver, url) {
 
 Page.prototype.getUrl = function () {
 
-    return this.driver.get(this.url);
+    this.driver.get(this.url);
+
+    this.driver.wait(driver.wait(until.urlIs(this.url)), 10000);
+
 };
 
 module.exports = Page;
