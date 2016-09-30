@@ -42,6 +42,9 @@ describe("testing javascript in the browser", function () {
         homepage = new Home(driver);
         homepage.getUrl();
 
+        var url = "http://localhost:8000/website/index.html";
+        this.driver.wait(until.urlContains(url), 10000);
+
         /*
          * wait till specific element is loaded.
          * timeout 3000
@@ -91,6 +94,9 @@ describe("testing javascript in the browser", function () {
 
         loginPage = new Login(driver);
         loginPage.getUrl();
+
+        var url = "http://localhost:8000/website/loginPage.html";
+        this.driver.wait(until.urlContains(url), 10000);
         /*
          * wait till specific element is loaded
          * timeout 3000

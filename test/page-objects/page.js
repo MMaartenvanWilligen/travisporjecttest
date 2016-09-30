@@ -26,8 +26,7 @@ function Page(driver, url) {
 Page.prototype.getUrl = function () {
 
     this.driver.get(this.url);
-
-    this.driver.wait(until.urlIs(this.url), 10000);
+    console.log("get url");
 
 };
 
