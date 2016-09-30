@@ -70,7 +70,7 @@ describe("testing javascript in the browser", function () {
             it("CTA button should be raised", function () {
 
                return homepage.ctaButton().then(function (elm) {
-                   elm.getText().them(function () {
+                   elm.getText().then(function () {
                        assert.equal(txt, "RAISED");
                    });
                 });
