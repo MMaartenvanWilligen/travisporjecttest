@@ -100,8 +100,9 @@ describe("testing javascript in the browser", function () {
         }, 3000);
 
         it("username should be Admin", function (done) {
-            usernameInput = loginPage.inputUsername();
+            inputUsername = loginPage.inputUsername();
             console.log("usernameInput" + " " + usernameInput);
+            console.log("usernameInput" + " " + loginPage.inputUsername());
             // usernameInput.getText().then(function (txt) {
             //     console.log(txt);
             //     assert.equal(txt, "Admin");
