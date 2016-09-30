@@ -108,7 +108,7 @@ describe("testing javascript in the browser", function () {
 
         it("username should be Admin", function (done) {
             inputUsername = loginPage.inputUsername();
-            console.log("usernameInput" + " " + usernameInput);
+            console.log("usernameInput" + " " + inputUsername);
             console.log("usernameInput" + " " + loginPage.inputUsername());
             // usernameInput.getText().then(function (txt) {
             //     console.log(txt);
