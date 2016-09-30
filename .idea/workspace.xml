@@ -26,9 +26,21 @@
       <file leaf-file-name="first-test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/first-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
+            <state relative-caret-position="600">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buttons.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/page-objects/buttons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,8 +48,8 @@
       <file leaf-file-name="loginPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/page-objects/loginPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+            <state relative-caret-position="840">
+              <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -60,21 +72,11 @@
       <file leaf-file-name="homePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/page-objects/homePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="855">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pageFactory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/page-objects/pageFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -390,12 +392,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473768917377</updated>
-      <workItem from="1473768919085" duration="159960000" />
+      <workItem from="1473768919085" duration="160477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159960000" />
+    <option name="totallyTimeSpent" value="160477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1271" y="23" width="1277" height="1337" extended-state="0" />
@@ -567,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/page-objects/buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/page-objects/pageFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -640,28 +632,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/page-objects/homePage.js">
+    <entry file="file://$PROJECT_DIR$/test/first-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        <state relative-caret-position="600">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/page-objects/buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/first-test.js">
+    <entry file="file://$PROJECT_DIR$/test/page-objects/homePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
-          <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
-          <folding />
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/page-objects/loginPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        <state relative-caret-position="840">
+          <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
