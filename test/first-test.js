@@ -76,11 +76,12 @@ describe("testing javascript in the browser", function () {
                 });
             });
 
-            it("Expect onclick text change", function (done) {
-                // return homepage.ctaButtonClick().getText().then(function (txt) {
-                //     assert.equal(txt, "BUTTONTRANSFORM");
-                //     done();
-                // });
+            it("Expect onclick text change", function () {
+                return homepage.ctaButtonClick().then(function (elm) {
+                    elm.getText().then(function (txt) {
+                        assert.equal(txt, "BUTTONTRANSFORM");
+                    });
+                });
             });
         });
     });
