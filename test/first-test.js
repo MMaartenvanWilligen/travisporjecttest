@@ -61,11 +61,12 @@ describe("testing javascript in the browser", function () {
 
         describe("buttons", function () {
 
-            it("h1 text should be awesome", function (done) {
-                homepage.header().getText().then(function (txt) {
-                    assert.equal(txt, "awesome");
-                    done();
+            it("h1 text should be awesome", function () {
+                homepage.header().then(function(text) {
+                    assert.equal(text, "awesome");
+
                 });
+
             });
 
             it("CTA button should be raised", function (done) {

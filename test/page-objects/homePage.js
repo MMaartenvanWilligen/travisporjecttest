@@ -27,8 +27,10 @@ Home.prototype.constructor = Home;
  * */
 
 Home.prototype.header = function () {
-
-    return this.driver.findElement(webdriver.By.id("header"));
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("header")).getText().then(function(text) {
+        d.fulfill(text);
+    });
 };
 
 Home.prototype.ctaButtonClick = function () {
