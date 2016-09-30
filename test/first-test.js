@@ -54,25 +54,20 @@ describe("testing javascript in the browser", function () {
         //     return displayed
         // }, 3000);
 
-        before(function () {
-
-
-        });
-
         describe("buttons", function () {
 
             it("h1 text should be awesome", function () {
-                return homepage.header().then(function(text) {
+                return homepage.header().then(function (text) {
                     assert.equal(text, "awesome");
                 });
             });
 
             it("CTA button should be raised", function () {
 
-               return homepage.ctaButton().then(function (elm) {
-                   elm.getText().then(function (txt) {
-                       assert.equal(txt, "RAISED");
-                   });
+                return homepage.ctaButton().then(function (elm) {
+                    elm.getText().then(function (txt) {
+                        assert.equal(txt, "RAISED");
+                    });
                 });
             });
 
