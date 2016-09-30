@@ -44,7 +44,7 @@ describe("testing javascript in the browser", function () {
         homepage.getUrl();
 
         var url = "http://localhost:8000/website/index.html";
-        this.driver.wait(until.urlContains(url), 10000);
+        driver.wait(until.urlContains(url), 10000);
 
         /*
          * wait till specific element is loaded.
