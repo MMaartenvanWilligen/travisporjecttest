@@ -24,7 +24,7 @@ Login.prototype.constructor = Login;
 
 Login.prototype.inputUsername = function () {
 
-    this.driver.wait(until.elementLocated(webdriver.id('username')), 5000).then(function (elm) {
+    this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
         return elm;
     });
 
@@ -34,14 +34,14 @@ Login.prototype.inputUsername = function () {
 
 Login.prototype.inputUsernameGetValue = function () {
 
-    this.driver.wait(until.elementLocated(webdriver.id('username')), 5000).then(function (elm) {
+    this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
         return elm;
     });
 };
 
 Login.prototype.inputUsernameSetValue = function () {
 
-    driver.wait(until.elementLocated(webdriver.name('username')), 5 * 1000).then(function (elm) {
+    driver.wait(until.elementLocated(webdriver.By.name('username')), 5 * 1000).then(function (elm) {
         elm.sendKeys("Admin");
     });
 };
