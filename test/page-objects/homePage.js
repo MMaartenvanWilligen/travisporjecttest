@@ -31,6 +31,7 @@ Home.prototype.header = function () {
     this.driver.findElement(webdriver.By.id("header")).getText().then(function(text) {
         d.fulfill(text);
     });
+    return d.promise;
 };
 
 Home.prototype.ctaButtonClick = function () {
