@@ -25,11 +25,9 @@ function Page(driver, url) {
 
 Page.prototype.getUrl = function () {
 
-    return this.driver.get(this.url).then(function (result) {
+    this.driver.get(this.url);
+    return webdriver.promise.fulfilled(true);
 
-        console.log("get url");
-        return result;
-    });
 };
 
 module.exports = Page;
