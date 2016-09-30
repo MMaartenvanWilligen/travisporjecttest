@@ -62,21 +62,20 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("h1 text should be awesome", function () {
-                homepage.header().then(function(text) {
+                return homepage.header().then(function(text) {
                     assert.equal(text, "awesome");
                 });
             });
 
             it("CTA button should be raised", function () {
 
-                homepage.ctaButton().getText().then(function (txt) {
+               return homepage.ctaButton().getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
                 });
             });
 
-            it("Expect onclick text change to buttontransform", function (done) {
-                homepage.ctaButtonClick();
-                homepage.ctaButton().getText().then(function (txt) {
+            it("Expect onclick text change", function (done) {
+                return homepage.ctaButtonClick().getText().then(function (txt) {
                     assert.equal(txt, "BUTTONTRANSFORM");
                     done();
                 });

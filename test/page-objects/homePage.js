@@ -34,6 +34,15 @@ Home.prototype.header = function () {
     return d.promise;
 };
 
+/*method return cta button
+ *
+ * */
+
+Home.prototype.ctaButton = function () {
+
+    return this.driver.findElement(webdriver.By.id("raisedbutton"));
+};
+
 Home.prototype.ctaButtonClick = function () {
 
     var d = webdriver.promise.defer();
@@ -49,18 +58,8 @@ Home.prototype.ctaButtonClick = function () {
     // return this
 };
 
-/*method return cta button
- *
- * */
 
-Home.prototype.ctaButton = function () {
-    var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function(elm) {
-        d.fulfill(elm);
-    });
-    return d.promise;
 
-};
 
 /*
  * export HomePage
