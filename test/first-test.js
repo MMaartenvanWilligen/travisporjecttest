@@ -44,48 +44,49 @@ describe("testing javascript in the browser", function () {
         homepage.getUrl();
 
         var url = "http://localhost:8000/website/index.html";
-        driver.wait(until.urlIs(url), 10000);
+        driver.wait(until.urlIs(url), 10000).then(function () {
 
-        /*
-         * wait till specific element is loaded.
-         * timeout 3000
-         * */
+            /*
+             * wait till specific element is loaded.
+             * timeout 3000
+             * */
 
-        driver.wait(function () {
-            var displayed = driver.findElement(webdriver.By.id("header")).isDisplayed();
-            console.log(displayed);
-            return displayed
-        }, 3000);
+            driver.wait(function () {
+                var displayed = driver.findElement(webdriver.By.id("header")).isDisplayed();
+                console.log(displayed);
+                return displayed
+            }, 3000);
 
-        before(function () {
+            before(function () {
 
 
-        });
-
-        describe("buttons", function () {
-
-            it("h1 text should be awesome", function (done) {
-
-                homepage.header().getText().then(function (txt) {
-                    assert.equal(txt, "awesome");
-                    done();
-                });
             });
 
-            it("CTA button should be raised", function (done) {
-                var button = homepage.ctaButton();
-                console.log("button" + " " + button);
-                button.getText().then(function (txt) {
-                    assert.equal(txt, "RAISED");
-                    done();
-                });
-            });
+            describe("buttons", function () {
 
-            it("Expect onclick text change to buttontransform", function (done) {
-                homepage.ctaButtonClick();
-                homepage.ctaButton().getText().then(function (txt) {
-                    assert.equal(txt, "BUTTONTRANSFORM");
-                    done();
+                it("h1 text should be awesome", function (done) {
+
+                    homepage.header().getText().then(function (txt) {
+                        assert.equal(txt, "awesome");
+                        done();
+                    });
+                });
+
+                it("CTA button should be raised", function (done) {
+                    var button = homepage.ctaButton();
+                    console.log("button" + " " + button);
+                    button.getText().then(function (txt) {
+                        assert.equal(txt, "RAISED");
+                        done();
+                    });
+                });
+
+                it("Expect onclick text change to buttontransform", function (done) {
+                    homepage.ctaButtonClick();
+                    homepage.ctaButton().getText().then(function (txt) {
+                        assert.equal(txt, "BUTTONTRANSFORM");
+                        done();
+                    });
                 });
             });
         });
@@ -97,31 +98,33 @@ describe("testing javascript in the browser", function () {
         loginPage.getUrl();
 
         var url = "http://localhost:8000/website/loginPage.html";
-        driver.wait(until.urlIs(url), 10000);
-        /*
-         * wait till specific element is loaded
-         * timeout 3000
-         * */
-        driver.wait(function () {
-            return driver.findElement(webdriver.By.id("username")).isDisplayed();
-        }, 3000);
+        driver.wait(until.urlIs(url), 10000).then(function () {
 
-        it("username should be Admin", function (done) {
-            inputUsername = loginPage.inputUsername();
-            console.log("usernameInput" + " " + inputUsername);
-            console.log("usernameInput" + " " + loginPage.inputUsername());
-            // usernameInput.getText().then(function (txt) {
-            //     console.log(txt);
-            //     assert.equal(txt, "Admin");
-            //
-            // });
+            /*
+             * wait till specific element is loaded
+             * timeout 3000
+             * */
+            driver.wait(function () {
+                return driver.findElement(webdriver.By.id("username")).isDisplayed();
+            }, 3000);
 
-            done();
+            it("username should be Admin", function (done) {
+                inputUsername = loginPage.inputUsername();
+                console.log("usernameInput" + " " + inputUsername);
+                console.log("usernameInput" + " " + loginPage.inputUsername());
+                // usernameInput.getText().then(function (txt) {
+                //     console.log(txt);
+                //     assert.equal(txt, "Admin");
+                //
+                // });
+
+                done();
+            });
+
+            it("password should be", function () {
+                loginPage.inputPassword();
+            })
         });
-
-        it("password should be", function () {
-            loginPage.inputPassword();
-        })
     });
 
     afterTests();
