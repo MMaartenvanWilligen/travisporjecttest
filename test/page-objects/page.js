@@ -28,7 +28,7 @@ Page.prototype.getUrl = function () {
     return this.driver.get(this.url).then(function (result) {
 
         console.log("get url");
-        return result[0];
+        return result;
     });
 };
 

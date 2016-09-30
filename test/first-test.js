@@ -92,9 +92,7 @@ describe("testing javascript in the browser", function () {
     describe("Login page", function () {
 
         loginPage = new Login(driver);
-
-
-        loginPage.getUrl()
+        loginPage.getUrl();
 
         /*
          * wait till specific element is loaded
