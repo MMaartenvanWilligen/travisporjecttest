@@ -12,10 +12,10 @@ var Contact = require("./page-objects/contactPage");
 
 describe("testing javascript in the browser", function () {
 
-
     /*
      * declaring variables
      */
+
     var driver;
     var homepage;
     var loginPage;
@@ -44,7 +44,7 @@ describe("testing javascript in the browser", function () {
         homepage.getUrl();
 
         var url = "http://localhost:8000/website/index.html";
-        driver.wait(until.urlContains(url), 10000);
+        driver.wait(until.urlIs(url), 10000);
 
         /*
          * wait till specific element is loaded.
@@ -97,7 +97,7 @@ describe("testing javascript in the browser", function () {
         loginPage.getUrl();
 
         var url = "http://localhost:8000/website/loginPage.html";
-        this.driver.wait(until.urlContains(url), 10000);
+        driver.wait(until.urlIs(url), 10000);
         /*
          * wait till specific element is loaded
          * timeout 3000
