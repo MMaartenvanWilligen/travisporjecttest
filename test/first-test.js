@@ -68,8 +68,8 @@ describe("testing javascript in the browser", function () {
             });
 
             it("CTA button should be raised", function (done) {
-                var button = homepage.ctaButton();
-                button.getText().then(function (txt) {
+
+                homepage.ctaButton().getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
                     done();
                 });

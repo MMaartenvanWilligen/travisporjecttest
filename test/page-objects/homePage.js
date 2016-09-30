@@ -35,14 +35,14 @@ Home.prototype.header = function () {
 };
 
 Home.prototype.ctaButtonClick = function () {
-    var element;
 
-    this.driver.wait(until.elementLocated(webdriver.By.id("raisedbutton")), 5000).then(function (elm) {
-        element = elm;
-        elm.click();
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("raisedbutton")).click().then(function(elm) {
+
+        d.fulfill(elm);
     });
 
-    return element;
+    return d.promise;
 
     // var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
     // button.click();
