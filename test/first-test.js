@@ -41,10 +41,9 @@ describe("testing javascript in the browser", function () {
         console.log("driver is" + " " + driver);
 
         homepage = new Home(driver);
-        homepage.getUrl();
+        homepage.getUrl().then(function () {
 
-        var url = "http://localhost:8000/website/index.html";
-        driver.wait(until.urlIs(url), 10000).then(function () {
+
 
             /*
              * wait till specific element is loaded.
@@ -95,10 +94,9 @@ describe("testing javascript in the browser", function () {
     describe("Login page", function () {
 
         loginPage = new Login(driver);
-        loginPage.getUrl();
 
-        var url = "http://localhost:8000/website/loginPage.html";
-        driver.wait(until.urlIs(url), 10000).then(function () {
+
+        loginPage.getUrl().then(function () {
 
             /*
              * wait till specific element is loaded
