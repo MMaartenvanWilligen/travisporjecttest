@@ -67,11 +67,10 @@ describe("testing javascript in the browser", function () {
                 });
             });
 
-            it("CTA button should be raised", function (done) {
+            it("CTA button should be raised", function () {
 
                 homepage.ctaButton().getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
-                    done();
                 });
             });
 

@@ -54,8 +54,12 @@ Home.prototype.ctaButtonClick = function () {
  * */
 
 Home.prototype.ctaButton = function () {
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function(elm) {
+        d.fulfill(elm);
+    });
+    return d.promise;
 
-    return this.driver.findElement(webdriver.By.id("raisedbutton"));
 };
 
 /*
