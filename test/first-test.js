@@ -1,4 +1,5 @@
 var webdriver = require("selenium-webdriver");
+var until = webdriver.until;
 var assert = require("assert");
 var chai = require('chai')
     , expect = chai.expect
