@@ -24,15 +24,11 @@ Login.prototype.constructor = Login;
 
 Login.prototype.inputUsername = function () {
 
-    var element;
+    return this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
 
-    this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
+       return elm
 
-        element = elm;
-        console.log(elm);
     });
-
-    return element;
 
     //return this.driver.findElement(webdriver.By.id("username"));
     //inputUserName.sendKeys('Maarten');

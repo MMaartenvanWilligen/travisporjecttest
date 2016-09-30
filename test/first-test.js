@@ -43,17 +43,16 @@ describe("testing javascript in the browser", function () {
         homepage = new Home(driver);
         homepage.getUrl();
 
-
         /*
          * wait till specific element is loaded.
          * timeout 3000
          * */
 
-        driver.wait(function () {
-            var displayed = driver.findElement(webdriver.By.id("header")).isDisplayed();
-            console.log(displayed);
-            return displayed
-        }, 3000);
+        // driver.wait(function () {
+        //     var displayed = driver.findElement(webdriver.By.id("header")).isDisplayed();
+        //     console.log(displayed);
+        //     return displayed
+        // }, 3000);
 
         before(function () {
 
@@ -63,7 +62,6 @@ describe("testing javascript in the browser", function () {
         describe("buttons", function () {
 
             it("h1 text should be awesome", function (done) {
-
                 homepage.header().getText().then(function (txt) {
                     assert.equal(txt, "awesome");
                     done();
@@ -72,7 +70,6 @@ describe("testing javascript in the browser", function () {
 
             it("CTA button should be raised", function (done) {
                 var button = homepage.ctaButton();
-                console.log("button" + " " + button);
                 button.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
                     done();
