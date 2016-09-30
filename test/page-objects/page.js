@@ -3,8 +3,6 @@
  */
 // Object Page
 
-
-
 var driver;
 var url;
 

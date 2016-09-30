@@ -3,6 +3,7 @@
  */
 var webdriver = require("selenium-webdriver");
 var Page = require("./page");
+var until = webdriver.until;
 
 /*
  * constructor HomePage object
@@ -32,10 +33,20 @@ Home.prototype.header = function () {
 };
 
 Home.prototype.ctaButtonClick = function () {
+    var element;
 
-    var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
-    button.click();
-    return this
+    this.driver.wait(until.elementLocated(webdriver.By.id("raisedbutton")), 5000).then(function (elm) {
+
+        element = elm;
+        elm.click();
+        console.log(elm);
+    });
+
+    return element;
+
+    // var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
+    // button.click();
+    // return this
 };
 
 /*method return cta button

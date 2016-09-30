@@ -27,7 +27,9 @@ Login.prototype.inputUsername = function () {
     var element;
 
     this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
+
         element = elm;
+        console.log(elm);
     });
 
     return element;
