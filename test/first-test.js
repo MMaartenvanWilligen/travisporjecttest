@@ -25,7 +25,7 @@ describe("testing javascript in the browser", function () {
     var contactPage;
 
     /*
-     * test login page
+     * @desc test login page
      * */
 
     describe("Login page", function () {
@@ -55,20 +55,20 @@ describe("testing javascript in the browser", function () {
 
         it("should set value username field to 'Admin'", function () {
             loginPage.inputUsernameSetValue("Admin");
-            return homepage.inputUsernameGetValue().then(function (text) {
+            return loginPage.inputUsernameGetValue().then(function (text) {
                 assert.equal(text, "awesome");
             });
         });
 
         it("should set value password field to 'Password'", function () {
             loginPage.inputUsernameSetValue("Password");
-            return homepage.inputUsernameGetValue().then(function (text) {
+            return loginPage.inputUsernameGetValue().then(function (text) {
                 assert.equal(text, "Password");
             });
         });
 
         it("password should be", function () {
-            loginPage.inputPassword();
+            return loginPage.inputPassword();
         });
     });
 
@@ -131,6 +131,7 @@ describe("testing javascript in the browser", function () {
     /*
     * @desc mocha after, quit driver
     * */
+
     after(function () {
         return driver.quit();
     });
