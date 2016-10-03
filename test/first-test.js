@@ -106,9 +106,9 @@ describe("testing javascript in the browser", function () {
             done();
         });
 
-        it("should open the homepage", function () {
+        it("should open the loginPage", function () {
             loginPage = new Login(driver);
-            loginPage.getUrl();
+            return loginPage.getUrl();
         });
         /*
          * wait till specific element is loaded
