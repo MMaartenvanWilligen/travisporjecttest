@@ -44,8 +44,10 @@ Login.prototype.inputUsername = function () {
 Login.prototype.inputUsernameGetValue = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("username")).getAttribute("value").then(function (value) {
-        d.fulfill(value);
+    this.inputUsername().then(function (elm) {
+        elm.getAttribute("value").then(function (value) {
+            d.fulfill(value);
+        });
     });
     return d.promise;
 };
@@ -56,7 +58,7 @@ Login.prototype.inputUsernameGetValue = function () {
  * */
 Login.prototype.inputUsernameSetValue = function (inputText) {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("username")).then(function (elm) {
+    this.inputUsername().then(function (elm) {
         elm.sendKeys(inputText);
         d.fulfill(elm);
     });
@@ -83,7 +85,7 @@ Login.prototype.inputPasswordGetValue = function () {
 
 Login.prototype.inputPasswordSetValue = function (inputText) {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("userpass")).then(function (elm) {
+    this.inputPassword().then(function (elm) {
         elm.sendKeys(inputText);
         d.fulfill(elm);
     });
