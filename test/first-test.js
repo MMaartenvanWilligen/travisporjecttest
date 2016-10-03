@@ -74,7 +74,12 @@ describe("testing javascript in the browser", function () {
         });
 
         it("after submit should go to index", function () {
-            return loginPage.submitClick();
+            return loginPage.submitClick().then(function () {
+                driver.getTitle().then(function (title) {
+                    assert.equal(title, "Home Page");
+                });
+            });
+
         });
     });
 

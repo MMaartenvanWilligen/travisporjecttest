@@ -25,7 +25,5 @@ function textTransform(e){
 }
 
 function loginButton() {
-
-
-
+    window.location.href = "http://localhost:8000/website/index.html";
 }
