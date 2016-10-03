@@ -90,10 +90,6 @@ describe("testing javascript in the browser", function () {
             });
         });
 
-        after(function () {
-            return driver.quit();
-        });
-
     });
 
     describe("Login page", function () {
@@ -109,6 +105,13 @@ describe("testing javascript in the browser", function () {
         it("should open the loginPage", function () {
             loginPage = new Login(driver);
             return loginPage.getUrl();
+        });
+
+        it("The title should be 'Login page'", function () {
+            // Since we want the title from the page, we need to manually handle the Promise
+            return driver.getTitle().then(function (title) {
+                assert.equal(title, "Login page");
+            });
         });
         /*
          * wait till specific element is loaded
@@ -135,9 +138,9 @@ describe("testing javascript in the browser", function () {
         });
     });
     //afterTests();
-    // after(function () {
-    //     return driver.quit();
-    // });
+    after(function () {
+        return driver.quit();
+    });
 });
 
 /*
