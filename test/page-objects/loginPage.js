@@ -44,7 +44,7 @@ Login.prototype.inputUsername = function () {
 Login.prototype.inputUsernameGetValue = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("username")).getText.then(function (text) {
+    this.driver.findElement(webdriver.By.id("username")).getText().then(function (text) {
         d.fulfill(text);
     });
     return d.promise;
@@ -66,7 +66,7 @@ Login.prototype.inputUsernameSetValue = function (inputText) {
 Login.prototype.inputPassword = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("password")).then(function (elm) {
+    this.driver.findElement(webdriver.By.id("userpass")).then(function (elm) {
         d.fulfill(elm);
     });
     return d.promise;
@@ -75,7 +75,7 @@ Login.prototype.inputPassword = function () {
 
 Login.prototype.inputPasswordGetValue = function () {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("password")).getText.then(function (text) {
+    this.driver.findElement(webdriver.By.id("userpass")).getText().then(function (text) {
         d.fulfill(text);
     });
     return d.promise;
@@ -83,7 +83,7 @@ Login.prototype.inputPasswordGetValue = function () {
 
 Login.prototype.inputPasswordSetValue = function () {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("password")).then(function (inputText) {
+    this.driver.findElement(webdriver.By.id("userpass")).then(function (inputText) {
         elm.sendKeys(inputText);
         d.fulfill(elm);
     });
