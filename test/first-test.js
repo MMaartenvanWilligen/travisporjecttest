@@ -28,14 +28,14 @@ describe("testing javascript in the browser", function () {
      * @desc test login page
      * */
 
-    describe("Login page", function () {
+    describe("Should login on login page", function () {
 
         driver = "";
 
         /*
-         * before test initialize driver
-         *
+         * @desc before test initialize driver
          * */
+
         before(function (done) {
             driver = require("./driver").GetDriver();
             done();
@@ -67,11 +67,14 @@ describe("testing javascript in the browser", function () {
                     assert.equal(value, "Password");
                 });
             });
+        });
+
+        it("should not return errors", function () {
 
         });
 
-        it("password should be", function () {
-            return loginPage.inputPassword();
+        it("after submit should go to index", function () {
+            return loginPage.submitClick();
         });
     });
 
@@ -82,11 +85,8 @@ describe("testing javascript in the browser", function () {
 
     describe('Home page', function () {
 
-        /* @desc mocha before test
-         * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
-         * new Page Object Home
-         * Go to url with sauce labs tunnel
-         *
+        /*
+         * @desc mocha before, initialize driver
          * */
 
         driver = "";

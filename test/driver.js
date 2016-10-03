@@ -1,11 +1,14 @@
 /**
  * Created by maarten on 19-09-16.
  */
-/*var webdriver = require("selenium-webdriver");*/
 
 var driver;
 var webdriver = require("selenium-webdriver");
 
+
+/*
+ * @desc build driver if driver is not yet set
+ * */
 function GetDriver() {
 
     if (!driver) {
@@ -17,9 +20,15 @@ function GetDriver() {
 
 }
 
-var buildDriver = function () {
+/*
+ * @desc build driver with saucelabs tunnel
+ * selenium driver that uses saucelabs
+ * saucelabs tunnel needed for suacelabs to access the localhost
+ *
+ * @return driver
+ * */
 
-    console.log("getDriver");
+var buildDriver = function () {
 
     if (process.env.SAUCE_USERNAME != undefined) {
         console.log("suace user name defined");

@@ -64,19 +64,19 @@ Login.prototype.inputUsernameSetValue = function (inputText) {
 };
 
 Login.prototype.inputPassword = function () {
-
     var d = webdriver.promise.defer();
     this.driver.findElement(webdriver.By.id("userpass")).then(function (elm) {
         d.fulfill(elm);
     });
     return d.promise;
-
 };
 
 Login.prototype.inputPasswordGetValue = function () {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("userpass")).getAttribute("value").then(function (value) {
-        d.fulfill(value);
+    this.inputPassword().then(function (elm) {
+        elm.getAttribute("value").then(function (value) {
+            d.fulfill(value);
+        });
     });
     return d.promise;
 };
@@ -91,14 +91,20 @@ Login.prototype.inputPasswordSetValue = function (inputText) {
 };
 
 Login.prototype.submitButton = function () {
-
-    driver.findElement(webdriver.By.id('submit'));
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id('submit')).then(function (elm) {
+        d.fulfill(elm);
+    });
+    return d.promise;
 };
 
-Login.prototype.submitButtonClick = function () {
-
-    driver.findElement(webdriver.id('submit')).click();
-    return this
+Login.prototype.submitClick = function () {
+    var d = webdriver.promise.defer();
+    this.submitButton().then(function (elm) {
+        elm.click();
+        d.fulfill(elm);
+    });
+    return d.promise
 };
 
 module.exports = Login;
