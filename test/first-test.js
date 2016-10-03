@@ -55,16 +55,16 @@ describe("testing javascript in the browser", function () {
 
         it("should set value username field to 'Admin'", function () {
             return loginPage.inputUsernameSetValue("Admin").then(function () {
-                loginPage.inputUsernameGetValue().then(function (text) {
-                    assert.equal(text, "Admin");
+                loginPage.inputUsernameGetValue().then(function (value) {
+                    assert.equal(value, "Admin");
                 });
             });
         });
 
         it("should set value password field to 'Password'", function () {
             return loginPage.inputPasswordSetValue("Password").then(function () {
-                loginPage.inputPasswordGetValue().then(function (text) {
-                    assert.equal(text, "Password");
+                loginPage.inputPasswordGetValue().then(function (value) {
+                    assert.equal(value, "Password");
                 });
             });
 

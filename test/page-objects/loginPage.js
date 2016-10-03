@@ -44,8 +44,8 @@ Login.prototype.inputUsername = function () {
 Login.prototype.inputUsernameGetValue = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("username")).getText().then(function (text) {
-        d.fulfill(text);
+    this.driver.findElement(webdriver.By.id("username")).getAttribute("value").then(function (value) {
+        d.fulfill(value);
     });
     return d.promise;
 };
@@ -75,8 +75,8 @@ Login.prototype.inputPassword = function () {
 
 Login.prototype.inputPasswordGetValue = function () {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("userpass")).getText().then(function (text) {
-        d.fulfill(text);
+    this.driver.findElement(webdriver.By.id("userpass")).getAttribute("value").then(function (value) {
+        d.fulfill(value);
     });
     return d.promise;
 };
