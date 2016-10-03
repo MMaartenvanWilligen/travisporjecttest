@@ -81,9 +81,9 @@ Login.prototype.inputPasswordGetValue = function () {
     return d.promise;
 };
 
-Login.prototype.inputPasswordSetValue = function () {
+Login.prototype.inputPasswordSetValue = function (inputText) {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("userpass")).then(function (inputText) {
+    this.driver.findElement(webdriver.By.id("userpass")).then(function (elm) {
         elm.sendKeys(inputText);
         d.fulfill(elm);
     });
