@@ -56,13 +56,13 @@ describe("testing javascript in the browser", function () {
         it("should set value username field to 'Admin'", function () {
             loginPage.inputUsernameSetValue("Admin");
             return loginPage.inputUsernameGetValue().then(function (text) {
-                assert.equal(text, "awesome");
+                assert.equal(text, "Admin");
             });
         });
 
         it("should set value password field to 'Password'", function () {
             loginPage.inputUsernameSetValue("Password");
-            return loginPage.inputUsernameGetValue().then(function (text) {
+            return loginPage.inputPasswordGetValue().then(function (text) {
                 assert.equal(text, "Password");
             });
         });
