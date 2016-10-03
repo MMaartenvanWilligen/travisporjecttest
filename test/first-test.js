@@ -16,7 +16,7 @@ describe("testing javascript in the browser", function () {
      * declaring variables
      */
 
-    var driver;
+
     var homepage;
     var loginPage;
     var contactPage;
@@ -36,8 +36,10 @@ describe("testing javascript in the browser", function () {
          * Go to local url with sauce labs tunnel
          * ready for testing
          * */
+        var driver;
 
         before(function (done) {
+            console.log("before";)
             driver = require("./driver").GetDriver();
             console.log("driver is" + " " + driver);
             done();
@@ -93,16 +95,26 @@ describe("testing javascript in the browser", function () {
 
     describe("Login page", function () {
 
-        loginPage = new Login(driver);
-        loginPage.getUrl();
+        var driver;
+        before(function (done) {
+            console.log("before";)
+            driver = require("./driver").GetDriver();
+            console.log("driver is" + " " + driver);
+            done();
+        });
 
+        it("should open the homepage", function () {
+
+            loginPage = new Login(driver);
+            loginPage.getUrl();
+        });
         /*
          * wait till specific element is loaded
          * timeout 3000
          * */
-        driver.wait(function () {
-            return driver.findElement(webdriver.By.id("username")).isDisplayed();
-        }, 3000);
+        // driver.wait(function () {
+        //     return driver.findElement(webdriver.By.id("username")).isDisplayed();
+        // }, 3000);
 
         it("username should be Admin", function (done) {
             inputUsername = loginPage.inputUsername();
@@ -123,7 +135,7 @@ describe("testing javascript in the browser", function () {
     });
 
     //afterTests();
-    after(function() {
+    after(function () {
         return driver.quit();
     });
 
