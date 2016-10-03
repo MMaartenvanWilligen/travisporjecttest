@@ -70,7 +70,9 @@ describe("testing javascript in the browser", function () {
         });
 
         it("should not return errors", function () {
-
+            return loginPage.ErrorHandlingFormSpan().then(function (elm) {
+                elm.isDisplayed()
+            })
         });
 
         it("after submit should go to index", function () {
