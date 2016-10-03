@@ -54,17 +54,20 @@ describe("testing javascript in the browser", function () {
         });
 
         it("should set value username field to 'Admin'", function () {
-            loginPage.inputUsernameSetValue("Admin");
-            return loginPage.inputUsernameGetValue().then(function (text) {
-                assert.equal(text, "Admin");
+            return loginPage.inputUsernameSetValue("Admin").then(function () {
+                loginPage.inputUsernameGetValue().then(function (text) {
+                    assert.equal(text, "Admin");
+                });
             });
         });
 
         it("should set value password field to 'Password'", function () {
-            loginPage.inputPasswordSetValue("Password");
-            return loginPage.inputPasswordGetValue().then(function (text) {
-                assert.equal(text, "Password");
+            return loginPage.inputPasswordSetValue("Password").then(function () {
+                loginPage.inputPasswordGetValue().then(function (text) {
+                    assert.equal(text, "Password");
+                });
             });
+
         });
 
         it("password should be", function () {
@@ -129,8 +132,8 @@ describe("testing javascript in the browser", function () {
     });
 
     /*
-    * @desc mocha after, quit driver
-    * */
+     * @desc mocha after, quit driver
+     * */
 
     after(function () {
         return driver.quit();
