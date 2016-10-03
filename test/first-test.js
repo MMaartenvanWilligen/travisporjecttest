@@ -54,7 +54,7 @@ describe("testing javascript in the browser", function () {
         });
 
         it("should set value username field to 'Admin'", function () {
-            return loginPage.inputUsernameSetValue("Admin").then(function () {
+            return loginPage.inputUsernameSetValue("Admin12").then(function () {
                 loginPage.inputUsernameGetValue().then(function (value) {
                     assert.equal(value, "Admin");
                 });
