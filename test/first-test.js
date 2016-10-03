@@ -38,16 +38,15 @@ describe("testing javascript in the browser", function () {
          * */
 
         before(function (done) {
-
             driver = require("./driver").GetDriver();
             console.log("driver is" + " " + driver);
+            done();
+        });
+
+        it("should open the homepage", function () {
 
             homepage = new Home(driver);
-
-            homepage.getUrl();
-
-            done();
-
+            return homepage.getUrl();
         });
 
         /*
@@ -61,28 +60,32 @@ describe("testing javascript in the browser", function () {
         //     return displayed
         // }, 3000);
 
-        describe("buttons", function () {
+        it("The title is 'demo website'", function () {
+            // Since we want the title from the page, we need to manually handle the Promise
+            return driver.getTitle().then(function (title) {
+                assert.equal(title, "demo website");
+            });
+        });
 
-            it("h1 text should be awesome", function () {
-                return homepage.header().then(function (text) {
-                    assert.equal(text, "awesome");
+        it("h1 text should be awesome", function () {
+            return homepage.header().then(function (text) {
+                assert.equal(text, "awesome");
+            });
+        });
+
+        it("CTA button should have text raised", function () {
+
+            return homepage.ctaButton().then(function (elm) {
+                elm.getText().then(function (txt) {
+                    assert.equal(txt, "RAISED");
                 });
             });
+        });
 
-            it("CTA button should have text raised", function () {
-
-                return homepage.ctaButton().then(function (elm) {
-                    elm.getText().then(function (txt) {
-                        assert.equal(txt, "RAISED");
-                    });
-                });
-            });
-
-            it("Expect onclick text change to buttontransform", function () {
-                return homepage.ctaButtonClick().then(function (elm) {
-                    elm.getText().then(function (txt) {
-                        assert.equal(txt, "BUTTONTRANSFORM");
-                    });
+        it("Expect onclick text change to buttontransform", function () {
+            return homepage.ctaButtonClick().then(function (elm) {
+                elm.getText().then(function (txt) {
+                    assert.equal(txt, "BUTTONTRANSFORM");
                 });
             });
         });
@@ -119,7 +122,10 @@ describe("testing javascript in the browser", function () {
         })
     });
 
-    afterTests();
+    //afterTests();
+    after(function() {
+        return driver.quit();
+    });
 
 });
 
@@ -128,9 +134,9 @@ describe("testing javascript in the browser", function () {
  * quit the driver
  * */
 
-function afterTests() {
-
-    console.log("quit driver");
-    //return driver.quit();
-
-}
+// function afterTests() {
+//
+//     console.log("quit driver");
+//     //return driver.quit();
+//
+// }
