@@ -112,11 +112,12 @@ Login.prototype.submitClick = function () {
 Login.prototype.ErrorHandlingFormSpan = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.css(".mdl-textfield__error span ")).then(function (elm) {
+    this.driver.findElement(webdriver.By.className("mdl-textfield__error")).then(function (elm) {
         d.fulfill(elm);
     });
     return d.promise;
 };
+
 module.exports = Login;
 
 
