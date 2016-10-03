@@ -9,7 +9,10 @@ var Home = require("./page-objects/homePage");
 var Login = require("./page-objects/loginPage");
 var Contact = require("./page-objects/contactPage");
 
-
+/*
+ * mocha describe
+ * promise aware framework
+ * */
 describe("testing javascript in the browser", function () {
 
     /*
@@ -22,26 +25,71 @@ describe("testing javascript in the browser", function () {
     var contactPage;
 
     /*
-     * test HomePage
+     * test login page
+     * */
+
+    describe("Login page", function () {
+
+        driver = "";
+
+        /*
+         * before test initialize driver
+         *
+         * */
+        before(function (done) {
+            driver = require("./driver").GetDriver();
+            done();
+        });
+
+        it("should open the loginPage", function () {
+            loginPage = new Login(driver);
+            return loginPage.getUrl();
+        });
+
+        it("The title should be 'Login page'", function () {
+            // Since we want the title from the page,
+            return driver.getTitle().then(function (title) {
+                assert.equal(title, "Login page");
+            });
+        });
+
+        it("should set value username field to 'Admin'", function () {
+            return loginPage.inputUsernameSetValue("Admin");
+        });
+
+        it("username should be Admin", function (done) {
+            inputUsername = loginPage.inputUsername();
+            console.log("usernameInput" + " " + inputUsername);
+            // usernameInput.getText().then(function (txt) {
+            //     console.log(txt);
+            //     assert.equal(txt, "Admin");
+            //
+            // });
+            done();
+        });
+
+        it("password should be", function () {
+            loginPage.inputPassword();
+        });
+    });
+
+    /*
+     * @desc test HomePage
      *
      * */
 
     describe('Home page', function () {
 
-        /*
-         * before
-         * set new driver that interact with saucelabs
+        /* @desc mocha before test
+         * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+         * new Page Object Home
+         * Go to url with sauce labs tunnel
          *
-         * set Page Object Home
-         * Go to local url with sauce labs tunnel
-         * ready for testing
          * */
 
         driver = "";
         before(function (done) {
-            console.log("before");
             driver = require("./driver").GetDriver();
-            console.log("driver is" + " " + driver);
             done();
         });
 
@@ -49,17 +97,6 @@ describe("testing javascript in the browser", function () {
             homepage = new Home(driver);
             return homepage.getUrl();
         });
-
-        /*
-         * wait till specific element is loaded.
-         * timeout 3000
-         * */
-
-        // driver.wait(function () {
-        //     var displayed = driver.findElement(webdriver.By.id("header")).isDisplayed();
-        //     console.log(displayed);
-        //     return displayed
-        // }, 3000);
 
         it("The title is 'demo website'", function () {
             // Since we want the title from the page, we need to manually handle the Promise
@@ -92,68 +129,10 @@ describe("testing javascript in the browser", function () {
 
     });
 
-    describe("Login page", function () {
-
-        driver = "";
-        before(function (done) {
-            console.log("before");
-            driver = require("./driver").GetDriver();
-            console.log("driver is" + " " + driver);
-            done();
-        });
-
-        it("should open the loginPage", function () {
-            loginPage = new Login(driver);
-            return loginPage.getUrl();
-        });
-
-        it("The title should be 'Login page'", function () {
-            // Since we want the title from the page, we need to manually handle the Promise
-            return driver.getTitle().then(function (title) {
-                assert.equal(title, "Login page");
-            });
-        });
-        /*
-         * wait till specific element is loaded
-         * timeout 3000
-         * */
-        // driver.wait(function () {
-        //     return driver.findElement(webdriver.By.id("username")).isDisplayed();
-        // }, 3000);
-        it("should set value username field", function () {
-            return loginPage.inputUsernameSetValue("Admin");
-        });
-
-        it("username should be Admin", function (done) {
-            inputUsername = loginPage.inputUsername();
-            console.log("usernameInput" + " " + inputUsername);
-            console.log("usernameInput" + " " + loginPage.inputUsername());
-            // usernameInput.getText().then(function (txt) {
-            //     console.log(txt);
-            //     assert.equal(txt, "Admin");
-            //
-            // });
-            done();
-        });
-
-        it("password should be", function () {
-            loginPage.inputPassword();
-        });
-    });
-    //afterTests();
+    /*
+    * @desc mocha after, quit driver
+    * */
     after(function () {
         return driver.quit();
     });
 });
-
-/*
- * after tests
- * quit the driver
- * */
-
-// function afterTests() {
-//
-//     console.log("quit driver");
-//     //return driver.quit();
-//
-// }

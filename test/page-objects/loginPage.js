@@ -8,7 +8,7 @@ var until = webdriver.until;
 /*
  * constructor HomePage object
  *
- * driver
+ * @param driver
  * */
 
 function Login(driver) {
@@ -22,26 +22,45 @@ Login.prototype = Object.create(Page.prototype);
 Login.prototype.constructor = Login;
 
 
-Login.prototype.inputUsername = function () {
+/* @desc method get input field username
+ * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+ * @return promise of element username field
+ * */
 
-    return this.driver.findElement(webdriver.By.id("username"));
+Login.prototype.inputUsername = function () {
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("username")).then(function (elm) {
+        d.fulfill(elm);
+    });
+    return d.promise;
 
     //inputUserName.sendKeys('Maarten');
 };
 
+/* @desc method get value of input field username
+ * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+ * @return promise value username
+ * */
 Login.prototype.inputUsernameGetValue = function () {
 
-    this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
-        return elm;
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("username")).getText.then(function (text) {
+        d.fulfill(text);
     });
+    return d.promise;
 };
 
+/* @desc method set input field username
+ * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+ * @return promise
+ * */
 Login.prototype.inputUsernameSetValue = function (inputText) {
-    console.log(inputText);
-    UsernameField = this.driver.findElement(webdriver.By.id("username"));
-    UsernameField.sendKeys(inputText);
-    return this
-
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("username")).then(function (elm) {
+        elm.sendKeys(inputText);
+        d.fulfill(elm);
+    });
+    return d.promise;
 };
 
 Login.prototype.inputPassword = function () {

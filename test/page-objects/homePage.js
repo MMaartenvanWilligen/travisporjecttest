@@ -6,9 +6,8 @@ var Page = require("./page");
 var until = webdriver.until;
 
 /*
- * constructor HomePage object
- *
- * driver
+ * @desc constructor HomePage object
+ * @param driver
  * */
 
 function Home(driver) {
@@ -22,48 +21,48 @@ function Home(driver) {
 Home.prototype = Object.create(Page.prototype);
 Home.prototype.constructor = Home;
 
-/* method click on cta button
- *
+/* @desc method get value header
+ * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+ * @return promise of text header
  * */
 
 Home.prototype.header = function () {
-    //var d = webdriver.promise.defer();
-    return this.driver.findElement(webdriver.By.id("header")).getText().then(function(text) {
-        return text;
-       // d.fulfill(text);
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("header")).getText().then(function (text) {
+        d.fulfill(text);
     });
-    //return d.promise;
+    return d.promise;
 };
 
-/*method return cta button
- *
+/* @desc find element raised button
+ * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+ * @return promise raised button element
  * */
 
 Home.prototype.ctaButton = function () {
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function(elm) {
+    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function (elm) {
         d.fulfill(elm);
     });
     return d.promise;
 };
 
+/* @desc method click on raised button
+ * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
+ * @return promise raised button element
+ * */
 Home.prototype.ctaButtonClick = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function(elm) {
+    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function (elm) {
         elm.click();
         d.fulfill(elm);
     });
-
     return d.promise;
-
-    // var button = this.driver.findElement(webdriver.By.id("raisedbutton"));
-    // button.click();
-    // return this
 };
 
 /*
- * export HomePage
+ * @desc export HomePage
  * */
 
 module.exports = Home;
