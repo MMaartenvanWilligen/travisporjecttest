@@ -64,7 +64,7 @@ describe("testing javascript in the browser", function () {
         it("The title is 'demo website'", function () {
             // Since we want the title from the page, we need to manually handle the Promise
             return driver.getTitle().then(function (title) {
-                assert.equal(title, "demo website");
+                assert.equal(title, "Home Page");
             });
         });
 
@@ -120,6 +120,9 @@ describe("testing javascript in the browser", function () {
         // driver.wait(function () {
         //     return driver.findElement(webdriver.By.id("username")).isDisplayed();
         // }, 3000);
+        it("should set value username field", function () {
+            return loginPage.inputUsernameSetValue("Admin");
+        });
 
         it("username should be Admin", function (done) {
             inputUsername = loginPage.inputUsername();

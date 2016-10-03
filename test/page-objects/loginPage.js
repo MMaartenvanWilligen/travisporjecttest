@@ -24,13 +24,8 @@ Login.prototype.constructor = Login;
 
 Login.prototype.inputUsername = function () {
 
-    return this.driver.wait(until.elementLocated(webdriver.By.id('username')), 5000).then(function (elm) {
+    return this.driver.findElement(webdriver.By.id("username"));
 
-       return elm
-
-    });
-
-    //return this.driver.findElement(webdriver.By.id("username"));
     //inputUserName.sendKeys('Maarten');
 };
 
@@ -41,11 +36,12 @@ Login.prototype.inputUsernameGetValue = function () {
     });
 };
 
-Login.prototype.inputUsernameSetValue = function () {
+Login.prototype.inputUsernameSetValue = function (inputText) {
+    console.log(inputText);
+    UsernameField = this.driver.findElement(webdriver.By.id("username"));
+    UsernameField.sendKeys(inputText);
+    return this
 
-    driver.wait(until.elementLocated(webdriver.By.name('username')), 5 * 1000).then(function (elm) {
-        elm.sendKeys("Admin");
-    });
 };
 
 Login.prototype.inputPassword = function () {
