@@ -49,7 +49,8 @@ Home.prototype.ctaButton = function () {
 Home.prototype.ctaButtonClick = function () {
 
     var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("raisedbutton")).click().then(function(elm) {
+    this.driver.findElement(webdriver.By.id("raisedbutton")).then(function(elm) {
+        elm.click();
         d.fulfill(elm);
     });
 

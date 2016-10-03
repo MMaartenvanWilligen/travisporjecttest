@@ -135,9 +135,9 @@ describe("testing javascript in the browser", function () {
         });
     });
     //afterTests();
-    after(function () {
-        return driver.quit();
-    });
+    // after(function () {
+    //     return driver.quit();
+    // });
 });
 
 /*
