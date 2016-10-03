@@ -71,7 +71,9 @@ describe("testing javascript in the browser", function () {
 
         it("should not return errors", function () {
             return loginPage.ErrorHandlingFormSpan().then(function (elm) {
-                elm.isDisplayed()
+                elm.isDisplayed().then(function (bool) {
+                    assert.equal(false, bool)
+                })
             })
         });
 
