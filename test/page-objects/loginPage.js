@@ -65,14 +65,29 @@ Login.prototype.inputUsernameSetValue = function (inputText) {
 
 Login.prototype.inputPassword = function () {
 
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("password")).then(function (elm) {
+        d.fulfill(elm);
+    });
+    return d.promise;
+
 };
 
 Login.prototype.inputPasswordGetValue = function () {
-
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("password")).getText.then(function (text) {
+        d.fulfill(text);
+    });
+    return d.promise;
 };
 
 Login.prototype.inputPasswordSetValue = function () {
-
+    var d = webdriver.promise.defer();
+    this.driver.findElement(webdriver.By.id("password")).then(function (inputText) {
+        elm.sendKeys(inputText);
+        d.fulfill(elm);
+    });
+    return d.promise;
 };
 
 Login.prototype.submitButton = function () {
@@ -80,7 +95,7 @@ Login.prototype.submitButton = function () {
     driver.findElement(webdriver.By.id('submit'));
 };
 
-Login.prototype.subMitButtonClick = function () {
+Login.prototype.submitButtonClick = function () {
 
     driver.findElement(webdriver.id('submit')).click();
     return this

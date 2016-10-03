@@ -54,18 +54,17 @@ describe("testing javascript in the browser", function () {
         });
 
         it("should set value username field to 'Admin'", function () {
-            return loginPage.inputUsernameSetValue("Admin");
+            loginPage.inputUsernameSetValue("Admin");
+            return homepage.inputUsernameGetValue().then(function (text) {
+                assert.equal(text, "awesome");
+            });
         });
 
-        it("username should be Admin", function (done) {
-            inputUsername = loginPage.inputUsername();
-            console.log("usernameInput" + " " + inputUsername);
-            // usernameInput.getText().then(function (txt) {
-            //     console.log(txt);
-            //     assert.equal(txt, "Admin");
-            //
-            // });
-            done();
+        it("should set value password field to 'Password'", function () {
+            loginPage.inputUsernameSetValue("Password");
+            return homepage.inputUsernameGetValue().then(function (text) {
+                assert.equal(text, "Password");
+            });
         });
 
         it("password should be", function () {
