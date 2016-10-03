@@ -39,14 +39,13 @@ describe("testing javascript in the browser", function () {
         var driver;
 
         before(function (done) {
-            console.log("before";)
+            console.log("before");
             driver = require("./driver").GetDriver();
             console.log("driver is" + " " + driver);
             done();
         });
 
         it("should open the homepage", function () {
-
             homepage = new Home(driver);
             return homepage.getUrl();
         });
@@ -76,7 +75,6 @@ describe("testing javascript in the browser", function () {
         });
 
         it("CTA button should have text raised", function () {
-
             return homepage.ctaButton().then(function (elm) {
                 elm.getText().then(function (txt) {
                     assert.equal(txt, "RAISED");
@@ -97,14 +95,13 @@ describe("testing javascript in the browser", function () {
 
         var driver;
         before(function (done) {
-            console.log("before";)
+            console.log("before");
             driver = require("./driver").GetDriver();
             console.log("driver is" + " " + driver);
             done();
         });
 
         it("should open the homepage", function () {
-
             loginPage = new Login(driver);
             loginPage.getUrl();
         });
@@ -125,7 +122,6 @@ describe("testing javascript in the browser", function () {
             //     assert.equal(txt, "Admin");
             //
             // });
-
             done();
         });
 
