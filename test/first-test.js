@@ -16,7 +16,7 @@ describe("testing javascript in the browser", function () {
      * declaring variables
      */
 
-
+    var driver;
     var homepage;
     var loginPage;
     var contactPage;
@@ -36,8 +36,8 @@ describe("testing javascript in the browser", function () {
          * Go to local url with sauce labs tunnel
          * ready for testing
          * */
-        var driver;
 
+        driver = "";
         before(function (done) {
             console.log("before");
             driver = require("./driver").GetDriver();
@@ -89,11 +89,16 @@ describe("testing javascript in the browser", function () {
                 });
             });
         });
+
+        after(function () {
+            return driver.quit();
+        });
+
     });
 
     describe("Login page", function () {
 
-        var driver;
+        driver = "";
         before(function (done) {
             console.log("before");
             driver = require("./driver").GetDriver();
@@ -127,14 +132,12 @@ describe("testing javascript in the browser", function () {
 
         it("password should be", function () {
             loginPage.inputPassword();
-        })
+        });
     });
-
     //afterTests();
     after(function () {
         return driver.quit();
     });
-
 });
 
 /*
