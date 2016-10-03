@@ -37,19 +37,18 @@ describe("testing javascript in the browser", function () {
          * ready for testing
          * */
 
-        it("should load the page", function () {
+        before(function (done) {
 
             driver = require("./driver").GetDriver();
             console.log("driver is" + " " + driver);
 
             homepage = new Home(driver);
 
-            return homepage.getUrl().then(function () {
+            homepage.getUrl();
 
-                return webdriver.promise.fulfilled(true);
-            });
+            done();
+
         });
-
 
         /*
          * wait till specific element is loaded.
