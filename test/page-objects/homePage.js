@@ -27,11 +27,12 @@ Home.prototype.constructor = Home;
  * */
 
 Home.prototype.header = function () {
-    var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("header")).getText().then(function(text) {
-        d.fulfill(text);
+    //var d = webdriver.promise.defer();
+    return this.driver.findElement(webdriver.By.id("header")).getText().then(function(text) {
+        return text;
+       // d.fulfill(text);
     });
-    return d.promise;
+    //return d.promise;
 };
 
 /*method return cta button
