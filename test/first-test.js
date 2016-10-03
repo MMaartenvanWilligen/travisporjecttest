@@ -61,7 +61,7 @@ describe("testing javascript in the browser", function () {
         });
 
         it("should set value password field to 'Password'", function () {
-            loginPage.inputUsernameSetValue("Password");
+            loginPage.inputPasswordSetValue("Password");
             return loginPage.inputPasswordGetValue().then(function (text) {
                 assert.equal(text, "Password");
             });
