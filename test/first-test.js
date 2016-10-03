@@ -37,11 +37,19 @@ describe("testing javascript in the browser", function () {
          * ready for testing
          * */
 
-        driver = require("./driver").GetDriver();
-        console.log("driver is" + " " + driver);
+        it("should load the page", function () {
 
-        homepage = new Home(driver);
-        homepage.getUrl();
+            driver = require("./driver").GetDriver();
+            console.log("driver is" + " " + driver);
+
+            homepage = new Home(driver);
+
+            return homepage.getUrl().then(function () {
+
+                return webdriver.promise.fulfilled(true);
+            });
+        });
+
 
         /*
          * wait till specific element is loaded.
@@ -62,7 +70,7 @@ describe("testing javascript in the browser", function () {
                 });
             });
 
-            it("CTA button should be raised", function () {
+            it("CTA button should have text raised", function () {
 
                 return homepage.ctaButton().then(function (elm) {
                     elm.getText().then(function (txt) {
@@ -71,7 +79,7 @@ describe("testing javascript in the browser", function () {
                 });
             });
 
-            it("Expect onclick text change", function () {
+            it("Expect onclick text change to buttontransform", function () {
                 return homepage.ctaButtonClick().then(function (elm) {
                     elm.getText().then(function (txt) {
                         assert.equal(txt, "BUTTONTRANSFORM");

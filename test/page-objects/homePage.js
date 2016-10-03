@@ -50,7 +50,6 @@ Home.prototype.ctaButtonClick = function () {
 
     var d = webdriver.promise.defer();
     this.driver.findElement(webdriver.By.id("raisedbutton")).click().then(function(elm) {
-
         d.fulfill(elm);
     });
 
@@ -60,9 +59,6 @@ Home.prototype.ctaButtonClick = function () {
     // button.click();
     // return this
 };
-
-
-
 
 /*
  * export HomePage

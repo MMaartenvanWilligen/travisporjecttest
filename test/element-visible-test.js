@@ -27,15 +27,8 @@ describe("Buttons should visible by user", function () {
 
     });
 
-
-
-
-
     buttonsObject = new Buttons(driver);
     buttonsObject.getUrl();
-
-
-
 
     describe("should be within screen width and height", function () {
 
