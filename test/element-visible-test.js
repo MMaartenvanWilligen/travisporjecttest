@@ -7,9 +7,6 @@ var chai = require('chai')
     , expect = chai.expect
     , should = chai.should();
 
-var Buttons = require("./page-objects/buttons");
-
-
 describe("Buttons should visible by user", function () {
 
     var driver;
