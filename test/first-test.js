@@ -43,7 +43,11 @@ describe("testing javascript in the browser", function () {
 
         it("should open the loginPage", function () {
             loginPage = new Login(driver);
-            return loginPage.getUrl();
+            return loginPage.getUrl().then(function () {
+                loginPage.currentUrl().then(function (url) {
+                    assert.equal(url.toString(), loginPage.url);
+                })
+            });
         });
 
         it("The title should be 'Login page'", function () {

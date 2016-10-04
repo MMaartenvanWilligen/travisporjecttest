@@ -30,6 +30,17 @@ Page.prototype.getUrl = function () {
 
 };
 
+Page.prototype.currentUrl = function () {
+
+    var d = webdriver.promise.defer();
+    this.driver.getCurrentUrl().then(function (url) {
+        d.fulfill(url);
+    });
+
+    return d.promise;
+
+};
+
 module.exports = Page;
 
 
