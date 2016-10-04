@@ -82,35 +82,39 @@ describe("functional testing in real browser", function () {
         });
     });
 
-    // describe("Should login directly", function () {
-    //
-    //     driver = "";
-    //
-    //     /*
-    //      * @desc before test initialize driver
-    //      * */
-    //
-    //     before(function (done) {
-    //         driver = require("./driver").GetDriver();
-    //         done();
-    //     });
-    //
-    //     it("should open the loginPage", function () {
-    //         return loginPage.getUrl();
-    //     });
-    //
-    //     /*
-    //      * login
-    //      * */
-    //
-    //     it("should login", function () {
-    //         return loginPage.loginProcess().then(function () {
-    //             driver.getTitle().then(function (title) {
-    //                 assert.equal(title, "Home Page");
-    //             });
-    //         });
-    //     });
-    // });
+    describe("Should login directly", function () {
+
+        driver = "";
+
+        /*
+         * @desc before test initialize driver
+         * */
+
+        before(function (done) {
+            driver = require("./driver").GetDriver();
+            done();
+        });
+
+        it("should open the loginPage", function () {
+            return loginpage.getUrl().then(function () {
+                loginpage.currentUrl().then(function (url) {
+                    assert.equal(url, loginpage.url);
+                })
+            });
+        });
+
+        /*
+         * login
+         * */
+
+        it("should login", function () {
+            return loginPage.loginProcess().then(function () {
+                driver.getTitle().then(function (title) {
+                    assert.equal(title, "Home Page");
+                });
+            });
+        });
+    });
 
     after(function () {
         return driver.quit();

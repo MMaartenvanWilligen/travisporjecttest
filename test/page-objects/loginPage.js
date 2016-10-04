@@ -121,8 +121,8 @@ Login.prototype.loginProcess = function (Username, password) {
     var d = webdriver.promise.defer();
     this.inputUsernameSetValue(Username);
     this.inputPasswordSetValue(password);
-    this.submitClick().then(function (elm) {
-        d.fulfill(elm);
+    this.submitClick().then(function () {
+        d.fulfill();
     });
 
     return d.promise;
