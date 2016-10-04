@@ -34,6 +34,7 @@ Page.prototype.currentUrl = function () {
 
     var d = webdriver.promise.defer();
     this.driver.getCurrentUrl().then(function (url) {
+        console.log("current url:" + " " + url);
         d.fulfill(url);
     });
 
