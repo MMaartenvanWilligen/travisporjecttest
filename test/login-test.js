@@ -10,6 +10,7 @@ var chai = require('chai')
     , should = chai.should();
 
 var Login = require("./page-objects/loginPage");
+
 describe("functional testing in real browser", function () {
 
     /*
@@ -31,10 +32,11 @@ describe("functional testing in real browser", function () {
         before(function (done) {
             driver = require("./driver").GetDriver();
             done();
+            loginpage = new Login(driver);
         });
 
         it("should open the loginPage", function () {
-            loginpage = new Login(driver);
+
             return loginpage.getUrl().then(function () {
                 loginpage.currentUrl().then(function (url) {
                     assert.equal(url, loginpage.url);
@@ -82,7 +84,7 @@ describe("functional testing in real browser", function () {
         });
     });
 
-    describe("Should login directly", function () {
+    describe("Should login whitout intermediate steps", function () {
 
         driver = "";
 
@@ -104,7 +106,7 @@ describe("functional testing in real browser", function () {
         });
 
         /*
-         * login
+         * @login directly without checking intermediate steps
          * */
 
         it("should login", function () {
