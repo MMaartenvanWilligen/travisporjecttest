@@ -118,6 +118,13 @@ Login.prototype.ErrorHandlingFormSpan = function () {
     return d.promise;
 };
 
+Login.prototype.loginProcess = function (Username, password) {
+
+    this.inputUsernameSetValue(Username);
+    this.inputPasswordSetValue(password);
+    this.submitClick();
+};
+
 module.exports = Login;
 
 

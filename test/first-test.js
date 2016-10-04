@@ -87,6 +87,38 @@ describe("testing javascript in the browser", function () {
         });
     });
 
+    describe("Should login", function () {
+
+        driver = "";
+
+        /*
+         * @desc before test initialize driver
+         * */
+
+        before(function (done) {
+            driver = require("./driver").GetDriver();
+            done();
+        });
+
+        it("should open the loginPage", function () {
+            return loginPage.getUrl();
+        });
+
+        /*
+         * login
+         * */
+
+        it("should login", function () {
+            return loginPage.loginProcess().then(function () {
+                driver.getTitle().then(function (title) {
+                    assert.equal(title, "Home Page");
+                });
+            });
+
+        });
+    });
+
+
     /*
      * @desc test HomePage
      *
@@ -147,4 +179,5 @@ describe("testing javascript in the browser", function () {
     after(function () {
         return driver.quit();
     });
-});
+})
+;

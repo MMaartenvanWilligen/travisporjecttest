@@ -1,6 +1,12 @@
 /**
  * Created by maarten on 19-09-16.
  */
+
+/*
+* @desc page object homepage
+*
+* */
+
 var webdriver = require("selenium-webdriver");
 var Page = require("./page");
 var until = webdriver.until;
@@ -26,13 +32,7 @@ Home.prototype.constructor = Home;
  * @return promise of text header
  * */
 
-Home.prototype.header = function () {
-    var d = webdriver.promise.defer();
-    this.driver.findElement(webdriver.By.id("header")).getText().then(function (text) {
-        d.fulfill(text);
-    });
-    return d.promise;
-};
+
 
 /* @desc find element raised button
  * need to manually handle the Promise so it can be handled by the mocha framework in first-test.js
