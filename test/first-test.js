@@ -114,7 +114,6 @@ describe("testing javascript in the browser", function () {
                     assert.equal(title, "Home Page");
                 });
             });
-
         });
     });
 

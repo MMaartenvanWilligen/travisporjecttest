@@ -110,7 +110,6 @@ Login.prototype.submitClick = function () {
 };
 
 Login.prototype.ErrorHandlingFormSpan = function () {
-
     var d = webdriver.promise.defer();
     this.driver.findElement(webdriver.By.className("mdl-textfield__error")).then(function (elm) {
         d.fulfill(elm);
@@ -119,10 +118,14 @@ Login.prototype.ErrorHandlingFormSpan = function () {
 };
 
 Login.prototype.loginProcess = function (Username, password) {
-
+    var d = webdriver.promise.defer();
     this.inputUsernameSetValue(Username);
     this.inputPasswordSetValue(password);
-    this.submitClick();
+    this.submitClick().then(function (elm) {
+        d.fulfill(elm);
+    });
+
+    return d.promise;
 };
 
 module.exports = Login;
