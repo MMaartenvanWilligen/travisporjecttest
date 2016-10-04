@@ -11,13 +11,8 @@ var webdriver = require("selenium-webdriver");
  * */
 function GetDriver() {
 
-    if (!driver) {
         driver = buildDriver();
         return driver;
-    } else {
-        return driver
-    }
-
 }
 
 /*
