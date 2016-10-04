@@ -4,7 +4,7 @@
   "description": "travis integration with github and node",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/first-test.js --timeout 10000"
+    "test": "mocha test/ -name '*-test.js' --timeout 10000"
   },
   "repository": {
     "type": "git",
