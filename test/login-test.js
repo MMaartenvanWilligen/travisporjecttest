@@ -24,16 +24,22 @@ describe("functional testing in real browser", function () {
      * @desc test login page
      * */
 
+    before(function (done) {
+        driver = require("./driver").GetDriver();
+        done();
+        loginpage = new Login(driver);
+    });
+
     describe("Login test", function () {
 
         /*
          * @desc before test initialize driver
          * */
-        before(function (done) {
-            driver = require("./driver").GetDriver();
-            done();
-            loginpage = new Login(driver);
-        });
+        // before(function (done) {
+        //     driver = require("./driver").GetDriver();
+        //     done();
+        //     loginpage = new Login(driver);
+        // });
 
         it("should open the loginPage", function () {
 
@@ -92,10 +98,6 @@ describe("functional testing in real browser", function () {
          * @desc before test initialize driver
          * */
 
-        before(function (done) {
-            driver = require("./driver").GetDriver();
-            done();
-        });
 
         it("should open the loginPage", function () {
             return loginpage.getUrl().then(function () {
