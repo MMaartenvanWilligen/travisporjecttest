@@ -34,7 +34,7 @@ var buildDriver = function () {
                 build: process.env.TRAVIS_BUILD_NUMBER,
                 username: process.env.SAUCE_USERNAME,
                 accessKey: process.env.SAUCE_ACCESS_KEY,
-                browserName: ""
+                browserName: "chrome"
             }).build();
 
         return driver;
