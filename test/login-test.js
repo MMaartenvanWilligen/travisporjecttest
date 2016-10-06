@@ -92,8 +92,6 @@ describe("functional testing in real browser", function () {
 
     describe("Should login whitout intermediate steps", function () {
 
-        driver = "";
-
         /*
          * @desc before test initialize driver
          * */
