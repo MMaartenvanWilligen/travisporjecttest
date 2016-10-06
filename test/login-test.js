@@ -98,7 +98,6 @@ describe("functional testing in real browser", function () {
          * @desc before test initialize driver
          * */
 
-
         it("should open the loginPage", function () {
             return loginpage.getUrl().then(function () {
                 loginpage.currentUrl().then(function (url) {
