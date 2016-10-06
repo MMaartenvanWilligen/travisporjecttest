@@ -109,7 +109,7 @@ describe("functional testing in real browser", function () {
          * */
 
         it("should login", function () {
-            return loginPage.loginProcess().then(function () {
+            return loginpage.loginProcess().then(function () {
                 driver.getTitle().then(function (title) {
                     assert.equal(title, "Home Page");
                 });
